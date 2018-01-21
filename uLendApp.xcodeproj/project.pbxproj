@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32500B70200EB7E000927D15 /* CurrentUserViewController.swift */; };
+		3279F9D420137F4B001D010F /* Service_Algolia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3279F9D320137F4B001D010F /* Service_Algolia.swift */; };
 		32BE44992006CFDC0012EE19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BE44982006CFDC0012EE19 /* AppDelegate.swift */; };
 		32BE449B2006CFDC0012EE19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BE449A2006CFDC0012EE19 /* ViewController.swift */; };
 		32BE449E2006CFDC0012EE19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449C2006CFDC0012EE19 /* Main.storyboard */; };
 		32BE44A02006CFDC0012EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449F2006CFDC0012EE19 /* Assets.xcassets */; };
 		32BE44A32006CFDC0012EE19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BE44A12006CFDC0012EE19 /* LaunchScreen.storyboard */; };
+		32BE44AB2006D0790012EE19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32BE44AA2006D0780012EE19 /* GoogleService-Info.plist */; };
+		32C917452007A34B008F9A7C /* LoginMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C917442007A34B008F9A7C /* LoginMainViewController.swift */; };
+		32C917482007A852008F9A7C /* Service_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C917472007A852008F9A7C /* Service_Auth.swift */; };
+		32C9174B2007A910008F9A7C /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9174A2007A910008F9A7C /* Typealias.swift */; };
+		32C9174D2007A96A008F9A7C /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9174C2007A96A008F9A7C /* functions.swift */; };
+		BE9D266E055B4EBE6C878BAB /* Pods_uLendApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D2492761D3F7585A842CF6 /* Pods_uLendApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14D2492761D3F7585A842CF6 /* Pods_uLendApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uLendApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32500B70200EB7E000927D15 /* CurrentUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserViewController.swift; sourceTree = "<group>"; };
+		3279F9D320137F4B001D010F /* Service_Algolia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Algolia.swift; sourceTree = "<group>"; };
+		3279F9D620137FAB001D010F /* AlgoliaSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlgoliaSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE44952006CFDC0012EE19 /* uLendApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uLendApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE44982006CFDC0012EE19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32BE449A2006CFDC0012EE19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +34,13 @@
 		32BE449F2006CFDC0012EE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32BE44A22006CFDC0012EE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32BE44A42006CFDC0012EE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32BE44AA2006D0780012EE19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		32C917442007A34B008F9A7C /* LoginMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainViewController.swift; sourceTree = "<group>"; };
+		32C917472007A852008F9A7C /* Service_Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Auth.swift; sourceTree = "<group>"; };
+		32C9174A2007A910008F9A7C /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		32C9174C2007A96A008F9A7C /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
+		8DD64864CEDB4B7D9124F632 /* Pods-uLendApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uLendApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-uLendApp/Pods-uLendApp.release.xcconfig"; sourceTree = "<group>"; };
+		DB8D1E3C9E168E7F9E78AB1B /* Pods-uLendApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uLendApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uLendApp/Pods-uLendApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +48,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9D266E055B4EBE6C878BAB /* Pods_uLendApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24337932A22AD4BB5A2BD280 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3279F9D620137FAB001D010F /* AlgoliaSearch.framework */,
+				14D2492761D3F7585A842CF6 /* Pods_uLendApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32500B6E2009721D00927D15 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				32500B70200EB7E000927D15 /* CurrentUserViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		32BE448C2006CFDC0012EE19 = {
 			isa = PBXGroup;
 			children = (
 				32BE44972006CFDC0012EE19 /* uLendApp */,
 				32BE44962006CFDC0012EE19 /* Products */,
+				6B406F779B74AB14ABDB15AA /* Pods */,
+				24337932A22AD4BB5A2BD280 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +93,11 @@
 		32BE44972006CFDC0012EE19 /* uLendApp */ = {
 			isa = PBXGroup;
 			children = (
+				32C917492007A8F7008F9A7C /* extra */,
+				32C917462007A821008F9A7C /* Services */,
+				32C917422007A1A8008F9A7C /* Entities */,
+				32C917412007A1A2008F9A7C /* Views */,
+				32BE44AA2006D0780012EE19 /* GoogleService-Info.plist */,
 				32BE44982006CFDC0012EE19 /* AppDelegate.swift */,
 				32BE449A2006CFDC0012EE19 /* ViewController.swift */,
 				32BE449C2006CFDC0012EE19 /* Main.storyboard */,
@@ -64,6 +108,57 @@
 			path = uLendApp;
 			sourceTree = "<group>";
 		};
+		32C917412007A1A2008F9A7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				32500B6E2009721D00927D15 /* Main */,
+				32C917432007A332008F9A7C /* LoginMainView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		32C917422007A1A8008F9A7C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		32C917432007A332008F9A7C /* LoginMainView */ = {
+			isa = PBXGroup;
+			children = (
+				32C917442007A34B008F9A7C /* LoginMainViewController.swift */,
+			);
+			path = LoginMainView;
+			sourceTree = "<group>";
+		};
+		32C917462007A821008F9A7C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				32C917472007A852008F9A7C /* Service_Auth.swift */,
+				3279F9D320137F4B001D010F /* Service_Algolia.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		32C917492007A8F7008F9A7C /* extra */ = {
+			isa = PBXGroup;
+			children = (
+				32C9174A2007A910008F9A7C /* Typealias.swift */,
+				32C9174C2007A96A008F9A7C /* functions.swift */,
+			);
+			path = extra;
+			sourceTree = "<group>";
+		};
+		6B406F779B74AB14ABDB15AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB8D1E3C9E168E7F9E78AB1B /* Pods-uLendApp.debug.xcconfig */,
+				8DD64864CEDB4B7D9124F632 /* Pods-uLendApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32BE44A72006CFDC0012EE19 /* Build configuration list for PBXNativeTarget "uLendApp" */;
 			buildPhases = (
+				31525DD89D1A111730B6029A /* [CP] Check Pods Manifest.lock */,
 				32BE44912006CFDC0012EE19 /* Sources */,
 				32BE44922006CFDC0012EE19 /* Frameworks */,
 				32BE44932006CFDC0012EE19 /* Resources */,
+				ED2D7823D2199662D0707FD1 /* [CP] Embed Pods Frameworks */,
+				1D25FEE9A15CBB02F6950696 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32BE44A32006CFDC0012EE19 /* LaunchScreen.storyboard in Resources */,
+				32BE44AB2006D0790012EE19 /* GoogleService-Info.plist in Resources */,
 				32BE44A02006CFDC0012EE19 /* Assets.xcassets in Resources */,
 				32BE449E2006CFDC0012EE19 /* Main.storyboard in Resources */,
 			);
@@ -131,13 +230,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D25FEE9A15CBB02F6950696 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uLendApp/Pods-uLendApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31525DD89D1A111730B6029A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ED2D7823D2199662D0707FD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uLendApp/Pods-uLendApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		32BE44912006CFDC0012EE19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				32BE449B2006CFDC0012EE19 /* ViewController.swift in Sources */,
+				3279F9D420137F4B001D010F /* Service_Algolia.swift in Sources */,
+				32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */,
+				32C917452007A34B008F9A7C /* LoginMainViewController.swift in Sources */,
 				32BE44992006CFDC0012EE19 /* AppDelegate.swift in Sources */,
+				32C917482007A852008F9A7C /* Service_Auth.swift in Sources */,
+				32C9174B2007A910008F9A7C /* Typealias.swift in Sources */,
+				32C9174D2007A96A008F9A7C /* functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +425,7 @@
 		};
 		32BE44A82006CFDC0012EE19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB8D1E3C9E168E7F9E78AB1B /* Pods-uLendApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +441,7 @@
 		};
 		32BE44A92006CFDC0012EE19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DD64864CEDB4B7D9124F632 /* Pods-uLendApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
