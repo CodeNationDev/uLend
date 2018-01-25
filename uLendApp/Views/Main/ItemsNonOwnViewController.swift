@@ -1,14 +1,14 @@
 //
-//  CurrentUserViewController.swift
+//  ItemsNonOwnViewController.swift
 //  uLendApp
 //
-//  Created by Manu on 16/1/18.
+//  Created by Manu on 23/1/18.
 //  Copyright © 2018 Manu. All rights reserved.
 //
 
 import UIKit
 
-class CurrentUserViewController: UIViewController {
+class ItemsNonOwnViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
