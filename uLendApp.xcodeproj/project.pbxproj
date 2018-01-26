@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322344402018CF16008D0EBB /* ItemPageViewController.swift */; };
+		32234449201BD286008D0EBB /* AlgoliaKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32234448201BD286008D0EBB /* AlgoliaKeys.swift */; };
 		3236DB01201629C200D98EA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3236DB00201629C100D98EA4 /* GoogleService-Info.plist */; };
 		3236DB0320162A7000D98EA4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB0220162A7000D98EA4 /* Item.swift */; };
 		3236DB0520162B8C00D98EA4 /* GeoPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB0420162B8C00D98EA4 /* GeoPosition.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		14D2492761D3F7585A842CF6 /* Pods_uLendApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uLendApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		322344402018CF16008D0EBB /* ItemPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPageViewController.swift; sourceTree = "<group>"; };
+		32234448201BD286008D0EBB /* AlgoliaKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaKeys.swift; sourceTree = "<group>"; };
 		3236DB00201629C100D98EA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3236DB0220162A7000D98EA4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		3236DB0420162B8C00D98EA4 /* GeoPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoPosition.swift; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
+		32234447201BD263008D0EBB /* AlgoliaKeyChans */ = {
+			isa = PBXGroup;
+			children = (
+				32234448201BD286008D0EBB /* AlgoliaKeys.swift */,
+			);
+			path = AlgoliaKeyChans;
+			sourceTree = "<group>";
+		};
 		3236DB0C20177A1900D98EA4 /* PageControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 		32BE44972006CFDC0012EE19 /* uLendApp */ = {
 			isa = PBXGroup;
 			children = (
+				32234447201BD263008D0EBB /* AlgoliaKeyChans */,
 				32C917492007A8F7008F9A7C /* extra */,
 				32C917462007A821008F9A7C /* Services */,
 				32C917422007A1A8008F9A7C /* Entities */,
@@ -321,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3236DB0B201635A400D98EA4 /* Service_Item.swift in Sources */,
+				32234449201BD286008D0EBB /* AlgoliaKeys.swift in Sources */,
 				3236DB0320162A7000D98EA4 /* Item.swift in Sources */,
 				322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */,
 				3236DB09201632B500D98EA4 /* Service_Database.swift in Sources */,

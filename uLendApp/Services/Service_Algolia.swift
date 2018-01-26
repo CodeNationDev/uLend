@@ -12,8 +12,8 @@ import AlgoliaSearch
 struct Service_Algolia {
  
     
-    private static let clientSearch = Client(appID: "T2NW9U3W9F", apiKey: "c9ad5cd8c4a29789099c7501561228dc")
-    private static let clientAdmin = Client(appID: "T2NW9U3W9F", apiKey: "3934242ed5979c45ef9fb3ec062429ea")
+    private static let clientSearch = Client(appID: AlgoliaKeys.appId, apiKey: AlgoliaKeys.apiKeySearch)
+    private static let clientAdmin = Client(appID: AlgoliaKeys.appId, apiKey: AlgoliaKeys.apiKeyAdmin)
     
     var refSerchUser = clientSearch.index(withName: "users")
     var refCreateUser = clientAdmin.index(withName: "users")
