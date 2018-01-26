@@ -87,12 +87,12 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
-		32234447201BD263008D0EBB /* AlgoliaKeyChans */ = {
+		32234447201BD263008D0EBB /* AlgoliaKeys */ = {
 			isa = PBXGroup;
 			children = (
 				32234448201BD286008D0EBB /* AlgoliaKeys.swift */,
 			);
-			path = AlgoliaKeyChans;
+			path = AlgoliaKeys;
 			sourceTree = "<group>";
 		};
 		3236DB0C20177A1900D98EA4 /* PageControllers */ = {
@@ -135,7 +135,7 @@
 		32BE44972006CFDC0012EE19 /* uLendApp */ = {
 			isa = PBXGroup;
 			children = (
-				32234447201BD263008D0EBB /* AlgoliaKeyChans */,
+				32234447201BD263008D0EBB /* AlgoliaKeys */,
 				32C917492007A8F7008F9A7C /* extra */,
 				32C917462007A821008F9A7C /* Services */,
 				32C917422007A1A8008F9A7C /* Entities */,
