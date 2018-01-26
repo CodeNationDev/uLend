@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+final class ItemPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     
     var pageControl = UIPageControl.appearance()

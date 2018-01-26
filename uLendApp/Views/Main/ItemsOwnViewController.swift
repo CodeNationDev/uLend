@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemsOwnViewController: UIViewController {
+final class ItemsOwnViewController: UIViewController {
 
     
     
