@@ -29,7 +29,10 @@ extension Service_Algolia {
     
     func saveItem(_ item: Item!, _ CompletionHandlerSaveItem: @escaping CompletionAlgoliaItem){
         
-        let itemAl = ["uid": item.uid ?? "", "name": item.name ?? "", "description": item.description ?? ""]
+        
+        let _geolocation = ["lat":item.geoposition?.lat ?? nil, "long":item.geoposition?.long ?? nil]
+        let itemAl = ["uid": item.uid ?? "", "name": item.name ?? "", "description": item.description ?? "", "_geolocation":_geolocation] as [String : Any]
+        
 
         refCreateItems.addObject(itemAl, withID: item.uid!, requestOptions: nil) { (content, error) in
             if error == nil {

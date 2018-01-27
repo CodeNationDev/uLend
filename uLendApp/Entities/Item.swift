@@ -10,7 +10,7 @@ import Foundation
 
 
 
-class Item {
+final class Item {
     
     var uid: String?
     var uidOwner: String?
@@ -26,4 +26,36 @@ class Item {
     
     
     
+}
+
+
+extension Item {
+    
+ 
+    func createAlgoliaData() -> Profile?{
+        
+        
+        var data = Profile()
+
+        guard let uid = self.uid else {
+            return nil
+        }
+        guard let uidOwner = self.uidOwner else {
+            return nil
+        }
+        guard let name = self.name else {
+            return nil
+        }
+        
+        data["uid"] = uid as AnyObject
+        data["uidOwner"] = uidOwner as AnyObject
+        data["name"] = name as AnyObject
+        
+        // if geoposition exists add data
+        if geoposition != nil {
+            data["_geoloc"] = geoposition?.dataGeoposition() as AnyObject
+        }
+        
+        return data
+    }
 }

@@ -11,11 +11,16 @@ import Foundation
 
 struct GeoPosition {
     
-    var long : Double?
-    var lat : Double?
+    var long : Double!
+    var lat : Double!
     
     init(_ long: Double, _ lat: Double) {
         self.long = long
         self.lat = lat
     }
+    
+    func dataGeoposition() -> Dictionary<String, Double> {
+        return ["lng":self.long, "lat":self.lat]
+    }
+    
 }
