@@ -18,6 +18,7 @@ typealias CompletionUserFirebase = (_ error: String?, _ data: User?) -> Void
 
 typealias CompletionAlgoliaItem = (_ error: String?, _ content: [String: Any]?) -> Void
 
+
 //typealias CompletionItem = (_ error: String?, _ data: Item?) -> Void
 //typealias CompletionArrayItems = (_ error: String?, _ data: [Item]?) -> Void
 //typealias CompletionArrayLoans = (_ error: String?, _ data: [Loan]?) -> Void

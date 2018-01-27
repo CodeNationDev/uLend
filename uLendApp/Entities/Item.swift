@@ -35,29 +35,27 @@ extension Item {
     func createAlgoliaData() -> Profile?{
         
         
-        let data : Profile
+        var data = Profile()
+
+        guard let uid = self.uid else {
+            return nil
+        }
+        guard let uidOwner = self.uidOwner else {
+            return nil
+        }
+        guard let name = self.name else {
+            return nil
+        }
         
-//      verificamos cada dato
-//        guard let uid = self.uid else {
-//            return nil
-//        }
-//        guard let uidOwner = self.uidOwner else {
-//            return nil
-//        }
-//        guard let name = self.name else {
-//            return nil
-//        }
-//        guard self.description != nil else {}
-//        guard let geoposition = self.geoposition else {}
-//
-//
-//
-    
+        data["uid"] = uid as AnyObject
+        data["uidOwner"] = uidOwner as AnyObject
+        data["name"] = name as AnyObject
         
+        // if geoposition exists add data
+        if geoposition != nil {
+            data["_geoloc"] = geoposition?.dataGeoposition() as AnyObject
+        }
         
-        
-        
-        
-        
+        return data
     }
 }
