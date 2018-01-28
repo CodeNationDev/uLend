@@ -82,6 +82,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gk-aZ-cKG">
+                                <rect key="frame" x="139" y="561" width="96" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.79612527012497469" blue="0.13133214770061907" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="c0k-DX-Kff"/>
+                                    <constraint firstAttribute="width" constant="96" id="hU5-67-96k"/>
+                                </constraints>
+                                <state key="normal" title="Google Signin"/>
+                                <connections>
+                                    <action selector="googleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0vh-fI-0v6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -91,6 +103,8 @@
                             <constraint firstItem="3za-Cs-sWB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PhU-nb-0me"/>
                             <constraint firstItem="R09-QV-Sm5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W4A-Xw-Jz9"/>
                             <constraint firstItem="R09-QV-Sm5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aol-Ah-CrC"/>
+                            <constraint firstItem="9gk-aZ-cKG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ctl-Gm-3W7"/>
+                            <constraint firstItem="9gk-aZ-cKG" firstAttribute="top" secondItem="3za-Cs-sWB" secondAttribute="bottom" constant="50" id="lMR-2e-8pd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
