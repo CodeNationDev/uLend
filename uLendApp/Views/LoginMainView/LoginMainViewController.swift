@@ -8,8 +8,11 @@
 
 import UIKit
 import FirebaseAuth
+import GoogleSignIn
 
-class LoginMainViewController: UIViewController {
+class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
+
+    
     
     enum Mode {
         case login
@@ -35,7 +38,9 @@ class LoginMainViewController: UIViewController {
         passwordRepeatTextField.alpha = 0.0
         passwordRepeatTextField.backgroundColor = UIColor.orange
         
-        
+        // Google SignIn
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
         
         //datos de pruebas
         usernameTextField.text = "prueba@prueba.com"
@@ -208,6 +213,37 @@ extension LoginMainViewController {
 
     
     
+}
+
+
+//MARK: Google Signin
+extension LoginMainViewController {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print(error.localizedDescription)
+            present(errorAlertView(error.localizedDescription), animated: true, completion: nil)
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential) { (user, error) in
+            if let error = (error as NSError?){
+                print(error.localizedDescription)
+                self.present(errorAlertView(error.localizedDescription), animated: true, completion: nil)
+                return
+            }
+            
+            self.performSegue(withIdentifier: "showMain", sender: nil)
+        }
+        
+        
+        
+    }
+    
+    @IBAction func googleButtonPressed(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
+    }
 }
 
 
