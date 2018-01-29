@@ -49,29 +49,48 @@ struct Service_Item {
                         completionHandlerItem(nil, true)
 
                     }
-                    
-                    
-                    
-                    
                 })
-                
-                
-                
-                
-                
-
             }
+        }
+    }
+    
+    
+    
+    
+    func searchItem(_ uid: String!, completionHandler: @escaping CompletionItem){
+        
+        let docRef = Service_Database().collectionItems.document(uid)
+        
+        docRef.getDocument { (document, error) in
+            if let error = (error as NSError?){
+                completionHandler(error.localizedDescription, nil)
+            } else {
+                //tenemos el document, creamos el item y le damo salida
+                print(document?.data())   //imprimimos en pantalla
+            }
+        }
+        
+    }
+    
+    func searchItemsByOwner(_ uidOwner: String!, completionHandler: @escaping CompletionArrayItems){
+        
+        Service_Database().collectionItems.whereField("owner", isEqualTo: uidOwner).getDocuments { (query, error) in
+            if let error = (error as NSError?){
+                completionHandler(error.localizedDescription, nil)
+            }
+            
+            
+            //sin error tenemos los documents
+            for quer in query!.documents {
+                print("Item:")
+                print(quer.data())
+            }
+            completionHandler(nil, nil)
         }
         
         
         
-        
-        
-        
-        
-        
     }
-    
     
     
     
