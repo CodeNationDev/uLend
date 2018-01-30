@@ -33,6 +33,13 @@ class Service_Auth {
                     if let error = (error as NSError?){
                         completionHandler(error.localizedDescription, nil)
                     } else {
+                        
+                        //se ha creado el user, creamos el profile
+                        Service_User().createUser(user?.uid, completionHandler: { (error, bool) in
+                            if error != nil {
+                                print(error)
+                            }
+                        })
                         completionHandler(nil, user)
                     }
                 })

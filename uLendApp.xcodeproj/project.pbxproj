@@ -18,6 +18,7 @@
 		3236DB1220177C9700D98EA4 /* ItemsOwnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB1120177C9700D98EA4 /* ItemsOwnViewController.swift */; };
 		3236DB1420177CD100D98EA4 /* ItemsNonOwnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB1320177CD100D98EA4 /* ItemsNonOwnViewController.swift */; };
 		32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32500B70200EB7E000927D15 /* CurrentUserViewController.swift */; };
+		3267744A2020C64800067E1E /* Service_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326774492020C64800067E1E /* Service_User.swift */; };
 		3279F9D420137F4B001D010F /* Service_Algolia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3279F9D320137F4B001D010F /* Service_Algolia.swift */; };
 		32BE44992006CFDC0012EE19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BE44982006CFDC0012EE19 /* AppDelegate.swift */; };
 		32BE449E2006CFDC0012EE19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449C2006CFDC0012EE19 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		3236DB1120177C9700D98EA4 /* ItemsOwnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsOwnViewController.swift; sourceTree = "<group>"; };
 		3236DB1320177CD100D98EA4 /* ItemsNonOwnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsNonOwnViewController.swift; sourceTree = "<group>"; };
 		32500B70200EB7E000927D15 /* CurrentUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserViewController.swift; sourceTree = "<group>"; };
+		326774492020C64800067E1E /* Service_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_User.swift; sourceTree = "<group>"; };
 		3279F9D320137F4B001D010F /* Service_Algolia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Algolia.swift; sourceTree = "<group>"; };
 		3279F9D620137FAB001D010F /* AlgoliaSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlgoliaSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE44952006CFDC0012EE19 /* uLendApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uLendApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +179,7 @@
 				3279F9D320137F4B001D010F /* Service_Algolia.swift */,
 				3236DB08201632B500D98EA4 /* Service_Database.swift */,
 				3236DB0A201635A400D98EA4 /* Service_Item.swift */,
+				326774492020C64800067E1E /* Service_User.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				3236DB1020177A4D00D98EA4 /* LoansPageViewController.swift in Sources */,
 				3236DB0520162B8C00D98EA4 /* GeoPosition.swift in Sources */,
 				3279F9D420137F4B001D010F /* Service_Algolia.swift in Sources */,
+				3267744A2020C64800067E1E /* Service_User.swift in Sources */,
 				32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */,
 				32C917452007A34B008F9A7C /* LoginMainViewController.swift in Sources */,
 				3236DB1420177CD100D98EA4 /* ItemsNonOwnViewController.swift in Sources */,
@@ -508,8 +512,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TLQTU79PLM;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = uLendApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nebpehtire.uLendApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -524,8 +529,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TLQTU79PLM;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = uLendApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nebpehtire.uLendApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
