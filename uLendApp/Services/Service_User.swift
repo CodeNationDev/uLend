@@ -28,6 +28,29 @@ final class Service_User {
         }
     }
     
+    /// update in the document of the user only one label
+    ///
+    /// - Parameters:
+    ///   - uidUser: uid of the user document
+    ///   - label: propertie name
+    ///   - data: data
+    ///   - completionHandler: return true if is ok
+    func updateLabel(_ uidUser: String!, _ label: String!, _ data: AnyObject, completionHandler: @escaping CompletionBool){
+        
+        let profile : Profile = [label:data]
+        servDB.collectionUsers.document(uidUser).setData(profile) { (error) in
+            if error != nil {
+                completionHandler(error?.localizedDescription, false)
+            } else {
+                completionHandler(nil, true)
+            }
+        }
+
+    }
+    
+    
+    
+    
     
     
 }
