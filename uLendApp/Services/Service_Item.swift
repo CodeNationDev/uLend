@@ -12,7 +12,7 @@ import Firebase
 
 struct Service_Item {
     
-    let servDB = Service_Database()
+    let servDBitems = Service_Database().collectionItems
     
     
     func createItem(_ uidUser: String!, name: String, mediaUrl: [String]?, description: String, mediaData: Data?, completionHandlerItem: @escaping CompletionBool){
@@ -26,7 +26,7 @@ struct Service_Item {
             ] as [String : Any]
         
         var ref: DocumentReference? = nil
-        ref = servDB.collectionItems.addDocument(data: profile) { (error) in
+        ref = servDBitems.addDocument(data: profile) { (error) in
             if error != nil {
                 print("error adding document")
                 completionHandlerItem(error?.localizedDescription, false)
@@ -54,13 +54,35 @@ struct Service_Item {
         }
     }
     
+    func updateAllProfile(_ item: Item!, completionHandler: @escaping CompletionBool){
+        servDBitems.document(item.uid!).setData(item.toProfile()) { (error) in
+            if let error = (error as NSError?){
+                completionHandler(error.localizedDescription, false)
+            } else {
+                completionHandler(nil, true)
+            }
+            
+        }
+    }
+    
+    func updateLabelbyUidItem(_ uidItem: String!, _ label: String, _ data: AnyObject, completionHandler: @escaping CompletionBool){
+        let profile = [label:data]
+        servDBitems.document(uidItem).setData(profile) { (error) in
+            if error != nil {
+                completionHandler(error?.localizedDescription, false)
+            } else {
+                completionHandler(nil, true)
+            }
+        }
+    }
+    
     
     
     
     func searchItem(_ uid: String!, completionHandler: @escaping CompletionItem){
         
         let docRef = Service_Database().collectionItems.document(uid)
-        
+
         docRef.getDocument { (document, error) in
             if let error = (error as NSError?){
                 completionHandler(error.localizedDescription, nil)
@@ -74,7 +96,7 @@ struct Service_Item {
     
     func searchItemsByOwner(_ uidOwner: String!, completionHandler: @escaping CompletionArrayItems){
         
-        Service_Database().collectionItems.whereField("owner", isEqualTo: uidOwner).getDocuments { (query, error) in
+        servDBitems.whereField("owner", isEqualTo: uidOwner).getDocuments { (query, error) in
             if let error = (error as NSError?){
                 completionHandler(error.localizedDescription, nil)
             }
