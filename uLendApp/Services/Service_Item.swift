@@ -67,13 +67,22 @@ struct Service_Item {
     
     func updateLabelbyUidItem(_ uidItem: String!, _ label: String, _ data: AnyObject, completionHandler: @escaping CompletionBool){
         let profile = [label:data]
-        servDBitems.document(uidItem).setData(profile) { (error) in
+        
+        
+        servDBitems.document(uidItem).updateData(profile) { (error) in
             if error != nil {
-                completionHandler(error?.localizedDescription, false)
+                    completionHandler(error?.localizedDescription, false)
             } else {
                 completionHandler(nil, true)
             }
         }
+//        servDBitems.document(uidItem).setData(profile) { (error) in
+//            if error != nil {
+//                completionHandler(error?.localizedDescription, false)
+//            } else {
+//                completionHandler(nil, true)
+//            }
+//        }
     }
     
     

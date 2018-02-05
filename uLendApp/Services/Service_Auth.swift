@@ -37,7 +37,7 @@ class Service_Auth {
                         //se ha creado el user, creamos el profile
                         Service_User().createUser(user?.uid, completionHandler: { (error, bool) in
                             if error != nil {
-                                print(error)
+                                print(error as Any)
                             }
                             
                             

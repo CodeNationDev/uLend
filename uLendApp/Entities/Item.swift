@@ -29,7 +29,7 @@ final class Item {
         
         //demasiado forzado mejor con guard??
 
-        self.uid = document.documentID as? String
+        self.uid = document.documentID
         self.uidOwner = document.data()?["uidOwner"] as? String
         self.name = document.data()?["name"] as? String
         self.description = document.data()?["description"] as? String ?? ""
