@@ -21,7 +21,7 @@ final class ItemsOwnViewController: UIViewController {
         
         
 
-
+        pruebasquefuncionan().probandoItemsArray()
         
       
     }

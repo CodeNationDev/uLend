@@ -30,6 +30,7 @@ struct pruebasquefuncionan {
                 print(error)
             } else {
                 //tenemos array :)
+                print(items)
             }
         }
     }
