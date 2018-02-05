@@ -12,18 +12,18 @@ import Firebase
 
 struct Service_Item {
     
-    let servDBitems = Service_Database().collectionItems
+    private let servDBitems = Service_Database().collectionItems
     
     
     func createItem(_ uidUser: String!, name: String, mediaUrl: [String]?, description: String, mediaData: Data?, completionHandlerItem: @escaping CompletionBool){
         
         //primero lo creamos en firestore
-        let profile = [
+        let profile: Profile = [
             "owner": uidUser,
             "name" : name,
             "description": description,
             "createdDate": Date().timeIntervalSince1970
-            ] as [String : Any]
+            ]
         
         var ref: DocumentReference? = nil
         ref = servDBitems.addDocument(data: profile) { (error) in

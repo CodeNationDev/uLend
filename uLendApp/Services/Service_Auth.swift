@@ -39,6 +39,13 @@ class Service_Auth {
                             if error != nil {
                                 print(error)
                             }
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                         })
                         completionHandler(nil, user)
                     }
