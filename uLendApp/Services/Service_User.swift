@@ -35,17 +35,21 @@ final class Service_User {
     ///   - label: propertie name
     ///   - data: data
     ///   - completionHandler: return true if is ok
-    func updateLabel(_ uidUser: String!, _ label: String!, _ data: AnyObject, completionHandler: @escaping CompletionBool){
-        
-        let profile : Profile = [label:data]
-        servDB.collectionUsers.document(uidUser).setData(profile) { (error) in
-            if error != nil {
-                completionHandler(error?.localizedDescription, false)
+    func updateLabel(_ uidUser: String!, _ label: String!, _ data: Any, completionHandler: @escaping CompletionBool){
+       
+        var profile = Profile()
+
+        profile[label] = data
+        profile["lastUpdated"] = FieldValue.serverTimestamp()
+
+        servDB.collectionUsers.document(uidUser).updateData(profile) { error in
+            if let error = error {
+                completionHandler(error.localizedDescription, false)
             } else {
                 completionHandler(nil, true)
             }
         }
-
+        
     }
     
     

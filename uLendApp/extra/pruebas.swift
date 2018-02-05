@@ -12,7 +12,7 @@ struct pruebasquefuncionan {
     
     
     func probandochangelabel(){
-        Service_Item().updateLabelbyUidItem("0vF3ut41l5376o8JitEB", "name", "mequetrefe" as AnyObject) { (error, bool) in
+        Service_Item().updateLabelbyUidItem("0vF3ut41l5376o8JitEB", "name", "lerele") { (error, bool) in
             if error != nil {
                 print(error!)
             } else {
@@ -43,6 +43,16 @@ struct pruebasquefuncionan {
             } else {
                 //tenemos array :)
                 print(items as Any)
+            }
+        }
+    }
+    
+    func pruebasconuser(){
+        Service_User().updateLabel("JsIBXfzufTTFvJPHNJ9UnnbwVIr2", "surname", "pocholo") { (error, bool) in
+            if error != nil {
+                print(error as Any)
+            } else {
+                print(bool)
             }
         }
     }

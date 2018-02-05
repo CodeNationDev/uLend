@@ -65,7 +65,7 @@ struct Service_Item {
         }
     }
     
-    func updateLabelbyUidItem(_ uidItem: String!, _ label: String, _ data: AnyObject, completionHandler: @escaping CompletionBool){
+    func updateLabelbyUidItem(_ uidItem: String!, _ label: String, _ data: AnyHashable, completionHandler: @escaping CompletionBool){
         let profile = [label:data]
         
         
@@ -76,13 +76,7 @@ struct Service_Item {
                 completionHandler(nil, true)
             }
         }
-//        servDBitems.document(uidItem).setData(profile) { (error) in
-//            if error != nil {
-//                completionHandler(error?.localizedDescription, false)
-//            } else {
-//                completionHandler(nil, true)
-//            }
-//        }
+
     }
     
     
