@@ -28,6 +28,33 @@ final class Service_User {
         }
     }
     
+    /// update in the document of the user only one label
+    ///
+    /// - Parameters:
+    ///   - uidUser: uid of the user document
+    ///   - label: propertie name
+    ///   - data: data
+    ///   - completionHandler: return true if is ok
+    func updateLabel(_ uidUser: String!, _ label: String!, _ data: Any, completionHandler: @escaping CompletionBool){
+       
+        var profile = Profile()
+
+        profile[label] = data
+        profile["lastUpdated"] = FieldValue.serverTimestamp()
+
+        servDB.collectionUsers.document(uidUser).updateData(profile) { error in
+            if let error = error {
+                completionHandler(error.localizedDescription, false)
+            } else {
+                completionHandler(nil, true)
+            }
+        }
+        
+    }
+    
+    
+    
+    
     
     
 }

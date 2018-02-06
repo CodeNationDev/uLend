@@ -19,7 +19,11 @@
 		3236DB1420177CD100D98EA4 /* ItemsNonOwnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB1320177CD100D98EA4 /* ItemsNonOwnViewController.swift */; };
 		32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32500B70200EB7E000927D15 /* CurrentUserViewController.swift */; };
 		3267744A2020C64800067E1E /* Service_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326774492020C64800067E1E /* Service_User.swift */; };
+		3267744C202215C200067E1E /* pruebas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267744B202215C200067E1E /* pruebas.swift */; };
 		3279F9D420137F4B001D010F /* Service_Algolia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3279F9D320137F4B001D010F /* Service_Algolia.swift */; };
+		3284072020250E600088F7A0 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284071F20250E600088F7A0 /* Loan.swift */; };
+		3284072220250F060088F7A0 /* enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284072120250F060088F7A0 /* enum.swift */; };
+		32840724202510830088F7A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32840723202510830088F7A0 /* User.swift */; };
 		32BE44992006CFDC0012EE19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BE44982006CFDC0012EE19 /* AppDelegate.swift */; };
 		32BE449E2006CFDC0012EE19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449C2006CFDC0012EE19 /* Main.storyboard */; };
 		32BE44A02006CFDC0012EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449F2006CFDC0012EE19 /* Assets.xcassets */; };
@@ -45,8 +49,12 @@
 		3236DB1320177CD100D98EA4 /* ItemsNonOwnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsNonOwnViewController.swift; sourceTree = "<group>"; };
 		32500B70200EB7E000927D15 /* CurrentUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserViewController.swift; sourceTree = "<group>"; };
 		326774492020C64800067E1E /* Service_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_User.swift; sourceTree = "<group>"; };
+		3267744B202215C200067E1E /* pruebas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebas.swift; sourceTree = "<group>"; };
 		3279F9D320137F4B001D010F /* Service_Algolia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Algolia.swift; sourceTree = "<group>"; };
 		3279F9D620137FAB001D010F /* AlgoliaSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlgoliaSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3284071F20250E600088F7A0 /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
+		3284072120250F060088F7A0 /* enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enum.swift; sourceTree = "<group>"; };
+		32840723202510830088F7A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		32BE44952006CFDC0012EE19 /* uLendApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uLendApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE44982006CFDC0012EE19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32BE449D2006CFDC0012EE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,6 +168,8 @@
 			children = (
 				3236DB0220162A7000D98EA4 /* Item.swift */,
 				3236DB0420162B8C00D98EA4 /* GeoPosition.swift */,
+				3284071F20250E600088F7A0 /* Loan.swift */,
+				32840723202510830088F7A0 /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -189,6 +199,8 @@
 			children = (
 				32C9174A2007A910008F9A7C /* Typealias.swift */,
 				32C9174C2007A96A008F9A7C /* functions.swift */,
+				3267744B202215C200067E1E /* pruebas.swift */,
+				3284072120250F060088F7A0 /* enum.swift */,
 			);
 			path = extra;
 			sourceTree = "<group>";
@@ -359,6 +371,7 @@
 			files = (
 				3236DB0B201635A400D98EA4 /* Service_Item.swift in Sources */,
 				32234449201BD286008D0EBB /* AlgoliaKeys.swift in Sources */,
+				3284072020250E600088F7A0 /* Loan.swift in Sources */,
 				3236DB0320162A7000D98EA4 /* Item.swift in Sources */,
 				322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */,
 				3236DB09201632B500D98EA4 /* Service_Database.swift in Sources */,
@@ -366,6 +379,7 @@
 				3236DB0520162B8C00D98EA4 /* GeoPosition.swift in Sources */,
 				3279F9D420137F4B001D010F /* Service_Algolia.swift in Sources */,
 				3267744A2020C64800067E1E /* Service_User.swift in Sources */,
+				3284072220250F060088F7A0 /* enum.swift in Sources */,
 				32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */,
 				32C917452007A34B008F9A7C /* LoginMainViewController.swift in Sources */,
 				3236DB1420177CD100D98EA4 /* ItemsNonOwnViewController.swift in Sources */,
@@ -373,7 +387,9 @@
 				3236DB1220177C9700D98EA4 /* ItemsOwnViewController.swift in Sources */,
 				32C917482007A852008F9A7C /* Service_Auth.swift in Sources */,
 				32C9174B2007A910008F9A7C /* Typealias.swift in Sources */,
+				3267744C202215C200067E1E /* pruebas.swift in Sources */,
 				32C9174D2007A96A008F9A7C /* functions.swift in Sources */,
+				32840724202510830088F7A0 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

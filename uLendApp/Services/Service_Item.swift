@@ -12,42 +12,39 @@ import Firebase
 
 struct Service_Item {
     
-    let servDB = Service_Database()
+    private let servDBitems = Service_Database().collectionItems
     
     
-    func createItem(_ uidUser: String!, name: String, mediaUrl: [String]?, description: String, mediaData: Data?, completionHandlerItem: @escaping CompletionBool){
+    func createItem(_ uidUser: String!, name: String, mediaUrl: [String]?, description: String?, mediaData: Data?, completionHandlerItem: @escaping CompletionItem){
         
         //primero lo creamos en firestore
-        let profile = [
+        let profile: Profile = [
             "owner": uidUser,
             "name" : name,
-            "description": description,
+            "description": description ?? "",
             "createdDate": Date().timeIntervalSince1970
-            ] as [String : Any]
+            ]
         
         var ref: DocumentReference? = nil
-        ref = servDB.collectionItems.addDocument(data: profile) { (error) in
+        ref = servDBitems.addDocument(data: profile) { (error) in
             if error != nil {
                 print("error adding document")
-                completionHandlerItem(error?.localizedDescription, false)
+                completionHandlerItem(error?.localizedDescription, nil)
             } else {
                 print("Document added with ID: \(ref!.documentID)")
                 
                 // se debe añadir a algolia
                 //creamos el item en local
                 let item = Item()
-                item.description = description
+                item.description = description ?? ""
                 item.name = name
                 item.uid = ref?.documentID
                 
                 Service_Algolia().saveItem(item, { (errorAlg, content) in
                     if error != nil {
-                        print(errorAlg)
-                        completionHandlerItem(errorAlg, false)
+                        completionHandlerItem(errorAlg, item)
                     } else {
-                        print(content)
-                        completionHandlerItem(nil, true)
-
+                        completionHandlerItem(nil, item)
                     }
                 })
             }
@@ -57,38 +54,80 @@ struct Service_Item {
     
     
     
+    func updateAllProfile(_ item: Item!, completionHandler: @escaping CompletionBool){
+        servDBitems.document(item.uid!).setData(item.toProfile()) { (error) in
+            if let error = (error as NSError?){
+                completionHandler(error.localizedDescription, false)
+            } else {
+                completionHandler(nil, true)
+            }
+            
+        }
+    }
+    
+    func updateLabelbyUidItem(_ uidItem: String!, _ label: String, _ data: AnyHashable, completionHandler: @escaping CompletionBool){
+        let profile = [label:data]
+        
+        
+        servDBitems.document(uidItem).updateData(profile) { (error) in
+            if error != nil {
+                    completionHandler(error?.localizedDescription, false)
+            } else {
+                completionHandler(nil, true)
+            }
+        }
+
+    }
+    
+    
+    
+    
+    /// Búsqueda de un ítem por su uid
+    ///
+    /// - Parameters:
+    ///   - uid: uid del item
+    ///   - completionHandler: error? o Item?
     func searchItem(_ uid: String!, completionHandler: @escaping CompletionItem){
         
         let docRef = Service_Database().collectionItems.document(uid)
-        
+
         docRef.getDocument { (document, error) in
             if let error = (error as NSError?){
                 completionHandler(error.localizedDescription, nil)
             } else {
-                //tenemos el document, creamos el item y le damo salida
-                print(document?.data())   //imprimimos en pantalla
+                let item = Item(document: document)
+                completionHandler(nil, item)
             }
         }
         
     }
     
+    
+    
+    
+    
+    
+    
+    /// Items de un usuario
+    ///
+    /// - Parameters:
+    ///   - uidOwner: uid del usuario
+    ///   - completionHandler: error? o Array de Items?
     func searchItemsByOwner(_ uidOwner: String!, completionHandler: @escaping CompletionArrayItems){
         
-        Service_Database().collectionItems.whereField("owner", isEqualTo: uidOwner).getDocuments { (query, error) in
+        servDBitems.whereField("owner", isEqualTo: uidOwner).getDocuments { (documents, error) in
             if let error = (error as NSError?){
                 completionHandler(error.localizedDescription, nil)
             }
+
+            var items = [Item]()
             
-            
-            //sin error tenemos los documents
-            for quer in query!.documents {
-                print("Item:")
-                print(quer.data())
+            for document in documents!.documents {
+                items.append(Item(document: document))
             }
-            completionHandler(nil, nil)
+
+            completionHandler(nil, items)
         }
-        
-        
         
     }
     
