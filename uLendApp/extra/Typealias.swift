@@ -11,6 +11,7 @@ import FirebaseAuth
 
 
 typealias Profile = Dictionary<String, Any>
+typealias ProfileAnyHashable = Dictionary<String, AnyHashable>
 
 typealias CompletionAnyObject = (_ error: String?, _ data: AnyObject?) -> Void
 typealias CompletionUserFirebase = (_ error: String?, _ data: User?) -> Void

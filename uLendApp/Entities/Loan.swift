@@ -12,8 +12,8 @@ final class Loan {
     
     var uid: String!
     var item: Item!
-    var ownerUser: UserUlend!
-    var loanUser: UserUlend!
+    var ownerUser: UserUlend?
+    var loanUser: UserUlend?
     
     var status: loanstatus!
     var petitiondate: String!
@@ -28,6 +28,8 @@ final class Loan {
         self.status = loanstatus.ordered
         self.petitiondate = Date().description
     }
+    
+
     
     
     
