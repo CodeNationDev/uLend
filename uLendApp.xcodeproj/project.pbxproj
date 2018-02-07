@@ -24,6 +24,9 @@
 		3284072020250E600088F7A0 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284071F20250E600088F7A0 /* Loan.swift */; };
 		3284072220250F060088F7A0 /* enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284072120250F060088F7A0 /* enum.swift */; };
 		32840724202510830088F7A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32840723202510830088F7A0 /* User.swift */; };
+		32ABD9612029F31B00100977 /* itemCreateNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ABD9602029F31B00100977 /* itemCreateNewViewController.swift */; };
+		32ABD968202A077100100977 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ABD967202A077100100977 /* CameraViewController.swift */; };
+		32ABD96C202A652A00100977 /* Service_Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ABD96B202A652A00100977 /* Service_Loan.swift */; };
 		32BE44992006CFDC0012EE19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BE44982006CFDC0012EE19 /* AppDelegate.swift */; };
 		32BE449E2006CFDC0012EE19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449C2006CFDC0012EE19 /* Main.storyboard */; };
 		32BE44A02006CFDC0012EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449F2006CFDC0012EE19 /* Assets.xcassets */; };
@@ -55,6 +58,9 @@
 		3284071F20250E600088F7A0 /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		3284072120250F060088F7A0 /* enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enum.swift; sourceTree = "<group>"; };
 		32840723202510830088F7A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		32ABD9602029F31B00100977 /* itemCreateNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemCreateNewViewController.swift; sourceTree = "<group>"; };
+		32ABD967202A077100100977 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		32ABD96B202A652A00100977 /* Service_Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Loan.swift; sourceTree = "<group>"; };
 		32BE44952006CFDC0012EE19 /* uLendApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uLendApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE44982006CFDC0012EE19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32BE449D2006CFDC0012EE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +109,7 @@
 			children = (
 				3236DB0F20177A4D00D98EA4 /* LoansPageViewController.swift */,
 				322344402018CF16008D0EBB /* ItemPageViewController.swift */,
+				32ABD9602029F31B00100977 /* itemCreateNewViewController.swift */,
 			);
 			path = PageControllers;
 			sourceTree = "<group>";
@@ -115,6 +122,14 @@
 				3236DB1320177CD100D98EA4 /* ItemsNonOwnViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		32ABD966202A076400100977 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				32ABD967202A077100100977 /* CameraViewController.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		32BE448C2006CFDC0012EE19 = {
@@ -156,6 +171,7 @@
 		32C917412007A1A2008F9A7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				32ABD966202A076400100977 /* Camera */,
 				3236DB0C20177A1900D98EA4 /* PageControllers */,
 				32500B6E2009721D00927D15 /* Main */,
 				32C917432007A332008F9A7C /* LoginMainView */,
@@ -190,6 +206,7 @@
 				3236DB08201632B500D98EA4 /* Service_Database.swift */,
 				3236DB0A201635A400D98EA4 /* Service_Item.swift */,
 				326774492020C64800067E1E /* Service_User.swift */,
+				32ABD96B202A652A00100977 /* Service_Loan.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -372,9 +389,11 @@
 				3236DB0B201635A400D98EA4 /* Service_Item.swift in Sources */,
 				32234449201BD286008D0EBB /* AlgoliaKeys.swift in Sources */,
 				3284072020250E600088F7A0 /* Loan.swift in Sources */,
+				32ABD968202A077100100977 /* CameraViewController.swift in Sources */,
 				3236DB0320162A7000D98EA4 /* Item.swift in Sources */,
 				322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */,
 				3236DB09201632B500D98EA4 /* Service_Database.swift in Sources */,
+				32ABD96C202A652A00100977 /* Service_Loan.swift in Sources */,
 				3236DB1020177A4D00D98EA4 /* LoansPageViewController.swift in Sources */,
 				3236DB0520162B8C00D98EA4 /* GeoPosition.swift in Sources */,
 				3279F9D420137F4B001D010F /* Service_Algolia.swift in Sources */,
@@ -385,6 +404,7 @@
 				3236DB1420177CD100D98EA4 /* ItemsNonOwnViewController.swift in Sources */,
 				32BE44992006CFDC0012EE19 /* AppDelegate.swift in Sources */,
 				3236DB1220177C9700D98EA4 /* ItemsOwnViewController.swift in Sources */,
+				32ABD9612029F31B00100977 /* itemCreateNewViewController.swift in Sources */,
 				32C917482007A852008F9A7C /* Service_Auth.swift in Sources */,
 				32C9174B2007A910008F9A7C /* Typealias.swift in Sources */,
 				3267744C202215C200067E1E /* pruebas.swift in Sources */,
