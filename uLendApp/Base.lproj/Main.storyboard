@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -473,11 +474,11 @@
         <!--itemsPage-->
         <scene sceneID="IY6-xE-ViJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vWn-L7-zGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" title="itemsPage" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Jgg-xH-BaT" customClass="ItemPageViewController" customModule="uLendApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Items" image="SearchIcon" id="bMI-Lr-E8F"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWn-L7-zGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-238" y="-962"/>
         </scene>
@@ -517,55 +518,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dAK-i4-9HH" userLabel="Top">
-                                <rect key="frame" x="0.0" y="44" width="375" height="220"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="heX-5K-f8z" userLabel="Image and Name">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ks7-OG-OU5">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="0cd-qd-86q"/>
-                                                    <constraint firstAttribute="height" constant="220" id="tZ8-Zh-jqK"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DDN-i5-lTr" userLabel="Buttons items and loans">
-                                        <rect key="frame" x="200" y="0.0" width="175" height="220"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dE2-Xk-0hI">
-                                                <rect key="frame" x="0.0" y="0.0" width="175" height="73.333333333333329"/>
-                                                <color key="backgroundColor" red="0.64914279513888884" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="Items Count"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50o-sp-RlF">
-                                                <rect key="frame" x="0.0" y="73.333333333333343" width="175" height="73.333333333333343"/>
-                                                <color key="backgroundColor" red="0.64914279509999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="OwnLoans Count"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrF-Kw-YB0">
-                                                <rect key="frame" x="0.0" y="146.66666666666666" width="175" height="73.333333333333343"/>
-                                                <color key="backgroundColor" red="0.64914279509999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="otherLoans Count"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="email@emailusuario.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3u-qe-aN3" userLabel="email">
+                                <rect key="frame" x="0.0" y="265" width="375" height="21"/>
                                 <constraints>
-                                    <constraint firstItem="heX-5K-f8z" firstAttribute="top" secondItem="dAK-i4-9HH" secondAttribute="top" id="KX4-yy-WEb"/>
-                                    <constraint firstAttribute="bottom" secondItem="heX-5K-f8z" secondAttribute="bottom" id="dcj-pV-zKC"/>
-                                    <constraint firstItem="heX-5K-f8z" firstAttribute="leading" secondItem="dAK-i4-9HH" secondAttribute="leading" id="ly8-vU-m7o"/>
-                                    <constraint firstAttribute="bottom" secondItem="DDN-i5-lTr" secondAttribute="bottom" id="ulL-hA-q5W"/>
+                                    <constraint firstAttribute="width" secondItem="w3u-qe-aN3" secondAttribute="height" multiplier="125:7" id="QJY-gs-1lV"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ks7-OG-OU5">
+                                <rect key="frame" x="0.0" y="44" width="375" height="168"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="David Martín Sáiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G31-ob-nRA" userLabel="Nombre">
+                                <rect key="frame" x="0.0" y="220" width="375" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G31-ob-nRA" secondAttribute="height" multiplier="375:37" id="mHg-kA-ifJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DDN-i5-lTr" userLabel="Buttons items and loans">
+                                <rect key="frame" x="126" y="531" width="123" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dE2-Xk-0hI">
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30"/>
+                                        <color key="backgroundColor" red="0.64914279513888884" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Items Count"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50o-sp-RlF">
+                                        <rect key="frame" x="0.0" y="30" width="123" height="30"/>
+                                        <color key="backgroundColor" red="0.64914279509999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="OwnLoans Count"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrF-Kw-YB0">
+                                        <rect key="frame" x="0.0" y="60" width="123" height="30"/>
+                                        <color key="backgroundColor" red="0.64914279509999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="otherLoans Count"/>
+                                    </button>
+                                </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="dAK-i4-9HH" firstAttribute="top" secondItem="Pg5-pP-1xi" secondAttribute="top" id="QXS-d8-dlW"/>
-                            <constraint firstItem="dAK-i4-9HH" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" id="Qau-w2-iwp"/>
-                            <constraint firstItem="dAK-i4-9HH" firstAttribute="trailing" secondItem="Pg5-pP-1xi" secondAttribute="trailing" id="iax-rn-Cng"/>
+                            <constraint firstItem="w3u-qe-aN3" firstAttribute="top" secondItem="G31-ob-nRA" secondAttribute="bottom" constant="8" id="Iw2-4j-oJz"/>
+                            <constraint firstItem="G31-ob-nRA" firstAttribute="trailing" secondItem="Pg5-pP-1xi" secondAttribute="trailing" id="K4u-8o-ZNp"/>
+                            <constraint firstItem="w3u-qe-aN3" firstAttribute="top" secondItem="G31-ob-nRA" secondAttribute="bottom" constant="8" id="Lqf-Q5-5vF"/>
+                            <constraint firstItem="w3u-qe-aN3" firstAttribute="trailing" secondItem="Pg5-pP-1xi" secondAttribute="trailing" id="QA1-vh-9YV"/>
+                            <constraint firstItem="G31-ob-nRA" firstAttribute="top" secondItem="ks7-OG-OU5" secondAttribute="bottom" constant="8" id="Qc2-ze-wOh"/>
+                            <constraint firstItem="G31-ob-nRA" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" id="RsA-Sz-ZGW"/>
+                            <constraint firstItem="G31-ob-nRA" firstAttribute="top" secondItem="ks7-OG-OU5" secondAttribute="bottom" constant="8" id="VCP-k1-34v"/>
+                            <constraint firstItem="w3u-qe-aN3" firstAttribute="top" secondItem="G31-ob-nRA" secondAttribute="bottom" constant="8" id="XDX-RN-720"/>
+                            <constraint firstItem="w3u-qe-aN3" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" id="bha-L7-nxy"/>
+                            <constraint firstItem="w3u-qe-aN3" firstAttribute="top" secondItem="G31-ob-nRA" secondAttribute="bottom" constant="8" id="wrU-sb-Y6I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pg5-pP-1xi"/>
                     </view>
@@ -573,7 +580,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTl-gQ-js7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2036" y="1134"/>
+            <point key="canvasLocation" x="2036" y="1133.497536945813"/>
         </scene>
     </scenes>
     <resources>
