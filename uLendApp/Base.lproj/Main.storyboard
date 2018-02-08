@@ -184,6 +184,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2i-pf-SCS">
+                                <rect key="frame" x="67" y="44" width="240" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -199,6 +203,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CSS-Ri-poA"/>
                     </view>
+                    <connections>
+                        <outlet property="prueba" destination="u2i-pf-SCS" id="nq8-cp-v6j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k11-ew-Euc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -214,51 +221,83 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obx-Ie-szB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ex3-AK-yGK">
-                                        <rect key="frame" x="8" y="740" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="M03-Yu-ukZ"/>
-                                        </constraints>
-                                        <state key="normal" title="Exit"/>
-                                        <connections>
-                                            <action selector="exitButtonPressed:" destination="9MV-ZI-IzD" eventType="touchUpInside" id="oGp-Pl-Iep"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECU-pE-Zzm">
-                                        <rect key="frame" x="149" y="693" width="77" height="77"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="77" id="87U-mE-OI4"/>
-                                            <constraint firstAttribute="height" constant="77" id="V5s-hw-gEc"/>
-                                            <constraint firstAttribute="width" constant="77" id="ZwP-9e-Ztz"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="77" id="aZf-OW-3uM"/>
-                                        </constraints>
-                                        <state key="normal" image="capture"/>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="Ex3-AK-yGK" firstAttribute="leading" secondItem="Obx-Ie-szB" secondAttribute="leading" constant="8" id="B4y-TL-ZTh"/>
-                                    <constraint firstAttribute="bottom" secondItem="ECU-pE-Zzm" secondAttribute="bottom" constant="42" id="RdW-gB-4QB"/>
-                                    <constraint firstItem="ECU-pE-Zzm" firstAttribute="centerX" secondItem="Obx-Ie-szB" secondAttribute="centerX" id="eWx-IK-70F"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ex3-AK-yGK" secondAttribute="bottom" constant="42" id="gOp-xU-VIA"/>
-                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ex3-AK-yGK">
+                                <rect key="frame" x="16" y="738" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ABn-vY-uJM"/>
+                                    <constraint firstAttribute="width" constant="30" id="f4q-R4-Pew"/>
+                                </constraints>
+                                <state key="normal" title="Exit"/>
+                                <connections>
+                                    <action selector="exitButtonPressed:" destination="9MV-ZI-IzD" eventType="touchUpInside" id="oGp-Pl-Iep"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECU-pE-Zzm">
+                                <rect key="frame" x="149" y="691" width="77" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="2di-SF-ySM"/>
+                                    <constraint firstAttribute="width" constant="77" id="5jq-9I-Mjy"/>
+                                </constraints>
+                                <state key="normal" image="capture"/>
+                                <connections>
+                                    <action selector="pressedTakePhoto" destination="9MV-ZI-IzD" eventType="touchUpInside" id="cOY-RY-3yD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Obx-Ie-szB" firstAttribute="leading" secondItem="YOW-Uh-41U" secondAttribute="leading" id="6J0-n7-jCI"/>
-                            <constraint firstAttribute="bottom" secondItem="Obx-Ie-szB" secondAttribute="bottom" id="Kld-v3-e3C"/>
-                            <constraint firstItem="Obx-Ie-szB" firstAttribute="top" secondItem="e8p-8o-4kU" secondAttribute="top" id="Wdc-fV-Ob1"/>
-                            <constraint firstItem="Obx-Ie-szB" firstAttribute="trailing" secondItem="YOW-Uh-41U" secondAttribute="trailing" id="ply-tb-WjQ"/>
+                            <constraint firstItem="Obx-Ie-szB" firstAttribute="top" secondItem="e8p-8o-4kU" secondAttribute="top" id="66p-Ux-raf"/>
+                            <constraint firstItem="Obx-Ie-szB" firstAttribute="leading" secondItem="YOW-Uh-41U" secondAttribute="leading" id="IdI-26-RD8"/>
+                            <constraint firstItem="YOW-Uh-41U" firstAttribute="bottom" secondItem="ECU-pE-Zzm" secondAttribute="bottom" constant="10" id="O4f-g7-mrJ"/>
+                            <constraint firstItem="Ex3-AK-yGK" firstAttribute="leading" secondItem="YOW-Uh-41U" secondAttribute="leading" constant="16" id="g8e-Qo-rqI"/>
+                            <constraint firstItem="Obx-Ie-szB" firstAttribute="trailing" secondItem="YOW-Uh-41U" secondAttribute="trailing" id="ofv-XC-laj"/>
+                            <constraint firstItem="ECU-pE-Zzm" firstAttribute="centerX" secondItem="e8p-8o-4kU" secondAttribute="centerX" id="pJ0-MZ-Cun"/>
+                            <constraint firstItem="YOW-Uh-41U" firstAttribute="bottom" secondItem="Ex3-AK-yGK" secondAttribute="bottom" constant="10" id="qms-dW-o0r"/>
+                            <constraint firstAttribute="bottom" secondItem="Obx-Ie-szB" secondAttribute="bottom" id="rZu-sk-0az"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YOW-Uh-41U"/>
                     </view>
                     <connections>
                         <outlet property="cameraView" destination="Obx-Ie-szB" id="Wxt-Qe-4J5"/>
+                        <outlet property="captureBTN" destination="ECU-pE-Zzm" id="8kz-gn-YWu"/>
+                        <outlet property="exitButton" destination="Ex3-AK-yGK" id="zzv-BR-FIl"/>
+                        <outlet property="preView" destination="5Nh-pW-ceH" id="iIo-pR-npE"/>
+                        <outlet property="temporalImageView" destination="hgJ-Ux-ZSV" id="Jom-bD-Lme"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bC4-gb-MJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="5Nh-pW-ceH">
+                    <rect key="frame" x="0.0" y="0.0" width="316" height="599"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hgJ-Ux-ZSV">
+                            <rect key="frame" x="0.0" y="0.0" width="316" height="599"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPZ-ki-sSW">
+                            <rect key="frame" x="62" y="547" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="OK"/>
+                            <connections>
+                                <action selector="okSavePhoto" destination="9MV-ZI-IzD" eventType="touchUpInside" id="gON-QN-pfn"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPq-nb-qJU">
+                            <rect key="frame" x="234" y="547" width="48" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Cancel"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="hgJ-Ux-ZSV" firstAttribute="trailing" secondItem="6Op-l4-O0K" secondAttribute="trailing" id="EuM-ct-YxK"/>
+                        <constraint firstItem="hgJ-Ux-ZSV" firstAttribute="top" secondItem="5Nh-pW-ceH" secondAttribute="top" id="SHt-8K-W5J"/>
+                        <constraint firstItem="hgJ-Ux-ZSV" firstAttribute="leading" secondItem="6Op-l4-O0K" secondAttribute="leading" id="te6-lf-dRi"/>
+                        <constraint firstAttribute="bottom" secondItem="hgJ-Ux-ZSV" secondAttribute="bottom" id="yJA-Lb-bqA"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="6Op-l4-O0K"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="3482.4000000000001" y="-1666.2561576354681"/>
         </scene>

@@ -10,6 +10,12 @@ import UIKit
 
 class itemCreateNewViewController: UIViewController {
 
+    
+    @IBOutlet var prueba: UIImageView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,6 +35,16 @@ class itemCreateNewViewController: UIViewController {
     
     @IBAction func cancelPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? CameraViewController {
+            vc.backVC = self
+        }
+        
     }
 
 }
