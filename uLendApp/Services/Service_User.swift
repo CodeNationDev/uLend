@@ -18,7 +18,8 @@ final class Service_User {
         let profile: ProfileAnyHashable = [
             "name":"your name",
             "surname":"your surname",
-            "creationDate": FieldValue.serverTimestamp()
+            "creationDate": FieldValue.serverTimestamp(),
+            "email": (Auth.auth().currentUser?.email)!
         ]
         servDB.collectionUsers.document(uidUser).setData(profile) { (error) in
             if let error = error {

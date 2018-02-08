@@ -11,7 +11,7 @@ import AVFoundation
 import CoreML
 import Vision
 
-class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
+final class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
 
 //
 //    @IBOutlet var retakeButton: UIButton!
@@ -58,6 +58,7 @@ extension CameraViewController {
         
         self.captureSession = AVCaptureSession()
         self.captureSession?.sessionPreset = AVCaptureSession.Preset.hd1920x1080
+        
         
         let backCamera = AVCaptureDevice.default(for: AVMediaType.video)
         
@@ -124,12 +125,23 @@ extension CameraViewController {
         preView.center = self.view.center
         
         
-        exitButton.isHidden = true
+        
     }
     
     
     @IBAction func okSavePhoto(){
+        
+        if self.backVC?.arrayImages == nil {
+            print("entramos aquí")
+            self.backVC?.initializeArray()
+        }
+        
         self.backVC?.prueba.image = temporalImageView.image!
+        self.backVC?.arrayImages?.append(temporalImageView.image!)
+        self.backVC?.reloadCollection()
+        
+        print(self.backVC?.arrayImages?.count)
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -137,33 +149,16 @@ extension CameraViewController {
     @IBAction func pressedTakePhoto(){
         self.photoOutPut?.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
         self.captureBTN.isHidden = true
+        self.exitButton.isHidden = true
     }
     
     
+    @IBAction func cancelPreview(){
+        self.preView.removeFromSuperview()
+        self.exitButton.isHidden = false
+        self.captureBTN.isHidden = false
+    }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
 }

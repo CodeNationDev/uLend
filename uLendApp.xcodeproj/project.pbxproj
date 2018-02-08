@@ -31,6 +31,7 @@
 		32BE449E2006CFDC0012EE19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449C2006CFDC0012EE19 /* Main.storyboard */; };
 		32BE44A02006CFDC0012EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449F2006CFDC0012EE19 /* Assets.xcassets */; };
 		32BE44A32006CFDC0012EE19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BE44A12006CFDC0012EE19 /* LaunchScreen.storyboard */; };
+		32C36443202C92F50050901B /* NewItemImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C36442202C92F50050901B /* NewItemImageCell.swift */; };
 		32C917452007A34B008F9A7C /* LoginMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C917442007A34B008F9A7C /* LoginMainViewController.swift */; };
 		32C917482007A852008F9A7C /* Service_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C917472007A852008F9A7C /* Service_Auth.swift */; };
 		32C9174B2007A910008F9A7C /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9174A2007A910008F9A7C /* Typealias.swift */; };
@@ -67,6 +68,7 @@
 		32BE449F2006CFDC0012EE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32BE44A22006CFDC0012EE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32BE44A42006CFDC0012EE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32C36442202C92F50050901B /* NewItemImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemImageCell.swift; sourceTree = "<group>"; };
 		32C917442007A34B008F9A7C /* LoginMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainViewController.swift; sourceTree = "<group>"; };
 		32C917472007A852008F9A7C /* Service_Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Auth.swift; sourceTree = "<group>"; };
 		32C9174A2007A910008F9A7C /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
@@ -168,9 +170,18 @@
 			path = uLendApp;
 			sourceTree = "<group>";
 		};
+		32C36441202C92870050901B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				32C36442202C92F50050901B /* NewItemImageCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		32C917412007A1A2008F9A7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				32C36441202C92870050901B /* Cells */,
 				32ABD966202A076400100977 /* Camera */,
 				3236DB0C20177A1900D98EA4 /* PageControllers */,
 				32500B6E2009721D00927D15 /* Main */,
@@ -391,6 +402,7 @@
 				3284072020250E600088F7A0 /* Loan.swift in Sources */,
 				32ABD968202A077100100977 /* CameraViewController.swift in Sources */,
 				3236DB0320162A7000D98EA4 /* Item.swift in Sources */,
+				32C36443202C92F50050901B /* NewItemImageCell.swift in Sources */,
 				322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */,
 				3236DB09201632B500D98EA4 /* Service_Database.swift in Sources */,
 				32ABD96C202A652A00100977 /* Service_Loan.swift in Sources */,
