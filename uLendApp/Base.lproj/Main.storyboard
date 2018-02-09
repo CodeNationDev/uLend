@@ -475,33 +475,24 @@
         <scene sceneID="HRy-9U-Ccq">
             <objects>
                 <viewController id="XZe-PG-WoN" customClass="CurrentUserViewController" customModule="uLendApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cr1-d8-mZV">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="cr1-d8-mZV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="email@emailusuario.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3u-qe-aN3" userLabel="email">
-                                <rect key="frame" x="0.0" y="265" width="375" height="21"/>
+                            <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ks7-OG-OU5">
+                                <rect key="frame" x="55" y="84" width="265" height="154"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="w3u-qe-aN3" secondAttribute="height" multiplier="125:7" id="QJY-gs-1lV"/>
+                                    <constraint firstAttribute="width" secondItem="ks7-OG-OU5" secondAttribute="height" multiplier="265:154" id="LE3-Tz-FMa"/>
                                 </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email@emailusuario.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3u-qe-aN3" userLabel="email">
+                                <rect key="frame" x="80" y="318.66666666666669" width="215" height="13.333333333333314"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ks7-OG-OU5">
-                                <rect key="frame" x="0.0" y="44" width="375" height="168"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="David Martín Sáiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G31-ob-nRA" userLabel="Nombre">
-                                <rect key="frame" x="0.0" y="220" width="375" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="G31-ob-nRA" secondAttribute="height" multiplier="375:37" id="mHg-kA-ifJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DDN-i5-lTr" userLabel="Buttons items and loans">
-                                <rect key="frame" x="126" y="531" width="123" height="90"/>
+                                <rect key="frame" x="126" y="446" width="123" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dE2-Xk-0hI">
@@ -521,19 +512,34 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O7-CY-a8G">
+                                <rect key="frame" x="126" y="639" width="123" height="30"/>
+                                <state key="normal" title="Editar datos"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre Apellido1 Apellido2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G31-ob-nRA" userLabel="Nombre">
+                                <rect key="frame" x="28" y="268" width="318.66666666666669" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G31-ob-nRA" secondAttribute="height" multiplier="318:31" id="Mdq-oE-dJd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="w3u-qe-aN3" firstAttribute="top" secondItem="G31-ob-nRA" secondAttribute="bottom" constant="8" id="Iw2-4j-oJz"/>
-                            <constraint firstItem="G31-ob-nRA" firstAttribute="trailing" secondItem="Pg5-pP-1xi" secondAttribute="trailing" id="K4u-8o-ZNp"/>
-                            <constraint firstItem="w3u-qe-aN3" firstAttribute="top" secondItem="G31-ob-nRA" secondAttribute="bottom" constant="8" id="Lqf-Q5-5vF"/>
-                            <constraint firstItem="w3u-qe-aN3" firstAttribute="trailing" secondItem="Pg5-pP-1xi" secondAttribute="trailing" id="QA1-vh-9YV"/>
-                            <constraint firstItem="G31-ob-nRA" firstAttribute="top" secondItem="ks7-OG-OU5" secondAttribute="bottom" constant="8" id="Qc2-ze-wOh"/>
-                            <constraint firstItem="G31-ob-nRA" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" id="RsA-Sz-ZGW"/>
-                            <constraint firstItem="G31-ob-nRA" firstAttribute="top" secondItem="ks7-OG-OU5" secondAttribute="bottom" constant="8" id="VCP-k1-34v"/>
-                            <constraint firstItem="w3u-qe-aN3" firstAttribute="top" secondItem="G31-ob-nRA" secondAttribute="bottom" constant="8" id="XDX-RN-720"/>
-                            <constraint firstItem="w3u-qe-aN3" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" id="bha-L7-nxy"/>
-                            <constraint firstItem="w3u-qe-aN3" firstAttribute="top" secondItem="G31-ob-nRA" secondAttribute="bottom" constant="8" id="wrU-sb-Y6I"/>
+                            <constraint firstItem="Pg5-pP-1xi" firstAttribute="trailing" secondItem="0O7-CY-a8G" secondAttribute="trailing" constant="126" id="0YS-Ja-kXi"/>
+                            <constraint firstItem="w3u-qe-aN3" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" constant="80" id="2LM-Rf-ng7"/>
+                            <constraint firstItem="ks7-OG-OU5" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" constant="55" id="Lc4-Ca-dQr"/>
+                            <constraint firstItem="w3u-qe-aN3" firstAttribute="top" secondItem="G31-ob-nRA" secondAttribute="bottom" constant="20" id="LpS-nn-tEA"/>
+                            <constraint firstItem="Pg5-pP-1xi" firstAttribute="trailing" secondItem="w3u-qe-aN3" secondAttribute="trailing" constant="80" id="N7B-NX-zZH"/>
+                            <constraint firstItem="ks7-OG-OU5" firstAttribute="top" secondItem="Pg5-pP-1xi" secondAttribute="top" constant="40" id="OuT-n6-HRZ"/>
+                            <constraint firstItem="G31-ob-nRA" firstAttribute="top" secondItem="ks7-OG-OU5" secondAttribute="bottom" constant="30" id="ZIh-Bt-6kO"/>
+                            <constraint firstItem="Pg5-pP-1xi" firstAttribute="trailing" secondItem="ks7-OG-OU5" secondAttribute="trailing" constant="55" id="ZLZ-JW-WUa"/>
+                            <constraint firstItem="Pg5-pP-1xi" firstAttribute="bottom" secondItem="0O7-CY-a8G" secondAttribute="bottom" constant="60" id="ezu-uy-cJ6"/>
+                            <constraint firstItem="Pg5-pP-1xi" firstAttribute="trailing" secondItem="G31-ob-nRA" secondAttribute="trailing" constant="28" id="gMw-Ly-Qg8"/>
+                            <constraint firstItem="G31-ob-nRA" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" constant="28" id="qhF-df-ghg"/>
+                            <constraint firstItem="0O7-CY-a8G" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" constant="126" id="wMc-ga-Lfm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pg5-pP-1xi"/>
                     </view>
