@@ -74,12 +74,7 @@ extension AppDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        do {
-            try Auth.auth().signOut()
 
-        } catch {
-            print("error signin Out")
-        }
     }
 }
 

@@ -586,25 +586,44 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGp-iQ-OYW">
+                                <rect key="frame" x="0.0" y="685" width="375" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.053134866184234686" blue="0.021934402089620719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="HZy-bU-E2M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="tintColor" red="0.99640144720000001" green="0.97779007019999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="SignOut"/>
+                                <connections>
+                                    <action selector="signOut" destination="XZe-PG-WoN" eventType="touchUpInside" id="yRY-eY-4Es"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Pg5-pP-1xi" firstAttribute="trailing" secondItem="0O7-CY-a8G" secondAttribute="trailing" constant="126" id="0YS-Ja-kXi"/>
                             <constraint firstItem="w3u-qe-aN3" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" constant="80" id="2LM-Rf-ng7"/>
+                            <constraint firstItem="dGp-iQ-OYW" firstAttribute="trailing" secondItem="Pg5-pP-1xi" secondAttribute="trailing" id="3x2-zR-8l6"/>
                             <constraint firstItem="ks7-OG-OU5" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" constant="55" id="Lc4-Ca-dQr"/>
                             <constraint firstItem="w3u-qe-aN3" firstAttribute="top" secondItem="G31-ob-nRA" secondAttribute="bottom" constant="20" id="LpS-nn-tEA"/>
                             <constraint firstItem="Pg5-pP-1xi" firstAttribute="trailing" secondItem="w3u-qe-aN3" secondAttribute="trailing" constant="80" id="N7B-NX-zZH"/>
                             <constraint firstItem="ks7-OG-OU5" firstAttribute="top" secondItem="Pg5-pP-1xi" secondAttribute="top" constant="40" id="OuT-n6-HRZ"/>
+                            <constraint firstItem="dGp-iQ-OYW" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" id="PsA-dj-ySw"/>
                             <constraint firstItem="G31-ob-nRA" firstAttribute="top" secondItem="ks7-OG-OU5" secondAttribute="bottom" constant="30" id="ZIh-Bt-6kO"/>
                             <constraint firstItem="Pg5-pP-1xi" firstAttribute="trailing" secondItem="ks7-OG-OU5" secondAttribute="trailing" constant="55" id="ZLZ-JW-WUa"/>
                             <constraint firstItem="Pg5-pP-1xi" firstAttribute="bottom" secondItem="0O7-CY-a8G" secondAttribute="bottom" constant="60" id="ezu-uy-cJ6"/>
                             <constraint firstItem="Pg5-pP-1xi" firstAttribute="trailing" secondItem="G31-ob-nRA" secondAttribute="trailing" constant="28" id="gMw-Ly-Qg8"/>
+                            <constraint firstItem="dGp-iQ-OYW" firstAttribute="bottom" secondItem="Pg5-pP-1xi" secondAttribute="bottom" id="jAh-pc-ONJ"/>
                             <constraint firstItem="G31-ob-nRA" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" constant="28" id="qhF-df-ghg"/>
                             <constraint firstItem="0O7-CY-a8G" firstAttribute="leading" secondItem="Pg5-pP-1xi" secondAttribute="leading" constant="126" id="wMc-ga-Lfm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pg5-pP-1xi"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="User" image="SearchIcon" id="31R-RG-mkt"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="signedOut" id="ztp-sb-t4W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTl-gQ-js7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
