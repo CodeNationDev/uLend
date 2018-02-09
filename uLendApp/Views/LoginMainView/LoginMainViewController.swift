@@ -43,7 +43,7 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
         GIDSignIn.sharedInstance().uiDelegate = self
         
         //datos de pruebas
-        usernameTextField.text = "prueba@prueba.com"
+//        usernameTextField.text = "prueba@prueba.com"
         passwordTextField.text = "prueba"
         passwordRepeatTextField.text = "prueba"
         
