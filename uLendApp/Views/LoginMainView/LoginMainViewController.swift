@@ -194,26 +194,14 @@ extension LoginMainViewController {
             
         }
     }
-    
-    
-//
-//        func probandoAlgolia(){
-//
-//            let obj1 = ["firstname": "Jimmie", "lastname": "Barninger"]
-//            let obj2 = ["firstname": "Warren", "lastname": "Speach"]
-//
-//            Service_Algolia().refCreateItems.addObjects([obj1,obj2]) { (content, error) in
-//                if error == nil {
-//                    print("Object Ids: \(content!)")
-//                } else {
-//                    print(error?.localizedDescription)
-//                }
-//            }
-//        }
 
     
-    
 }
+
+
+
+
+
 
 
 //MARK: Google Signin
@@ -234,6 +222,11 @@ extension LoginMainViewController {
                 return
             }
             
+            Service_User().createUser(user?.uid, completionHandler: { (error, bool) in
+                if error != nil {
+                    print(error)
+                }
+            })
             self.performSegue(withIdentifier: "showMain", sender: nil)
         }
         

@@ -44,9 +44,23 @@ struct Service_Loan {
     }
     
     
-    func changeStatus(_ status: loanstatus, completionHandler:@escaping CompletionBool){
-        
+    
+    
+    func changeStatus(_ loan: Loan!,_ status: loanstatus, completionHandler:@escaping CompletionBool){
+        let profile : ProfileAnyHashable = [
+            "status":status,
+            "lastChange": FieldValue.serverTimestamp()
+            ]
+        servDB.document(loan.uid).updateData(profile) { (error) in
+            if error != nil {
+                completionHandler(error?.localizedDescription, false)
+            } else {
+                completionHandler(nil, true)
+            }
+        }
     }
+    
+
     
     
     

@@ -24,6 +24,7 @@ final class UserUlend {
         self.uid = uid
         self.name = name
         self.surname = surname ?? ""
+        
     }
     
     
