@@ -32,7 +32,6 @@
 		32BE44A02006CFDC0012EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449F2006CFDC0012EE19 /* Assets.xcassets */; };
 		32BE44A32006CFDC0012EE19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BE44A12006CFDC0012EE19 /* LaunchScreen.storyboard */; };
 		32C36443202C92F50050901B /* NewItemImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C36442202C92F50050901B /* NewItemImageCell.swift */; };
-		32C36451202E5FED0050901B /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C36445202E5FEC0050901B /* IsaoTextField.swift */; };
 		32C36452202E5FED0050901B /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C36446202E5FEC0050901B /* MadokaTextField.swift */; };
 		32C36453202E5FED0050901B /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C36447202E5FEC0050901B /* KaedeTextField.swift */; };
 		32C36454202E5FED0050901B /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C36448202E5FEC0050901B /* JiroTextField.swift */; };
@@ -43,6 +42,7 @@
 		32C36459202E5FED0050901B /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C3644E202E5FEC0050901B /* YoshikoTextField.swift */; };
 		32C3645A202E5FED0050901B /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C3644F202E5FEC0050901B /* MinoruTextField.swift */; };
 		32C3645B202E5FED0050901B /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C36450202E5FEC0050901B /* TextFieldEffects.swift */; };
+		32C3645E202F3CDB0050901B /* IsaotextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C3645D202F3CDB0050901B /* IsaotextField.swift */; };
 		32C917452007A34B008F9A7C /* LoginMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C917442007A34B008F9A7C /* LoginMainViewController.swift */; };
 		32C917482007A852008F9A7C /* Service_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C917472007A852008F9A7C /* Service_Auth.swift */; };
 		32C9174B2007A910008F9A7C /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9174A2007A910008F9A7C /* Typealias.swift */; };
@@ -80,7 +80,6 @@
 		32BE44A22006CFDC0012EE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32BE44A42006CFDC0012EE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32C36442202C92F50050901B /* NewItemImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemImageCell.swift; sourceTree = "<group>"; };
-		32C36445202E5FEC0050901B /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
 		32C36446202E5FEC0050901B /* MadokaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadokaTextField.swift; sourceTree = "<group>"; };
 		32C36447202E5FEC0050901B /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
 		32C36448202E5FEC0050901B /* JiroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiroTextField.swift; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		32C3644E202E5FEC0050901B /* YoshikoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
 		32C3644F202E5FEC0050901B /* MinoruTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinoruTextField.swift; sourceTree = "<group>"; };
 		32C36450202E5FEC0050901B /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
+		32C3645D202F3CDB0050901B /* IsaotextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsaotextField.swift; sourceTree = "<group>"; };
 		32C917442007A34B008F9A7C /* LoginMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainViewController.swift; sourceTree = "<group>"; };
 		32C917472007A852008F9A7C /* Service_Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Auth.swift; sourceTree = "<group>"; };
 		32C9174A2007A910008F9A7C /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 		32C36444202E5FEC0050901B /* TextFieldEffects */ = {
 			isa = PBXGroup;
 			children = (
-				32C36445202E5FEC0050901B /* IsaoTextField.swift */,
+				32C3645D202F3CDB0050901B /* IsaotextField.swift */,
 				32C36446202E5FEC0050901B /* MadokaTextField.swift */,
 				32C36447202E5FEC0050901B /* KaedeTextField.swift */,
 				32C36448202E5FEC0050901B /* JiroTextField.swift */,
@@ -452,6 +452,7 @@
 				3236DB09201632B500D98EA4 /* Service_Database.swift in Sources */,
 				32ABD96C202A652A00100977 /* Service_Loan.swift in Sources */,
 				3236DB1020177A4D00D98EA4 /* LoansPageViewController.swift in Sources */,
+				32C3645E202F3CDB0050901B /* IsaotextField.swift in Sources */,
 				3236DB0520162B8C00D98EA4 /* GeoPosition.swift in Sources */,
 				3279F9D420137F4B001D010F /* Service_Algolia.swift in Sources */,
 				32C36452202E5FED0050901B /* MadokaTextField.swift in Sources */,
@@ -467,7 +468,6 @@
 				32ABD9612029F31B00100977 /* itemCreateNewViewController.swift in Sources */,
 				32C36456202E5FED0050901B /* HoshiTextField.swift in Sources */,
 				32C917482007A852008F9A7C /* Service_Auth.swift in Sources */,
-				32C36451202E5FED0050901B /* IsaoTextField.swift in Sources */,
 				32C36458202E5FED0050901B /* YokoTextField.swift in Sources */,
 				32C36455202E5FED0050901B /* AkiraTextField.swift in Sources */,
 				32C36454202E5FED0050901B /* JiroTextField.swift in Sources */,
