@@ -34,7 +34,8 @@ class Service_Auth {
                         completionHandler(error.localizedDescription, nil)
                     } else {
                         
-                        //se ha creado el user, creamos el profile
+                        //se ha creado el user y se ha logueado, creamos el profile
+                        
                         Service_User().createUser(user?.uid, completionHandler: { (error, bool) in
                             if error != nil {
                                 print(error as Any)

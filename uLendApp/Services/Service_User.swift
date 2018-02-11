@@ -56,6 +56,18 @@ final class Service_User {
     
     
     
+    func getDataCurrentUser(_ uidUser: String!, completionHandler: @escaping CompletionUser){
+        servDB.collectionUsers.document(uidUser).getDocument { (document, error) in
+            if let error = error {
+                completionHandler(error.localizedDescription, nil)
+            }
+            let currentUser = UserUlend(document!)
+            completionHandler(nil, currentUser)
+        }
+    }
+    
+    
+    
     
     
     

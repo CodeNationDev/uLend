@@ -25,6 +25,7 @@ typealias CompletionLoan = (_ error: String?, _ data: Loan?) -> Void
 typealias CompletionArrayItems = (_ error: String?, _ data: [Item]?) -> Void
 typealias CompletionArrayLoans = (_ error: String?, _ data: [Loan]?) -> Void
 typealias CompletionBool = (_ error: String?, _ data: Bool) -> Void
+typealias CompletionUser = (_ error: String?, _ data: UserUlend?) -> Void
 
 
 

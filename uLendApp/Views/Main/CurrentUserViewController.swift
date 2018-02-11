@@ -15,6 +15,22 @@ class CurrentUserViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //función para recuperar datos del  user
+//        quizás sea más conveniente realizarlo antes y luego llamarlo a una variable que esté een el appdelegate
+//        para no estar realizando la llamada cada vez q se carga la pantalla...
+        
+        Service_User().getDataCurrentUser(Auth.auth().currentUser?.uid) { (error, user) in
+            if let error = error {
+                print(error)
+            } else {
+                
+                print("el user tiene el id: \(user?.uid),\n el nombre: \(user?.name),\n apellido: \(user?.surname), \n y correo: \(user?.email)")
+                
+ 
+            }
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
