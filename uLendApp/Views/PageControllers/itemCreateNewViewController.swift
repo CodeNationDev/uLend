@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class itemCreateNewViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
 
     
-    @IBOutlet var prueba: UIImageView!
     
     @IBOutlet var photoCollection: UICollectionView!
+    @IBOutlet var descriptionText: UITextView!
+    @IBOutlet var nameTextField: MadokaTextField!
+    
+    
+    
+    
+    
+    
     
     open var arrayImages : [UIImage]?
 //    open var arrayImages : [UIImage] = [UIImage]()
@@ -94,5 +102,45 @@ extension itemCreateNewViewController {
         }
         return cell
     }
+    
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        descriptionText.resignFirstResponder()
+        nameTextField.resignFirstResponder()
+    }
+    
+    
+    
+    
+    @IBAction func createToughed(){
+        //primero comprobamos que tenga nombre y alguna foto cargada
+        if comprobeNameAndPhoto(){
+            //si estamos aquí es pq hemos pasado las dos pruebas
+            
+            Service_Item().createItem(Auth.auth().currentUser?.uid, name: nameTextField.text!, mediaUrl: nil, description: descriptionText.text, mediaData: nil, completionHandlerItem: { (error, item) in
+                
+                print(item?.uid as Any)
+                
+            })
+            
+        }
+    }
+    
+    func comprobeNameAndPhoto() -> Bool{
+        if nameTextField.text?.count == 0 {
+            self.present(errorAlertView("Debes introducir un nombre"), animated: true, completion: nil)
+            return false
+        }
+        if arrayImages == nil {
+            self.present(errorAlertView("Debes introducir alguna foto..."), animated: true, completion: nil)
+            return false
+        }
+        
+//        pasado esto lansamos un true
+        return true
+    }
+    
+    
     
 }

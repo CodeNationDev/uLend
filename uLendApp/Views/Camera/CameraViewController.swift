@@ -56,8 +56,8 @@ extension CameraViewController {
     
     func initCamera(){
         
-        self.captureSession = AVCaptureSession()
-        self.captureSession?.sessionPreset = AVCaptureSession.Preset.hd1920x1080
+        captureSession = AVCaptureSession()
+        captureSession?.sessionPreset = AVCaptureSession.Preset.hd1920x1080
         
         
         let backCamera = AVCaptureDevice.default(for: AVMediaType.video)
@@ -65,20 +65,20 @@ extension CameraViewController {
         
         do {
             let input = try AVCaptureDeviceInput(device: backCamera!)
-            self.captureSession?.addInput(input)
+            captureSession?.addInput(input)
             
-            self.photoOutPut = AVCapturePhotoOutput()
+            photoOutPut = AVCapturePhotoOutput()
             
             
             //se puede cambiar por un guard ?
-            if (self.captureSession?.canAddOutput(self.photoOutPut!) != nil) {
-                self.captureSession?.addOutput(self.photoOutPut!)
+            if (captureSession?.canAddOutput(photoOutPut!) != nil) {
+                captureSession?.addOutput(self.photoOutPut!)
                 
-                self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession!)
-                self.previewLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
-                self.previewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-                self.cameraView.layer.addSublayer(self.previewLayer!)
-                self.captureSession?.startRunning()
+                previewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
+                previewLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
+                previewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+                cameraView.layer.addSublayer(self.previewLayer!)
+                captureSession?.startRunning()
             }
             
             
@@ -86,7 +86,9 @@ extension CameraViewController {
             print("Error: \(error)")
         }
         
-        self.previewLayer?.frame = self.view.bounds
+//        previewLayer?.frame = self.view.bounds
+        previewLayer?.frame = self.cameraView.bounds
+        previewLayer?.videoGravity = .resizeAspectFill
         
         
         
@@ -104,18 +106,11 @@ extension CameraViewController {
         //guardamos la imagen que se ha tomado
         let photoData = photo.fileDataRepresentation()
         let image = UIImage(data: photoData!)
-        
-        //lo cargamos en la imagen de la view
-//        temporalImageView.image = image!
+
         
         openPreview()
         temporalImageView.image = image!
-        
-        
-        
-        
-//        backVC?.prueba.image = image!
-//        dismiss(animated: true, completion: nil)
+
     }
     
     
@@ -131,32 +126,28 @@ extension CameraViewController {
     
     @IBAction func okSavePhoto(){
         
-        if self.backVC?.arrayImages == nil {
-            print("entramos aquí")
-            self.backVC?.initializeArray()
+        if backVC?.arrayImages == nil {
+            backVC?.initializeArray()
         }
         
-        self.backVC?.prueba.image = temporalImageView.image!
-        self.backVC?.arrayImages?.append(temporalImageView.image!)
-        self.backVC?.reloadCollection()
-        
-        print(self.backVC?.arrayImages?.count)
+        backVC?.arrayImages?.append(temporalImageView.image!)
+        backVC?.reloadCollection()
         
         dismiss(animated: true, completion: nil)
     }
     
     
     @IBAction func pressedTakePhoto(){
-        self.photoOutPut?.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-        self.captureBTN.isHidden = true
-        self.exitButton.isHidden = true
+        photoOutPut?.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+        captureBTN.isHidden = true
+        exitButton.isHidden = true
     }
     
     
     @IBAction func cancelPreview(){
-        self.preView.removeFromSuperview()
-        self.exitButton.isHidden = false
-        self.captureBTN.isHidden = false
+        preView.removeFromSuperview()
+        exitButton.isHidden = false
+        captureBTN.isHidden = false
     }
     
 

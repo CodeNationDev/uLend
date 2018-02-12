@@ -213,7 +213,7 @@ extension LoginMainViewController {
             
             Service_User().createUser(user?.uid, completionHandler: { (error, bool) in
                 if error != nil {
-                    print(error)
+                    print(error as Any)
                 }
             })
             self.performSegue(withIdentifier: "showMain", sender: nil)
