@@ -18,17 +18,16 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
         case login
         case create
     }
-
     
-    @IBOutlet var usernameTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var passwordRepeatTextField: UITextField!
+    @IBOutlet var usernameTextField: YoshikoTextField!
+    @IBOutlet var passwordTextField: YoshikoTextField!
+    @IBOutlet var passwordRepeatTextField: YoshikoTextField!
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var newUserButton: UIButton!
     
     let serviceAuth = Service_Auth()
     var mode = Mode.login
-    
+    var currenUser: UserUlend?
     
 
     override func viewDidLoad() {
@@ -36,7 +35,7 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
 
         // Do any additional setup after loading the view.
         passwordRepeatTextField.alpha = 0.0
-        passwordRepeatTextField.backgroundColor = UIColor.orange
+        
         
         // Google SignIn
         GIDSignIn.sharedInstance().delegate = self
@@ -52,6 +51,8 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
         
         
     }
+    
+
     
     override func viewDidAppear(_ animated: Bool) {
         //si ya está loqueado vamos a la pantalla principal
@@ -183,19 +184,7 @@ extension LoginMainViewController {
         passwordTextField.resignFirstResponder()
         passwordRepeatTextField.resignFirstResponder()
     }
-    
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showMain" {
-            
-            
-            
-            
-        }
-    }
 
-    
 }
 
 

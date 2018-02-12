@@ -22,51 +22,101 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondoinicio" translatesAutoresizingMaskIntoConstraints="NO" id="R09-QV-Sm5" propertyAccessControl="all">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3za-Cs-sWB">
-                                <rect key="frame" x="87.666666666666686" y="286" width="200" height="240"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3za-Cs-sWB">
+                                <rect key="frame" x="87.666666666666686" y="281" width="200" height="250"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GMv-cH-B8w" customClass="AkiraTextField" customModule="uLendApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GMv-cH-B8w" customClass="YoshikoTextField" customModule="uLendApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="73n-Tg-Dqe"/>
-                                            <constraint firstAttribute="height" constant="40" id="V7G-14-INw"/>
+                                            <constraint firstAttribute="height" constant="50" id="V7G-14-INw"/>
                                         </constraints>
-                                        <attributedString key="attributedText"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="username"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                <color key="value" red="0.80361755431618709" green="0.80393809707557773" blue="0.86476840101522845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                                <color key="value" red="0.33222070523135716" green="0.011331671589992029" blue="0.45483026649746194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveBorderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeBackgroundColor">
+                                                <color key="value" red="0.0" green="1" blue="0.15745048278271989" alpha="0.28210616438356162" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.84696935674522777" green="0.86476840101522845" blue="0.84193879861931886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.33222070520000002" green="0.01133167159" blue="0.45483026650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cuq-lU-MXh">
-                                        <rect key="frame" x="0.0" y="55" width="200" height="40"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cuq-lU-MXh" customClass="YoshikoTextField" customModule="uLendApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="60" width="200" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="0Ht-E3-jwu"/>
-                                            <constraint firstAttribute="height" constant="40" id="Lbe-JQ-Khr"/>
+                                            <constraint firstAttribute="height" constant="50" id="Lbe-JQ-Khr"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                                <color key="value" red="0.33222070520000002" green="0.01133167159" blue="0.45483026650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveBorderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeBackgroundColor">
+                                                <color key="value" red="0.0" green="1" blue="0.15745048280000001" alpha="0.28210616440000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.33222070520000002" green="0.01133167159" blue="0.45483026650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHi-QU-xeE">
-                                        <rect key="frame" x="0.0" y="110" width="200" height="40"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHi-QU-xeE" customClass="YoshikoTextField" customModule="uLendApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="120" width="200" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="1XN-jA-ElY"/>
+                                            <constraint firstAttribute="height" constant="50" id="1XN-jA-ElY"/>
                                             <constraint firstAttribute="width" constant="200" id="PwS-u4-fRk"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" red="0.33222070520000002" green="0.01133167159" blue="0.45483026650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeBackgroundColor">
+                                                <color key="value" red="0.0" green="1" blue="0.15745048280000001" alpha="0.28210616440000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveBorderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderSize">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="activeBorderColor">
+                                                <color key="value" red="0.33222070520000002" green="0.01133167159" blue="0.45483026650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gt-fr-Zzf">
-                                        <rect key="frame" x="0.0" y="165" width="200" height="30"/>
+                                        <rect key="frame" x="0.0" y="180" width="200" height="30"/>
                                         <color key="backgroundColor" red="0.46956673087806433" green="1" blue="0.47075320691478029" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="fHS-6a-psY"/>
@@ -79,7 +129,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md1-zw-Yur">
-                                        <rect key="frame" x="0.0" y="210" width="200" height="30"/>
+                                        <rect key="frame" x="0.0" y="220" width="200" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.86218941061752774" blue="0.28937802439147231" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="4Zn-QH-wGx"/>
@@ -94,7 +144,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gk-aZ-cKG">
-                                <rect key="frame" x="139" y="576" width="96" height="30"/>
+                                <rect key="frame" x="139" y="581" width="96" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.79612527012497469" blue="0.13133214770061907" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="c0k-DX-Kff"/>
