@@ -174,11 +174,7 @@ extension LoginMainViewController {
     }
     
     
-    
-    
-    
-    
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()

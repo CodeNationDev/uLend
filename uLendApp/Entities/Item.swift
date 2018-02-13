@@ -20,23 +20,33 @@ final class Item {
     var images: [String]?
     var geoposition: GeoPosition?
     
+    
+    var country: String?
+    
+    
     init(){}
     
     
      
     init(document: DocumentSnapshot!){
-        
-        
-        //demasiado forzado mejor con guard??
 
         self.uid = document.documentID
-        self.uidOwner = document.data()?["uidOwner"] as? String
-        self.name = document.data()?["name"] as? String
-        self.description = document.data()?["description"] as? String ?? ""
-
-        if let geo = document.data()?["_geoloc"] as? Dictionary<String, Double> {
+        self.uidOwner = document.get("uidOwner") as? String
+        self.name = document.get("name") as? String
+        self.description = document.get("description") as? String ?? ""
+        
+        if let geo = document.get("_geoloc") as? Dictionary<String, Double> {
             self.geoposition = GeoPosition(geo["lng"]!, geo["lat"]!)
         }
+        
+        
+//        self.uidOwner = document.data()?["uidOwner"] as? String
+//        self.name = document.data()?["name"] as? String
+//        self.description = document.data()?["description"] as? String ?? ""
+//
+//        if let geo = document.data()?["_geoloc"] as? Dictionary<String, Double> {
+//            self.geoposition = GeoPosition(geo["lng"]!, geo["lat"]!)
+//        }
         
         
         
@@ -57,7 +67,6 @@ final class Item {
         
         
         return profile
-        
     }
     
     

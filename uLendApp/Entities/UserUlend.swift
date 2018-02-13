@@ -15,6 +15,9 @@ final class UserUlend {
     var name: String!
     var surname: String!
     var email: String!
+    var telephoneNumer: Int?
+    var country: String?
+    
     
     
     
@@ -35,6 +38,8 @@ final class UserUlend {
         self.name = document.get("name") as? String ?? "name"
         self.surname = document.get("surname") as? String ?? "surname"
         self.email = document.get("email") as? String ?? "email@email.com"
+        self.telephoneNumer = document.get("telephoneNumber") as? Int ?? 0
+        self.country = document.get("country") as? String ?? "no country"
         
         
     }

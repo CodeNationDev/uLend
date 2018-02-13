@@ -25,10 +25,7 @@ class itemCreateNewViewController: UIViewController, UICollectionViewDelegate, U
     
     
     open var arrayImages : [UIImage]?
-//    open var arrayImages : [UIImage] = [UIImage]()
-    open var imagescount = 0
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -122,6 +119,12 @@ extension itemCreateNewViewController {
                 
                 print(item?.uid as Any)
                 
+                //se debería pasar al array de items el nuevo creado
+                
+                
+                
+                self.dismiss(animated: true, completion: nil)
+                
             })
             
         }
@@ -137,7 +140,7 @@ extension itemCreateNewViewController {
             return false
         }
         
-//        pasado esto lansamos un true
+//        pasado esto lanzamos un true
         return true
     }
     

@@ -8,53 +8,69 @@
 
 import UIKit
 
-final class ItemsOwnViewController: UIViewController {
+final class ItemsOwnViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
 
     
-    @IBOutlet var newItemQuestionView: UIView!
-    
+//    @IBOutlet var newItemQuestionView: UIView!
     @IBOutlet var newItemButton: UIBarButtonItem!
-    
+    @IBOutlet var itemsCollection: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-//        newItemQuestionView.bounds = UIScreen.main.bounds
-//        newItemQuestionView.bounds = self.view.bounds
-//        newItemQuestionView.sizeToFit()
         
-
+        itemsCollection.delegate = self
+        itemsCollection.dataSource = self
         
       
     }
-
-
     
-    @IBAction func newItemPressed(_ sender: Any) {
-        newItemButton.isEnabled = false
-        animateView()
-    }
-    
+//    @IBAction func newItemPressed(_ sender: Any) {
+//        newItemButton.isEnabled = false
+////        animateView()
+//    }
+//
 
 
 
 }
 
+
+// MARK: Collection Functions
 extension ItemsOwnViewController {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
     
-    func animateView(){
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "item", for: indexPath) as! ItemCollectionViewCell
         
-        self.view.addSubview(newItemQuestionView)
-        newItemQuestionView.center = self.view.center
-        newItemQuestionView.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
-        newItemQuestionView.alpha = 0
         
-        UIView.animate(withDuration: 0.33) {
-            self.newItemQuestionView.transform = CGAffineTransform.identity
-            self.newItemQuestionView.alpha = 1
-        }
+//        cell.textLabel.text = "hola caracola"
 
+//        cell.imageView.image = #imageLiteral(resourceName: "cameraIcon")
+        return cell
     }
     
 }
+
+
+// MARK: animation functions
+//extension ItemsOwnViewController {
+//
+//    func animateView(){
+//
+//        self.view.addSubview(newItemQuestionView)
+//        newItemQuestionView.center = self.view.center
+//        newItemQuestionView.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
+//        newItemQuestionView.alpha = 0
+//
+//        UIView.animate(withDuration: 0.33) {
+//            self.newItemQuestionView.transform = CGAffineTransform.identity
+//            self.newItemQuestionView.alpha = 1
+//        }
+//
+//    }
+//
+//}
+

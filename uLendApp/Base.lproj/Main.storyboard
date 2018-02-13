@@ -466,7 +466,6 @@
                                     <navigationItem title="Mis cosas" id="7Eo-Ca-kPR">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qqI-3W-cDR">
                                             <connections>
-                                                <action selector="newItemPressed:" destination="bPg-66-rTe" id="HWP-Uj-GMM"/>
                                                 <segue destination="VcP-5I-sqz" kind="show" identifier="newItem" id="RZI-VV-Sc9"/>
                                             </connections>
                                         </barButtonItem>
@@ -487,7 +486,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ownItems" id="Tof-06-cJb">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="item" id="Tof-06-cJb" customClass="ItemCollectionViewCell" customModule="uLendApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -515,29 +514,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="cV5-6K-aVM"/>
                     <connections>
-                        <outlet property="newItemButton" destination="qqI-3W-cDR" id="thZ-yW-7sA"/>
-                        <outlet property="newItemQuestionView" destination="s5D-WS-tzZ" id="w1J-kL-MDe"/>
+                        <outlet property="itemsCollection" destination="XBp-5h-u1Z" id="DEi-Km-Woi"/>
+                        <outlet property="newItemButton" destination="qqI-3W-cDR" id="5DH-Wf-Ten"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7eY-1q-AkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="s5D-WS-tzZ">
-                    <rect key="frame" x="0.0" y="0.0" width="162" height="120"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch7-Za-odH">
-                            <rect key="frame" x="60.333333333333343" y="49.666666666666664" width="41.666666666666657" height="20.999999999999993"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="1" green="0.46596010090647211" blue="0.20182210266747025" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <constraints>
-                        <constraint firstItem="ch7-Za-odH" firstAttribute="centerX" secondItem="s5D-WS-tzZ" secondAttribute="centerX" id="PqL-EC-0rU"/>
-                        <constraint firstItem="ch7-Za-odH" firstAttribute="centerY" secondItem="s5D-WS-tzZ" secondAttribute="centerY" id="hL0-w8-dsh"/>
-                    </constraints>
-                    <viewLayoutGuide key="safeArea" id="Rhv-W6-2XQ"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="2767" y="-998"/>
         </scene>
