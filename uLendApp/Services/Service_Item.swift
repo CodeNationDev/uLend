@@ -14,8 +14,7 @@ struct Service_Item {
     
     private let servDBitems = Service_Database().collectionItems
     
-    
-    func createItem(_ uidUser: String!, name: String, mediaUrl: [String]?, description: String?, mediaData: Data?, completionHandlerItem: @escaping CompletionItem){
+    func createItem(_ uidUser: String!, name: String, mediaUrl: [String]?, description: String?, mediaData: [Data]!, completionHandlerItem: @escaping CompletionItem){
         
         //primero lo creamos en firestore
         let profile: Profile = [
@@ -31,8 +30,23 @@ struct Service_Item {
                 print("error adding document")
                 completionHandlerItem(error?.localizedDescription, nil)
             } else {
-                print("Document added with ID: \(ref!.documentID)")
-                
+                //se debe insertar las imagenes en el contenedor de items
+                var counter = 1;
+                for data in mediaData {
+                    
+                    let imageName = "\(UUID().uuidString).jpg"
+
+                    Service_Storage().itemImagesRef.child((ref?.documentID)!).child(imageName).putData(data, metadata: nil, completion: { (object, error) in
+                        if let error = (error as NSError?){
+                            print(error.localizedDescription)
+                        } else {
+
+                            self.servDBitems.document(ref!.documentID).collection("mediaUrl").document("image\(counter)").setData(["mediaUrl":String(describing: object!.downloadURL()!)])
+                            counter += 1
+                        }
+                    })
+                }
+
                 // se debe añadir a algolia
                 //creamos el item en local
                 let item = Item()

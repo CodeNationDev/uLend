@@ -25,6 +25,8 @@ final class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegat
     
     @IBOutlet var preView: UIView!
     
+    var photoData : Data?
+    
     
     //variables de la cámara
     var captureSession: AVCaptureSession?
@@ -37,14 +39,9 @@ final class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegat
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
-        
-        
         initCamera()
     }
 
-
-    
 }
 
 
@@ -80,8 +77,6 @@ extension CameraViewController {
                 cameraView.layer.addSublayer(self.previewLayer!)
                 captureSession?.startRunning()
             }
-            
-            
         } catch  {
             print("Error: \(error)")
         }
@@ -89,9 +84,7 @@ extension CameraViewController {
 //        previewLayer?.frame = self.view.bounds
         previewLayer?.frame = self.cameraView.bounds
         previewLayer?.videoGravity = .resizeAspectFill
-        
-        
-        
+
     }
     
     
@@ -104,13 +97,11 @@ extension CameraViewController {
         }
         
         //guardamos la imagen que se ha tomado
-        let photoData = photo.fileDataRepresentation()
+        photoData = photo.fileDataRepresentation()
         let image = UIImage(data: photoData!)
 
-        
         openPreview()
         temporalImageView.image = image!
-
     }
     
     
@@ -118,24 +109,19 @@ extension CameraViewController {
         self.view.addSubview(preView)
         preView.bounds = self.view.bounds.applying(CGAffineTransform(scaleX: 0.8, y: 0.8))
         preView.center = self.view.center
-        
-        
-        
+
     }
-    
     
     @IBAction func okSavePhoto(){
         
         if backVC?.arrayImages == nil {
             backVC?.initializeArray()
         }
-        
         backVC?.arrayImages?.append(temporalImageView.image!)
         backVC?.reloadCollection()
-        
+        backVC?.arrayData?.append(photoData!)
         dismiss(animated: true, completion: nil)
     }
-    
     
     @IBAction func pressedTakePhoto(){
         photoOutPut?.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
@@ -143,13 +129,10 @@ extension CameraViewController {
         exitButton.isHidden = true
     }
     
-    
     @IBAction func cancelPreview(){
         preView.removeFromSuperview()
         exitButton.isHidden = false
         captureBTN.isHidden = false
     }
-    
 
-    
 }

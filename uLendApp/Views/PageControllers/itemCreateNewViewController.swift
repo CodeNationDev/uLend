@@ -17,14 +17,8 @@ class itemCreateNewViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet var photoCollection: UICollectionView!
     @IBOutlet var descriptionText: UITextView!
     @IBOutlet var nameTextField: MadokaTextField!
-    
-    
-    
-    
-    
-    
-    
     open var arrayImages : [UIImage]?
+    open var arrayData : [Data]?
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +41,7 @@ class itemCreateNewViewController: UIViewController, UICollectionViewDelegate, U
     
     open func initializeArray(){
         self.arrayImages = [UIImage]()
+        self.arrayData = [Data]()
     }
     
 
@@ -115,14 +110,8 @@ extension itemCreateNewViewController {
         if comprobeNameAndPhoto(){
             //si estamos aquí es pq hemos pasado las dos pruebas
             
-            Service_Item().createItem(Auth.auth().currentUser?.uid, name: nameTextField.text!, mediaUrl: nil, description: descriptionText.text, mediaData: nil, completionHandlerItem: { (error, item) in
-                
-                print(item?.uid as Any)
-                
-                //se debería pasar al array de items el nuevo creado
-                
-                
-                
+            Service_Item().createItem(Auth.auth().currentUser?.uid, name: nameTextField.text!, mediaUrl: nil, description: descriptionText.text, mediaData: arrayData, completionHandlerItem: { (error, item) in
+                                
                 self.dismiss(animated: true, completion: nil)
                 
             })

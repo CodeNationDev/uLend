@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321D5732203301CC00EC66C1 /* Service_Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D5731203301CC00EC66C1 /* Service_Storage.swift */; };
 		322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322344402018CF16008D0EBB /* ItemPageViewController.swift */; };
 		32234449201BD286008D0EBB /* AlgoliaKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32234448201BD286008D0EBB /* AlgoliaKeys.swift */; };
 		3235942A2031F8E0006EEBBF /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323594292031F8E0006EEBBF /* ItemCollectionViewCell.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		14D2492761D3F7585A842CF6 /* Pods_uLendApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uLendApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		321D5731203301CC00EC66C1 /* Service_Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Storage.swift; sourceTree = "<group>"; };
 		322344402018CF16008D0EBB /* ItemPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPageViewController.swift; sourceTree = "<group>"; };
 		32234448201BD286008D0EBB /* AlgoliaKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaKeys.swift; sourceTree = "<group>"; };
 		323594292031F8E0006EEBBF /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				3236DB0A201635A400D98EA4 /* Service_Item.swift */,
 				326774492020C64800067E1E /* Service_User.swift */,
 				32ABD96B202A652A00100977 /* Service_Loan.swift */,
+				321D5731203301CC00EC66C1 /* Service_Storage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				32C36452202E5FED0050901B /* MadokaTextField.swift in Sources */,
 				32C3645B202E5FED0050901B /* TextFieldEffects.swift in Sources */,
 				3267744A2020C64800067E1E /* Service_User.swift in Sources */,
+				321D5732203301CC00EC66C1 /* Service_Storage.swift in Sources */,
 				3284072220250F060088F7A0 /* enum.swift in Sources */,
 				32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */,
 				32C917452007A34B008F9A7C /* LoginMainViewController.swift in Sources */,
