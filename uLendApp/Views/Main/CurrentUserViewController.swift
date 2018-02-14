@@ -11,6 +11,12 @@ import FirebaseAuth
 
 class CurrentUserViewController: UIViewController {
 
+    @IBOutlet var userName: MadokaTextField!
+    @IBOutlet var userEmail: MadokaTextField!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +30,10 @@ class CurrentUserViewController: UIViewController {
             if let error = error {
                 print(error)
             } else {
+                
+                self.userName.text = user!.name
+                self.userEmail.text = user!.email
+                
                 
                 print("el user tiene el id: \(user?.uid),\n el nombre: \(user?.name),\n apellido: \(user?.surname), \n y correo: \(user?.email)")
                 

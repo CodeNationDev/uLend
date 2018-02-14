@@ -24,15 +24,6 @@ final class ItemsOwnViewController: UIViewController, UICollectionViewDelegate, 
         
       
     }
-    
-//    @IBAction func newItemPressed(_ sender: Any) {
-//        newItemButton.isEnabled = false
-////        animateView()
-//    }
-//
-
-
-
 }
 
 
@@ -45,10 +36,6 @@ extension ItemsOwnViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "item", for: indexPath) as! ItemCollectionViewCell
         
-        
-//        cell.textLabel.text = "hola caracola"
-
-//        cell.imageView.image = #imageLiteral(resourceName: "cameraIcon")
         return cell
     }
     

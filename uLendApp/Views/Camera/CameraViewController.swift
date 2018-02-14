@@ -119,7 +119,10 @@ extension CameraViewController {
         }
         backVC?.arrayImages?.append(temporalImageView.image!)
         backVC?.reloadCollection()
-        backVC?.arrayData?.append(photoData!)
+        
+        let image = UIImageJPEGRepresentation(temporalImageView.image!, 0.2)
+        backVC?.arrayData?.append(image!)
+//        backVC?.arrayData?.append(photoData!)
         dismiss(animated: true, completion: nil)
     }
     
