@@ -25,6 +25,11 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var newUserButton: UIButton!
     @IBOutlet var googleLoginButton: UIButton!
+    @IBOutlet var loginView: UIView!
+    
+    
+    
+    
     
     let serviceAuth = Service_Auth()
     var mode = Mode.login
@@ -52,25 +57,22 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
         mode = .login
 
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        ocultamosItems()
-    }
-    
-    
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(true)
+////        ocultamosItems()    DEPRECATED
+//    }
+//
+//    
 
 
     
     override func viewDidAppear(_ animated: Bool) {
         //si ya está loqueado vamos a la pantalla principal
-//        guard Auth.auth().currentUser == nil else {
-//            performSegue(withIdentifier: "showMain", sender: nil)
-//            return
-//        }
-        
+
         if Auth.auth().currentUser == nil {
-            mostramosItems()
+//            mostramosItems()  DEPRECATED
+            animateLogin()
         } else {
             performSegue(withIdentifier: "showMain", sender: nil)
         }
@@ -217,6 +219,25 @@ extension LoginMainViewController {
 }
 
 
+
+//MARK: Animation login
+
+extension LoginMainViewController {
+    func animateLogin(){
+        loginView.alpha = 0
+        loginView.transform = CGAffineTransform.init(scaleX: 0.5, y: 0.5)
+        let position = loginView.center
+        loginView.center = CGPoint(x: loginView.center.x, y: loginView.center.y + 500)
+    
+        UIView.animate(withDuration: 0.5) {
+            self.loginView.alpha = 1
+            self.loginView.transform = CGAffineTransform.identity
+            self.loginView.center = position
+        }
+    
+    }
+    
+}
 
 
 
