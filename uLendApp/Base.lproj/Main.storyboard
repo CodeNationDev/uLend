@@ -71,6 +71,9 @@
                                                         <color key="value" red="0.33222070520000002" green="0.01133167159" blue="0.45483026650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="apareceTecladoMover:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="cU9-YL-UvZ"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cuq-lU-MXh" customClass="YoshikoTextField" customModule="uLendApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="60" width="200" height="50"/>
@@ -101,6 +104,9 @@
                                                         <real key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="apareceTecladoMover:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="vcn-K7-Ye8"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHi-QU-xeE" customClass="YoshikoTextField" customModule="uLendApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="120" width="200" height="50"/>
@@ -131,6 +137,9 @@
                                                         <color key="value" red="0.33222070520000002" green="0.01133167159" blue="0.45483026650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="apareceTecladoMover:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="JnY-0S-9Yf"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gt-fr-Zzf">
                                                 <rect key="frame" x="0.0" y="180" width="200" height="30"/>

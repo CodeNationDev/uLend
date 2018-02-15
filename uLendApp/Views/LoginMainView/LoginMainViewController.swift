@@ -12,7 +12,9 @@ import GoogleSignIn
 
 class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
 
+
     
+
     
     enum Mode {
         case login
@@ -35,6 +37,8 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
     var mode = Mode.login
     var currenUser: UserUlend?
     
+    
+    var controlPosicion = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +67,7 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
 ////        ocultamosItems()    DEPRECATED
 //    }
 //
-//    
+//
 
 
     
@@ -77,13 +81,6 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
             performSegue(withIdentifier: "showMain", sender: nil)
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
     
     @IBAction func loginPressed(_ sender: Any) {
         if mode == .create {
@@ -214,11 +211,31 @@ extension LoginMainViewController {
         usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         passwordRepeatTextField.resignFirstResponder()
+        
+        if controlPosicion {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + 200, width:self.view.frame.size.width, height:self.view.frame.size.height);
+                
+            })
+            controlPosicion = false
+            
+        }
+
+    }
+    
+    @IBAction func apareceTecladoMover(_ sender: Any) {
+        
+        if(!controlPosicion){ UIView.animate(withDuration: 0.3, animations: {
+            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - 200, width:self.view.frame.size.width, height:self.view.frame.size.height);
+            
+        })
+            controlPosicion = true
+        }
+        
     }
 
+
 }
-
-
 
 //MARK: Animation login
 
