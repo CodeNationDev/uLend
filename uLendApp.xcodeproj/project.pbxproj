@@ -18,6 +18,9 @@
 		3236DB0B201635A400D98EA4 /* Service_Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB0A201635A400D98EA4 /* Service_Item.swift */; };
 		3236DB1020177A4D00D98EA4 /* LoansPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB0F20177A4D00D98EA4 /* LoansPageViewController.swift */; };
 		3236DB1220177C9700D98EA4 /* ItemsOwnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB1120177C9700D98EA4 /* ItemsOwnViewController.swift */; };
+		324F16592035D99600CFDB0A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F16582035D99600CFDB0A /* CoreDataStack.swift */; };
+		324F165C2035DA0800CFDB0A /* uLend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 324F165A2035DA0800CFDB0A /* uLend.xcdatamodeld */; };
+		324F165E2035DCD800CFDB0A /* ItemManaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F165D2035DCD800CFDB0A /* ItemManaged.swift */; };
 		32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32500B70200EB7E000927D15 /* CurrentUserViewController.swift */; };
 		3267744A2020C64800067E1E /* Service_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326774492020C64800067E1E /* Service_User.swift */; };
 		3267744C202215C200067E1E /* pruebas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267744B202215C200067E1E /* pruebas.swift */; };
@@ -63,6 +66,9 @@
 		3236DB0A201635A400D98EA4 /* Service_Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Item.swift; sourceTree = "<group>"; };
 		3236DB0F20177A4D00D98EA4 /* LoansPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansPageViewController.swift; sourceTree = "<group>"; };
 		3236DB1120177C9700D98EA4 /* ItemsOwnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsOwnViewController.swift; sourceTree = "<group>"; };
+		324F16582035D99600CFDB0A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		324F165B2035DA0800CFDB0A /* uLend.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = uLend.xcdatamodel; sourceTree = "<group>"; };
+		324F165D2035DCD800CFDB0A /* ItemManaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManaged.swift; sourceTree = "<group>"; };
 		32500B70200EB7E000927D15 /* CurrentUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserViewController.swift; sourceTree = "<group>"; };
 		326774492020C64800067E1E /* Service_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_User.swift; sourceTree = "<group>"; };
 		3267744B202215C200067E1E /* pruebas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebas.swift; sourceTree = "<group>"; };
@@ -139,6 +145,16 @@
 			path = PageControllers;
 			sourceTree = "<group>";
 		};
+		324F16572035D98400CFDB0A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				324F16582035D99600CFDB0A /* CoreDataStack.swift */,
+				324F165A2035DA0800CFDB0A /* uLend.xcdatamodeld */,
+				324F165D2035DCD800CFDB0A /* ItemManaged.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		32500B6E2009721D00927D15 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +193,7 @@
 		32BE44972006CFDC0012EE19 /* uLendApp */ = {
 			isa = PBXGroup;
 			children = (
+				324F16572035D98400CFDB0A /* CoreData */,
 				32234447201BD263008D0EBB /* AlgoliaKeys */,
 				32C917492007A8F7008F9A7C /* extra */,
 				32C917462007A821008F9A7C /* Services */,
@@ -447,7 +464,9 @@
 				32ABD968202A077100100977 /* CameraViewController.swift in Sources */,
 				3236DB0320162A7000D98EA4 /* Item.swift in Sources */,
 				32C36443202C92F50050901B /* NewItemImageCell.swift in Sources */,
+				324F165E2035DCD800CFDB0A /* ItemManaged.swift in Sources */,
 				322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */,
+				324F165C2035DA0800CFDB0A /* uLend.xcdatamodeld in Sources */,
 				3236DB09201632B500D98EA4 /* Service_Database.swift in Sources */,
 				32ABD96C202A652A00100977 /* Service_Loan.swift in Sources */,
 				3236DB1020177A4D00D98EA4 /* LoansPageViewController.swift in Sources */,
@@ -456,6 +475,7 @@
 				3279F9D420137F4B001D010F /* Service_Algolia.swift in Sources */,
 				32C36452202E5FED0050901B /* MadokaTextField.swift in Sources */,
 				32C3645B202E5FED0050901B /* TextFieldEffects.swift in Sources */,
+				324F16592035D99600CFDB0A /* CoreDataStack.swift in Sources */,
 				3267744A2020C64800067E1E /* Service_User.swift in Sources */,
 				321D5732203301CC00EC66C1 /* Service_Storage.swift in Sources */,
 				3284072220250F060088F7A0 /* enum.swift in Sources */,
@@ -618,7 +638,7 @@
 				INFOPLIST_FILE = uLendApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nebpehitire.uLendApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nebpehtire.uLendApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -635,7 +655,7 @@
 				INFOPLIST_FILE = uLendApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nebpehitire.uLendApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nebpehtire.uLendApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -664,6 +684,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		324F165A2035DA0800CFDB0A /* uLend.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				324F165B2035DA0800CFDB0A /* uLend.xcdatamodel */,
+			);
+			currentVersion = 324F165B2035DA0800CFDB0A /* uLend.xcdatamodel */;
+			path = uLend.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 32BE448D2006CFDC0012EE19 /* Project object */;
 }

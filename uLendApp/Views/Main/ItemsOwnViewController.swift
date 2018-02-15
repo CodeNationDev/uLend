@@ -12,8 +12,7 @@ final class ItemsOwnViewController: UIViewController, UICollectionViewDelegate, 
 
 
     
-//    @IBOutlet var newItemQuestionView: UIView!
-    @IBOutlet var newItemButton: UIBarButtonItem!
+    @IBOutlet var sideMenu: UIView!
     @IBOutlet var itemsCollection: UICollectionView!
     
     override func viewDidLoad() {
@@ -21,10 +20,11 @@ final class ItemsOwnViewController: UIViewController, UICollectionViewDelegate, 
         
         itemsCollection.delegate = self
         itemsCollection.dataSource = self
-        
-      
     }
 }
+
+
+
 
 
 // MARK: Collection Functions
@@ -42,22 +42,30 @@ extension ItemsOwnViewController {
 }
 
 
-// MARK: animation functions
-//extension ItemsOwnViewController {
-//
-//    func animateView(){
-//
-//        self.view.addSubview(newItemQuestionView)
-//        newItemQuestionView.center = self.view.center
-//        newItemQuestionView.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
-//        newItemQuestionView.alpha = 0
-//
-//        UIView.animate(withDuration: 0.33) {
-//            self.newItemQuestionView.transform = CGAffineTransform.identity
-//            self.newItemQuestionView.alpha = 1
-//        }
-//
-//    }
-//
-//}
+
+//MARK: animation functions
+extension ItemsOwnViewController {
+    
+    
+    func hideSideMenu(){
+        UIView.animate(withDuration: 0.5) {
+            
+            self.sideMenu.center = CGPoint(x: self.sideMenu.center.x - 60, y: self.sideMenu.center.y)
+        }
+    }
+    
+    func showSideMenu(){
+        UIView.animate(withDuration: 0.5) {
+            self.sideMenu.center = CGPoint(x: self.sideMenu.center.x + 60, y: self.sideMenu.center.y)
+            print("hola caracola")
+        }
+    
+    }
+    
+    
+    
+    
+}
+
+
 

@@ -26,7 +26,14 @@ final class Item {
     
     init(){}
     
-    
+    init(_ uid: String!, _ uidOwner: String!, _ name: String!, _ description: String?, _ images: [String]?, _ geoposition: GeoPosition?){
+        self.uid = uid
+        self.uidOwner = uidOwner
+        self.name = name
+        self.description = description ?? ""
+        self.images = images ?? [String]()
+        self.geoposition = geoposition ?? nil
+    }
      
     init(document: DocumentSnapshot!){
 
@@ -38,20 +45,7 @@ final class Item {
         if let geo = document.get("_geoloc") as? Dictionary<String, Double> {
             self.geoposition = GeoPosition(geo["lng"]!, geo["lat"]!)
         }
-        
-        
-//        self.uidOwner = document.data()?["uidOwner"] as? String
-//        self.name = document.data()?["name"] as? String
-//        self.description = document.data()?["description"] as? String ?? ""
-//
-//        if let geo = document.data()?["_geoloc"] as? Dictionary<String, Double> {
-//            self.geoposition = GeoPosition(geo["lng"]!, geo["lat"]!)
-//        }
-        
-        
-        
-//        images
-//        self.images = document.data()?["imagesArray"] as? [String] ?? [String]()
+
 
     }
     

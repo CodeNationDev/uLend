@@ -111,7 +111,7 @@ extension itemCreateNewViewController {
             //si estamos aquí es pq hemos pasado las dos pruebas
             
             Service_Item().createItem(Auth.auth().currentUser?.uid, name: nameTextField.text!, mediaUrl: nil, description: descriptionText.text, mediaData: arrayData, completionHandlerItem: { (error, item) in
-                                
+                
                 self.dismiss(animated: true, completion: nil)
                 
             })

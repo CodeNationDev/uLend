@@ -61,13 +61,13 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
         mode = .login
 
     }
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(true)
-////        ocultamosItems()    DEPRECATED
-//    }
-//
-//
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        ocultamosItems()
+    }
+
+
 
 
     
@@ -159,21 +159,23 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
 extension LoginMainViewController {
     
     func ocultamosItems(){
-        usernameTextField.isHidden = true
-        passwordTextField.isHidden = true
-        passwordRepeatTextField.isHidden = true
-        loginButton.isHidden = true
-        newUserButton.isHidden = true
-        googleLoginButton.isHidden = true
+//        usernameTextField.isHidden = true
+//        passwordTextField.isHidden = true
+//        passwordRepeatTextField.isHidden = true
+//        loginButton.isHidden = true
+//        newUserButton.isHidden = true
+//        googleLoginButton.isHidden = true
+        loginView.isHidden = true
         
     }
     func mostramosItems(){
-        usernameTextField.isHidden = false
-        passwordTextField.isHidden = false
-        passwordRepeatTextField.isHidden = false
-        loginButton.isHidden = false
-        newUserButton.isHidden = false
-        googleLoginButton.isHidden = false
+//        usernameTextField.isHidden = false
+//        passwordTextField.isHidden = false
+//        passwordRepeatTextField.isHidden = false
+//        loginButton.isHidden = false
+//        newUserButton.isHidden = false
+//        googleLoginButton.isHidden = false
+        loginView.isHidden = false
     }
     
     
@@ -213,7 +215,7 @@ extension LoginMainViewController {
         passwordRepeatTextField.resignFirstResponder()
         
         if controlPosicion {
-            UIView.animate(withDuration: 0.3, animations: {
+            UIView.animate(withDuration: 0.2, animations: {
                 self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + 200, width:self.view.frame.size.width, height:self.view.frame.size.height);
                 
             })
@@ -241,6 +243,7 @@ extension LoginMainViewController {
 
 extension LoginMainViewController {
     func animateLogin(){
+        mostramosItems()
         loginView.alpha = 0
         loginView.transform = CGAffineTransform.init(scaleX: 0.5, y: 0.5)
         let position = loginView.center
