@@ -187,26 +187,65 @@
                                     <constraint firstItem="3za-Cs-sWB" firstAttribute="top" secondItem="ubL-a3-zxU" secondAttribute="top" constant="30" id="yxS-9V-oXv"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="u" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdg-FM-d12">
+                                <rect key="frame" x="120" y="263" width="135" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="cAT-eh-Gk3"/>
+                                    <constraint firstAttribute="height" constant="81" id="z04-hE-U5y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPr-j5-5Bp">
+                                <rect key="frame" x="147" y="263" width="135" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="qrZ-0Q-siz"/>
+                                    <constraint firstAttribute="width" constant="135" id="ugU-fM-KUc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdD-pr-xge">
+                                <rect key="frame" x="69" y="263" width="52" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="66r-7S-hgA"/>
+                                    <constraint firstAttribute="width" constant="52" id="O1D-Hv-VHs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="R09-QV-Sm5" secondAttribute="bottom" id="9cM-25-Lrf"/>
                             <constraint firstAttribute="bottom" secondItem="ubL-a3-zxU" secondAttribute="bottom" constant="30" id="Doi-XO-Ejj"/>
+                            <constraint firstItem="sdg-FM-d12" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HMc-Mr-tuY"/>
+                            <constraint firstItem="R09-QV-Sm5" firstAttribute="top" secondItem="sdg-FM-d12" secondAttribute="bottom" constant="-344" id="M2p-dH-vlK"/>
                             <constraint firstItem="R09-QV-Sm5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="POw-qo-2D9"/>
                             <constraint firstItem="ubL-a3-zxU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SHh-gu-2i5"/>
                             <constraint firstItem="R09-QV-Sm5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W4A-Xw-Jz9"/>
+                            <constraint firstItem="bPr-j5-5Bp" firstAttribute="leading" secondItem="sdg-FM-d12" secondAttribute="trailing" constant="-108" id="Wsz-vU-IuD"/>
+                            <constraint firstItem="R09-QV-Sm5" firstAttribute="top" secondItem="bPr-j5-5Bp" secondAttribute="bottom" constant="-344" id="Yvb-8q-wIL"/>
                             <constraint firstItem="R09-QV-Sm5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aol-Ah-CrC"/>
+                            <constraint firstItem="sdg-FM-d12" firstAttribute="leading" secondItem="zdD-pr-xge" secondAttribute="trailing" constant="-1" id="hjj-tt-ia8"/>
+                            <constraint firstItem="R09-QV-Sm5" firstAttribute="top" secondItem="zdD-pr-xge" secondAttribute="bottom" constant="-344" id="wW0-BX-aYv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="googleLoginButton" destination="9gk-aZ-cKG" id="txd-NH-2qD"/>
+                        <outlet property="lendLabel" destination="bPr-j5-5Bp" id="xMN-SH-5tN"/>
                         <outlet property="loginButton" destination="0gt-fr-Zzf" id="lJI-xK-C1H"/>
                         <outlet property="loginView" destination="ubL-a3-zxU" id="a6n-yK-nvX"/>
                         <outlet property="newUserButton" destination="md1-zw-Yur" id="WQY-8j-khv"/>
                         <outlet property="passwordRepeatTextField" destination="QHi-QU-xeE" id="f50-CF-lrZ"/>
                         <outlet property="passwordTextField" destination="Cuq-lU-MXh" id="Hmd-a7-8DQ"/>
+                        <outlet property="uLabel" destination="sdg-FM-d12" id="R4W-Pw-fK7"/>
                         <outlet property="usernameTextField" destination="GMv-cH-B8w" id="FSl-zH-FKQ"/>
+                        <outlet property="yoLabel" destination="zdD-pr-xge" id="oFY-td-5tV"/>
                         <segue destination="4HU-ee-Bce" kind="presentation" identifier="showMain" id="7k0-o5-s6S"/>
                     </connections>
                 </viewController>

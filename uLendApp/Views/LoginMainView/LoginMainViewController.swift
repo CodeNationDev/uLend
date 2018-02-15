@@ -31,6 +31,12 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
     
     
     
+    @IBOutlet var yoLabel: UILabel!
+    @IBOutlet var uLabel: UILabel!
+    @IBOutlet var lendLabel: UILabel!
+    
+    
+    
     
     
     let serviceAuth = Service_Auth()
@@ -77,6 +83,7 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
         if Auth.auth().currentUser == nil {
 //            mostramosItems()  DEPRECATED
             animateLogin()
+            youLendAnimation()
         } else {
             performSegue(withIdentifier: "showMain", sender: nil)
         }
@@ -255,6 +262,44 @@ extension LoginMainViewController {
             self.loginView.center = position
         }
     
+    }
+    
+    
+    
+    
+    func youLendAnimation() {
+        
+        //resituamos los elemenos
+        //yo u arriba
+        
+        let yoLabelCenter = yoLabel.center
+        let uLabelCenter = uLabel.center
+        let lendLabelCenter = lendLabel.center
+        
+        yoLabel.center = CGPoint(x: yoLabel.center.x, y: -10)
+        uLabel.center = CGPoint(x: uLabel.center.x, y: -10)
+        lendLabel.center = CGPoint(x: 800, y: lendLabel.center.y)
+        
+
+        UIView.animate(withDuration: 0.8, animations: {
+         
+            self.yoLabel.center = yoLabelCenter
+            self.uLabel.center = uLabelCenter
+        }) { (bool) in
+            UIView.animate(withDuration: 0.8, animations: {
+                
+                self.lendLabel.center = lendLabelCenter
+                
+                
+            }, completion: { (bool) in
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.yoLabel.center = CGPoint(x: -100, y: self.yoLabel.center.y)
+                })
+            })
+        }
+        
+        
+        
     }
     
 }
