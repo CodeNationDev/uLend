@@ -21,6 +21,7 @@
 		324F16592035D99600CFDB0A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F16582035D99600CFDB0A /* CoreDataStack.swift */; };
 		324F165C2035DA0800CFDB0A /* uLend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 324F165A2035DA0800CFDB0A /* uLend.xcdatamodeld */; };
 		324F165E2035DCD800CFDB0A /* ItemManaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F165D2035DCD800CFDB0A /* ItemManaged.swift */; };
+		324F16602035E38900CFDB0A /* Service_LocalCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F165F2035E38900CFDB0A /* Service_LocalCoreData.swift */; };
 		32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32500B70200EB7E000927D15 /* CurrentUserViewController.swift */; };
 		3267744A2020C64800067E1E /* Service_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326774492020C64800067E1E /* Service_User.swift */; };
 		3267744C202215C200067E1E /* pruebas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267744B202215C200067E1E /* pruebas.swift */; };
@@ -69,6 +70,7 @@
 		324F16582035D99600CFDB0A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		324F165B2035DA0800CFDB0A /* uLend.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = uLend.xcdatamodel; sourceTree = "<group>"; };
 		324F165D2035DCD800CFDB0A /* ItemManaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManaged.swift; sourceTree = "<group>"; };
+		324F165F2035E38900CFDB0A /* Service_LocalCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_LocalCoreData.swift; sourceTree = "<group>"; };
 		32500B70200EB7E000927D15 /* CurrentUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserViewController.swift; sourceTree = "<group>"; };
 		326774492020C64800067E1E /* Service_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_User.swift; sourceTree = "<group>"; };
 		3267744B202215C200067E1E /* pruebas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebas.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				324F16582035D99600CFDB0A /* CoreDataStack.swift */,
 				324F165A2035DA0800CFDB0A /* uLend.xcdatamodeld */,
 				324F165D2035DCD800CFDB0A /* ItemManaged.swift */,
+				324F165F2035E38900CFDB0A /* Service_LocalCoreData.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				32234449201BD286008D0EBB /* AlgoliaKeys.swift in Sources */,
 				32C36453202E5FED0050901B /* KaedeTextField.swift in Sources */,
 				3284072020250E600088F7A0 /* Loan.swift in Sources */,
+				324F16602035E38900CFDB0A /* Service_LocalCoreData.swift in Sources */,
 				32ABD968202A077100100977 /* CameraViewController.swift in Sources */,
 				3236DB0320162A7000D98EA4 /* Item.swift in Sources */,
 				32C36443202C92F50050901B /* NewItemImageCell.swift in Sources */,
