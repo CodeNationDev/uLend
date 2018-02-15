@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XZe-PG-WoN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -170,17 +170,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="googleLoginButton" destination="9gk-aZ-cKG" id="txd-NH-2qD"/>
                         <outlet property="loginButton" destination="0gt-fr-Zzf" id="lJI-xK-C1H"/>
                         <outlet property="newUserButton" destination="md1-zw-Yur" id="WQY-8j-khv"/>
                         <outlet property="passwordRepeatTextField" destination="QHi-QU-xeE" id="f50-CF-lrZ"/>
                         <outlet property="passwordTextField" destination="Cuq-lU-MXh" id="Hmd-a7-8DQ"/>
                         <outlet property="usernameTextField" destination="GMv-cH-B8w" id="FSl-zH-FKQ"/>
-                        <segue destination="4HU-ee-Bce" kind="show" identifier="showMain" id="7k0-o5-s6S"/>
+                        <segue destination="4HU-ee-Bce" kind="presentation" identifier="showMain" id="7k0-o5-s6S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="117.48768472906404"/>
+            <point key="canvasLocation" x="124" y="74"/>
         </scene>
         <!--Item Create New View Controller-->
         <scene sceneID="JHr-JT-cfB">
@@ -541,7 +542,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l63-Rx-yf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1231" y="117"/>
+            <point key="canvasLocation" x="1183" y="87"/>
         </scene>
         <!--Loans-->
         <scene sceneID="2MK-Nj-Rz6">

@@ -24,6 +24,7 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
     @IBOutlet var passwordRepeatTextField: YoshikoTextField!
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var newUserButton: UIButton!
+    @IBOutlet var googleLoginButton: UIButton!
     
     let serviceAuth = Service_Auth()
     var mode = Mode.login
@@ -32,6 +33,8 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
 
         // Do any additional setup after loading the view.
         passwordRepeatTextField.alpha = 0.0
@@ -47,18 +50,29 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
         passwordRepeatTextField.text = "prueba"
         
         mode = .login
-        
-        
-        
+
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        ocultamosItems()
+    }
+    
+    
+
 
     
     override func viewDidAppear(_ animated: Bool) {
         //si ya está loqueado vamos a la pantalla principal
-        guard Auth.auth().currentUser == nil else {
+//        guard Auth.auth().currentUser == nil else {
+//            performSegue(withIdentifier: "showMain", sender: nil)
+//            return
+//        }
+        
+        if Auth.auth().currentUser == nil {
+            mostramosItems()
+        } else {
             performSegue(withIdentifier: "showMain", sender: nil)
-            return
         }
     }
 
@@ -144,6 +158,25 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
 
 
 extension LoginMainViewController {
+    
+    func ocultamosItems(){
+        usernameTextField.isHidden = true
+        passwordTextField.isHidden = true
+        passwordRepeatTextField.isHidden = true
+        loginButton.isHidden = true
+        newUserButton.isHidden = true
+        googleLoginButton.isHidden = true
+        
+    }
+    func mostramosItems(){
+        usernameTextField.isHidden = false
+        passwordTextField.isHidden = false
+        passwordRepeatTextField.isHidden = false
+        loginButton.isHidden = false
+        newUserButton.isHidden = false
+        googleLoginButton.isHidden = false
+    }
+    
     
     func verifyEmail() -> Bool {
         if !isValidEmail(test: usernameTextField.text!){
