@@ -21,11 +21,29 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondoinicio" translatesAutoresizingMaskIntoConstraints="NO" id="ItU-3d-RpY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uLend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMc-Xp-eeo">
+                                <rect key="frame" x="121.00000000000001" y="376.33333333333331" width="133.33333333333337" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="0.5194221368715084" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share and enjoy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wf8-z4-k2x">
+                                <rect key="frame" x="136" y="441" width="103.66666666666669" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="0.43983502094972066" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ItU-3d-RpY" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="8dg-DE-zBQ"/>
                             <constraint firstAttribute="bottom" secondItem="ItU-3d-RpY" secondAttribute="bottom" id="Obk-wM-r87"/>
+                            <constraint firstItem="wf8-z4-k2x" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="VQe-qi-UJl"/>
+                            <constraint firstItem="CMc-Xp-eeo" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cLG-n2-W0a"/>
+                            <constraint firstItem="wf8-z4-k2x" firstAttribute="top" secondItem="CMc-Xp-eeo" secondAttribute="bottom" constant="3.6666666666666856" id="d9H-2t-AFp"/>
+                            <constraint firstItem="CMc-Xp-eeo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hMk-4r-LBW"/>
                             <constraint firstItem="ItU-3d-RpY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="luy-FB-vc6"/>
                             <constraint firstItem="ItU-3d-RpY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ycC-nd-lOs"/>
                         </constraints>

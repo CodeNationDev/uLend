@@ -457,29 +457,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cza-Qu-txm">
-                                <rect key="frame" x="0.0" y="44" width="375" height="40"/>
-                                <color key="backgroundColor" red="0.73695272840000003" green="0.7104021546" blue="0.69844189489999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="kmS-9A-2Ta"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Mis cosas" id="7Eo-Ca-kPR">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qqI-3W-cDR">
-                                            <connections>
-                                                <segue destination="VcP-5I-sqz" kind="show" identifier="newItem" id="RZI-VV-Sc9"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tun-Rw-VcX">
-                                <rect key="frame" x="0.0" y="673" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XBp-5h-u1Z">
-                                <rect key="frame" x="0.0" y="84" width="375" height="589"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="60" y="44" width="315" height="685"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="A1D-sh-4oO">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -497,31 +477,34 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XT7-JX-I9j">
+                                <rect key="frame" x="0.0" y="44" width="60" height="685"/>
+                                <color key="backgroundColor" red="0.92278796434402466" green="0.74062439975473005" blue="0.71435929291407507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="4lM-1x-19i"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.73695272842639592" green="0.71040215457654199" blue="0.69844189494030695" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Cza-Qu-txm" firstAttribute="top" secondItem="qie-NC-RyY" secondAttribute="top" id="17J-Dq-ex1"/>
-                            <constraint firstItem="tun-Rw-VcX" firstAttribute="top" secondItem="XBp-5h-u1Z" secondAttribute="bottom" id="7Ko-df-eqn"/>
-                            <constraint firstItem="XBp-5h-u1Z" firstAttribute="leading" secondItem="qie-NC-RyY" secondAttribute="leading" id="7ng-ka-lyA"/>
-                            <constraint firstItem="Cza-Qu-txm" firstAttribute="trailing" secondItem="qie-NC-RyY" secondAttribute="trailing" id="C12-b2-MoW"/>
-                            <constraint firstItem="XBp-5h-u1Z" firstAttribute="top" secondItem="Cza-Qu-txm" secondAttribute="bottom" id="Mv2-Hh-7kB"/>
-                            <constraint firstItem="tun-Rw-VcX" firstAttribute="bottom" secondItem="qie-NC-RyY" secondAttribute="bottom" id="Xhg-6y-SoT"/>
-                            <constraint firstItem="tun-Rw-VcX" firstAttribute="leading" secondItem="qie-NC-RyY" secondAttribute="leading" id="ZfY-6w-3Za"/>
-                            <constraint firstItem="Cza-Qu-txm" firstAttribute="leading" secondItem="qie-NC-RyY" secondAttribute="leading" id="naj-ic-3wl"/>
-                            <constraint firstItem="XBp-5h-u1Z" firstAttribute="trailing" secondItem="qie-NC-RyY" secondAttribute="trailing" id="p5Y-fc-lqH"/>
-                            <constraint firstItem="tun-Rw-VcX" firstAttribute="trailing" secondItem="qie-NC-RyY" secondAttribute="trailing" id="v2N-br-gIi"/>
+                            <constraint firstItem="XBp-5h-u1Z" firstAttribute="bottom" secondItem="qie-NC-RyY" secondAttribute="bottom" id="Mk2-7j-Kui"/>
+                            <constraint firstItem="XBp-5h-u1Z" firstAttribute="leading" secondItem="XT7-JX-I9j" secondAttribute="trailing" id="Sk1-Tk-lfq"/>
+                            <constraint firstItem="XT7-JX-I9j" firstAttribute="top" secondItem="XBp-5h-u1Z" secondAttribute="top" id="TlX-TF-Noa"/>
+                            <constraint firstItem="XT7-JX-I9j" firstAttribute="bottom" secondItem="qie-NC-RyY" secondAttribute="bottom" id="ap5-LT-AwA"/>
+                            <constraint firstItem="XT7-JX-I9j" firstAttribute="top" secondItem="qie-NC-RyY" secondAttribute="top" id="hH7-SU-rfF"/>
+                            <constraint firstItem="XBp-5h-u1Z" firstAttribute="trailing" secondItem="qie-NC-RyY" secondAttribute="trailing" id="usq-2H-exL"/>
+                            <constraint firstItem="XT7-JX-I9j" firstAttribute="leading" secondItem="qie-NC-RyY" secondAttribute="leading" id="wVS-ql-MXr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qie-NC-RyY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="cV5-6K-aVM"/>
                     <connections>
                         <outlet property="itemsCollection" destination="XBp-5h-u1Z" id="DEi-Km-Woi"/>
-                        <outlet property="newItemButton" destination="qqI-3W-cDR" id="5DH-Wf-Ten"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7eY-1q-AkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2767" y="-998"/>
+            <point key="canvasLocation" x="2765.5999999999999" y="-998.27586206896558"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cOE-9e-suM">
