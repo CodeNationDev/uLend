@@ -36,9 +36,7 @@ class Service_LocalCoreData {
         }
     }
     
-    
-    
-    
+
     func insertItem(_ saveItem: Item){
         
         let context = stack.persistentContainer.viewContext
@@ -59,6 +57,29 @@ class Service_LocalCoreData {
         
     }
     
+    
+    func removeItemByUID(_ uid: String!){
+        let context = stack.persistentContainer.viewContext
+        let request : NSFetchRequest<ItemManaged> = ItemManaged.fetchRequest()
+        let predicate = NSPredicate(format: "uid = \(uid)")
+        request.predicate = predicate
+        
+        do {
+            let items = try context.fetch(request)
+            if items.count > 0 {
+                context.delete(items.last!)
+            } else {
+                return
+            }
+            try context.save()
+        } catch {
+            print("Errores, errores y más errores")
+        }
+        
+        
+        //se deberían eliminar las imágenes que tenemos en caché
+        
+    }
     
     
     
