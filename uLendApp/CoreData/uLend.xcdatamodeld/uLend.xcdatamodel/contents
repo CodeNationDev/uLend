@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ImageCoreData" representedClassName="ImageCoreData" syncable="YES" codeGenerationType="class">
+        <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="imageItemNumer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uidItem" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Item" representedClassName="ItemManaged" syncable="YES" codeGenerationType="class">
         <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="geoposition" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="images" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sync" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uidOwner" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="ImageCoreData" positionX="-443" positionY="-144" width="128" height="103"/>
+        <element name="Item" positionX="-648" positionY="-148" width="128" height="118"/>
     </elements>
 </model>

@@ -14,12 +14,17 @@ final class ItemsOwnViewController: UIViewController, UICollectionViewDelegate, 
     
     @IBOutlet var sideMenu: UIView!
     @IBOutlet var itemsCollection: UICollectionView!
+    var items : [Item]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         itemsCollection.delegate = self
         itemsCollection.dataSource = self
+        
+        items = Service_LocalCoreData().itemsStored()
+        itemsCollection.reloadData()
+        
     }
 }
 
@@ -30,7 +35,8 @@ final class ItemsOwnViewController: UIViewController, UICollectionViewDelegate, 
 // MARK: Collection Functions
 extension ItemsOwnViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        print(items!.count)
+        return (items?.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -244,6 +244,8 @@ extension LoginMainViewController {
     }
 
 
+    
+    
 }
 
 //MARK: Animation login
@@ -269,12 +271,15 @@ extension LoginMainViewController {
     
     func youLendAnimation() {
         
-        //resituamos los elemenos
-        //yo u arriba
+        //hacemos copia de valores
         
         let yoLabelCenter = yoLabel.center
         let uLabelCenter = uLabel.center
         let lendLabelCenter = lendLabel.center
+        
+        //resituamos los elemenos
+        //yo u arriba
+        // lend a derecha
         
         yoLabel.center = CGPoint(x: yoLabel.center.x, y: -10)
         uLabel.center = CGPoint(x: uLabel.center.x, y: -10)
@@ -282,17 +287,18 @@ extension LoginMainViewController {
         
 
         UIView.animate(withDuration: 0.8, animations: {
-         
+            //yo u   -> para abajo
             self.yoLabel.center = yoLabelCenter
             self.uLabel.center = uLabelCenter
         }) { (bool) in
             UIView.animate(withDuration: 0.8, animations: {
-                
+                // lend ->  a izquierda
                 self.lendLabel.center = lendLabelCenter
                 
                 
             }, completion: { (bool) in
                 UIView.animate(withDuration: 0.5, animations: {
+                    //yo -> sale de pantalla
                     self.yoLabel.center = CGPoint(x: -100, y: self.yoLabel.center.y)
                 })
             })

@@ -31,6 +31,14 @@ struct Service_Item {
                 completionHandlerItem(error?.localizedDescription, nil)
             } else {
                 //se debe insertar las imagenes en el contenedor de items
+                
+                //creamos el item en local
+                let item = Item()
+                item.description = description ?? ""
+                item.name = name
+                item.uid = ref?.documentID
+                
+                
                 var counter = 1;
                 for data in mediaData {
                     
@@ -40,6 +48,12 @@ struct Service_Item {
                         if let error = (error as NSError?){
                             print(error.localizedDescription)
                         } else {
+                            
+                            //creado lo añadimos a coredata
+                            
+                            Service_LocalCoreData().insertItem(item)
+                            Service_LocalCoreData().insertImages(item, data, String(describing: object!.downloadURL()))
+                            
 
                             self.servDBitems.document(ref!.documentID).collection("mediaUrl").document("image\(counter)").setData(["mediaUrl":String(describing: object!.downloadURL()!)])
                             counter += 1
@@ -48,11 +62,7 @@ struct Service_Item {
                 }
 
                 // se debe añadir a algolia
-                //creamos el item en local
-                let item = Item()
-                item.description = description ?? ""
-                item.name = name
-                item.uid = ref?.documentID
+                
                 
                 Service_Algolia().saveItem(item, { (errorAlg, content) in
                     if error != nil {

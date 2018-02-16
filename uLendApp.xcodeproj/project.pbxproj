@@ -51,6 +51,7 @@
 		32C917482007A852008F9A7C /* Service_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C917472007A852008F9A7C /* Service_Auth.swift */; };
 		32C9174B2007A910008F9A7C /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9174A2007A910008F9A7C /* Typealias.swift */; };
 		32C9174D2007A96A008F9A7C /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9174C2007A96A008F9A7C /* functions.swift */; };
+		32CCD5C82036F8DE006A1073 /* ImageCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CCD5C72036F8DE006A1073 /* ImageCoreData.swift */; };
 		BE9D266E055B4EBE6C878BAB /* Pods_uLendApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D2492761D3F7585A842CF6 /* Pods_uLendApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		32C917472007A852008F9A7C /* Service_Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Auth.swift; sourceTree = "<group>"; };
 		32C9174A2007A910008F9A7C /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		32C9174C2007A96A008F9A7C /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
+		32CCD5C72036F8DE006A1073 /* ImageCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCoreData.swift; sourceTree = "<group>"; };
 		8DD64864CEDB4B7D9124F632 /* Pods-uLendApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uLendApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-uLendApp/Pods-uLendApp.release.xcconfig"; sourceTree = "<group>"; };
 		DB8D1E3C9E168E7F9E78AB1B /* Pods-uLendApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uLendApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uLendApp/Pods-uLendApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 				324F165A2035DA0800CFDB0A /* uLend.xcdatamodeld */,
 				324F165D2035DCD800CFDB0A /* ItemManaged.swift */,
 				324F165F2035E38900CFDB0A /* Service_LocalCoreData.swift */,
+				32CCD5C72036F8DE006A1073 /* ImageCoreData.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				32C36454202E5FED0050901B /* JiroTextField.swift in Sources */,
 				32C36459202E5FED0050901B /* YoshikoTextField.swift in Sources */,
 				32C9174B2007A910008F9A7C /* Typealias.swift in Sources */,
+				32CCD5C82036F8DE006A1073 /* ImageCoreData.swift in Sources */,
 				3267744C202215C200067E1E /* pruebas.swift in Sources */,
 				32C9174D2007A96A008F9A7C /* functions.swift in Sources */,
 				32840724202510830088F7A0 /* UserUlend.swift in Sources */,

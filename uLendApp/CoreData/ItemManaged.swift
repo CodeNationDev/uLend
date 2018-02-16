@@ -11,7 +11,7 @@ import Foundation
 extension ItemManaged {
     
     func mappedObject() -> Item {
-        return Item(self.uid, self.uidOwner, self.name, self.description, self.images as? [String], self.geoposition as? GeoPosition)
+        return Item(self.uid, self.uidOwner, self.name, self.descripcion)
     }
     
 

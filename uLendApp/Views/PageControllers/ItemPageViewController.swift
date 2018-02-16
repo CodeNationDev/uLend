@@ -34,10 +34,13 @@ final class ItemPageViewController: UIPageViewController, UIPageViewControllerDe
         self.dataSource = self
         setViewControllers([subViewControllers[0]], direction: .forward, animated: true, completion: nil)
         configurePageControl()
+        
+        
+        
     }
     
     
-
+    
 
 }
 

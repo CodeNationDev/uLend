@@ -26,13 +26,13 @@ final class Item {
     
     init(){}
     
-    init(_ uid: String!, _ uidOwner: String!, _ name: String!, _ description: String?, _ images: [String]?, _ geoposition: GeoPosition?){
+    init(_ uid: String!, _ uidOwner: String!, _ name: String!, _ description: String?){
         self.uid = uid
         self.uidOwner = uidOwner
         self.name = name
         self.description = description ?? ""
-        self.images = images ?? [String]()
-        self.geoposition = geoposition ?? nil
+//        self.images = images ?? [String]()
+//        self.geoposition = geoposition ?? nil
     }
      
     init(document: DocumentSnapshot!){

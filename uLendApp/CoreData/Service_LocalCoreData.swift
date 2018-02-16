@@ -46,14 +46,50 @@ class Service_LocalCoreData {
         item.uidOwner = saveItem.uidOwner
         item.name = saveItem.name
         item.descripcion = saveItem.description
-        item.images = saveItem.images! as NSObject
+//        item.images = saveItem.images! as NSObject
         item.sync = true
         
         do {
             try context.save()
+            print("se ha creado el item con éxito")
         } catch  {
             print("Error actualizando Core Data")
         }
+        
+    }
+    
+    
+    func insertImages(_ item: Item!, _ data: Data!, _ imageUrl: String!){
+        
+        let context = stack.persistentContainer.viewContext
+        let image = ImageCoreData(context:context)
+        
+        image.imageData = data
+        image.uidItem = item.uid
+        image.imageUrl = imageUrl
+        
+        
+//        var arrayImageCoreData = [ImageCoreData]()
+        
+//        for data in images {
+//            let imageCoreData = ImageCoreData(context: context)
+//
+//            imageCoreData.imageData = data
+//            imageCoreData.imageUrl = stringImage
+//            imageCoreData.uidItem = item.uid
+//
+//            arrayImageCoreData.append(imageCoreData)
+//
+//
+//        }
+        do {
+            try context.save()
+            print("se ha guardado la imagen con éxito")
+        } catch {
+            print("error actualizando Core Data")
+        }
+        
+        
         
     }
     

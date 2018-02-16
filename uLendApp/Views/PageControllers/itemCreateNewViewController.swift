@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 
+
 class itemCreateNewViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
 
@@ -112,7 +113,15 @@ extension itemCreateNewViewController {
             
             Service_Item().createItem(Auth.auth().currentUser?.uid, name: nameTextField.text!, mediaUrl: nil, description: descriptionText.text, mediaData: arrayData, completionHandlerItem: { (error, item) in
                 
-                self.dismiss(animated: true, completion: nil)
+                if let error = error {
+                    self.present(errorAlertView(error), animated: true, completion: nil)
+                } else {
+                    
+//                    Service_LocalCoreData().insertImages(item!, self.arrayData?.last)
+                    self.dismiss(animated: true, completion: nil)
+                }
+                
+                
                 
             })
             
