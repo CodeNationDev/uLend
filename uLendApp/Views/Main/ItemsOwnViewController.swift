@@ -42,6 +42,14 @@ extension ItemsOwnViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "item", for: indexPath) as! ItemCollectionViewCell
         
+        let item = items![indexPath.row]
+        let images = Service_LocalCoreData().imagesMyUIDimage(item.uid)
+        //primero hay q buscar las images
+//        Service_LocalCoreData().imagesMyUIDimage(items[indexPath.row].uid)
+        
+        
+//        cell.image = UIImage(data: items[])
+        cell.image.image = images![0]
         return cell
     }
     

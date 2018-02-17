@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 
 class Service_LocalCoreData {
@@ -34,6 +35,32 @@ class Service_LocalCoreData {
             print("malo malo malo")
             return nil
         }
+    }
+    
+    func imagesMyUIDimage(_ uidItem: String!) -> [UIImage]? {
+        
+        print(uidItem)
+        
+        var images = [UIImage]()
+        let context = stack.persistentContainer.viewContext
+        let request : NSFetchRequest<ImageCoreData> = ImageCoreData.fetchRequest()
+        
+        let predicate = NSPredicate(format: "uidItem = \(uidItem!)")
+        request.predicate = predicate
+
+        
+        do {
+            let fetchedImages = try context.fetch(request)
+            for image in fetchedImages {
+                images.append(image.mappedImage())
+            }
+        } catch {
+            print("algo ha pasado")
+            return nil
+        }
+        
+        
+        return images
     }
     
 
