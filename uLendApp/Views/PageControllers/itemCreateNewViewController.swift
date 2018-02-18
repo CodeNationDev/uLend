@@ -13,7 +13,7 @@ import FirebaseAuth
 class itemCreateNewViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
 
-    
+    open var backVC : ItemsOwnViewController!
     
     @IBOutlet var photoCollection: UICollectionView!
     @IBOutlet var descriptionText: UITextView!
@@ -118,6 +118,7 @@ extension itemCreateNewViewController {
                 } else {
                     
 //                    Service_LocalCoreData().insertImages(item!, self.arrayData?.last)
+                    
                     self.dismiss(animated: true, completion: nil)
                 }
                 

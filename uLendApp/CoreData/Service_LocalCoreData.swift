@@ -37,30 +37,29 @@ class Service_LocalCoreData {
         }
     }
     
-    func imagesMyUIDimage(_ uidItem: String!) -> [UIImage]? {
+    func imagesByUIDimage(_ uidItem: String!) -> [Data]? {
         
         print(uidItem)
         
-        var images = [UIImage]()
+        var images = [Data]()
         let context = stack.persistentContainer.viewContext
         let request : NSFetchRequest<ImageCoreData> = ImageCoreData.fetchRequest()
         
-        let predicate = NSPredicate(format: "uidItem = \(uidItem!)")
+//        let predicate = NSPredicate(format: "uiditem == '\(uidItem!)'")
+        let predicate = NSPredicate(format: "uiditem = %@", uidItem!)
         request.predicate = predicate
 
-        
         do {
             let fetchedImages = try context.fetch(request)
             for image in fetchedImages {
-                images.append(image.mappedImage())
+                images.append(image.imageData!)
+//                images.append(image.mappedImage())
+                
             }
         } catch {
-            print("algo ha pasado")
             return nil
         }
-        
-        
-        return images
+            return images
     }
     
 
@@ -92,7 +91,7 @@ class Service_LocalCoreData {
         let image = ImageCoreData(context:context)
         
         image.imageData = data
-        image.uidItem = item.uid
+        image.uiditem = item.uid
         image.imageUrl = imageUrl
         
         

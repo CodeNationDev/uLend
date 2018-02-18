@@ -43,13 +43,13 @@ extension ItemsOwnViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "item", for: indexPath) as! ItemCollectionViewCell
         
         let item = items![indexPath.row]
-        let images = Service_LocalCoreData().imagesMyUIDimage(item.uid)
-        //primero hay q buscar las images
-//        Service_LocalCoreData().imagesMyUIDimage(items[indexPath.row].uid)
+        let images = Service_LocalCoreData().imagesByUIDimage(item.uid)
         
-        
-//        cell.image = UIImage(data: items[])
-        cell.image.image = images![0]
+        guard let image = UIImage(data: (images?.last!)!) else {
+            print("algo falla")
+            return cell
+        }
+        cell.image.image = image
         return cell
     }
     
