@@ -76,6 +76,12 @@ extension ItemsOwnViewController {
     
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? itemCreateNewViewController {
+            vc.backVC = self
+        }
+    }
+    
     
     
     

@@ -118,7 +118,8 @@ extension itemCreateNewViewController {
                 } else {
                     
 //                    Service_LocalCoreData().insertImages(item!, self.arrayData?.last)
-                    
+                    self.backVC.items? = Service_LocalCoreData().itemsStored()!
+                    self.backVC.itemsCollection.reloadData()
                     self.dismiss(animated: true, completion: nil)
                 }
                 

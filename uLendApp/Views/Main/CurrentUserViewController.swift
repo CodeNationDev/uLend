@@ -35,7 +35,7 @@ class CurrentUserViewController: UIViewController {
                 self.userEmail.text = user!.email
                 
                 
-                print("el user tiene el id: \(user?.uid),\n el nombre: \(user?.name),\n apellido: \(user?.surname), \n y correo: \(user?.email)")
+//                print("el user tiene el id: \(user?.uid),\n el nombre: \(user?.name),\n apellido: \(user?.surname), \n y correo: \(user?.email)")
                 
  
             }

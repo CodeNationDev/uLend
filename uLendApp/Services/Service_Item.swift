@@ -27,7 +27,6 @@ struct Service_Item {
         var ref: DocumentReference? = nil
         ref = servDBitems.addDocument(data: profile) { (error) in
             if error != nil {
-                print("error adding document")
                 completionHandlerItem(error?.localizedDescription, nil)
             } else {
                 //se debe insertar las imagenes en el contenedor de items
@@ -37,40 +36,37 @@ struct Service_Item {
                 item.description = description ?? ""
                 item.name = name
                 item.uid = ref?.documentID
+                item.uidOwner = uidUser
+                //guardamos el item en coredata
+                Service_LocalCoreData().insertItem(item)
+//                Service_LocalCoreData().insertImages(item, mediaData, mediaUrl)
                 
-                
-                var counter = 1;
+                var counter = 1//;   <- C moment?
                 for data in mediaData {
                     
                     let imageName = "\(UUID().uuidString).jpg"
-
+                    
                     Service_Storage().itemImagesRef.child((ref?.documentID)!).child(imageName).putData(data, metadata: nil, completion: { (object, error) in
                         if let error = (error as NSError?){
                             print(error.localizedDescription)
                         } else {
                             
-                            //creado lo añadimos a coredata
+                            Service_LocalCoreData().insertImage(item, data, String(describing: object!.downloadURL()!))
                             
-                            Service_LocalCoreData().insertItem(item)
-                            Service_LocalCoreData().insertImages(item, data, String(describing: object!.downloadURL()))
-                            
-
                             self.servDBitems.document(ref!.documentID).collection("mediaUrl").document("image\(counter)").setData(["mediaUrl":String(describing: object!.downloadURL()!)])
+                            if counter == mediaData.count {
+                                Service_Algolia().saveItem(item, { (errorAlg, content) in
+                                    if error != nil {
+                                        completionHandlerItem(errorAlg, item)
+                                    } else {
+                                        completionHandlerItem(nil, item)
+                                    }
+                                })
+                            }
                             counter += 1
                         }
                     })
                 }
-
-                // se debe añadir a algolia
-                
-                
-                Service_Algolia().saveItem(item, { (errorAlg, content) in
-                    if error != nil {
-                        completionHandlerItem(errorAlg, item)
-                    } else {
-                        completionHandlerItem(nil, item)
-                    }
-                })
             }
         }
     }

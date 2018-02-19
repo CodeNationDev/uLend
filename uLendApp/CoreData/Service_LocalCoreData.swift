@@ -72,12 +72,10 @@ class Service_LocalCoreData {
         item.uidOwner = saveItem.uidOwner
         item.name = saveItem.name
         item.descripcion = saveItem.description
-//        item.images = saveItem.images! as NSObject
         item.sync = true
         
         do {
             try context.save()
-            print("se ha creado el item con éxito")
         } catch  {
             print("Error actualizando Core Data")
         }
@@ -85,7 +83,7 @@ class Service_LocalCoreData {
     }
     
     
-    func insertImages(_ item: Item!, _ data: Data!, _ imageUrl: String!){
+    func insertImage(_ item: Item!, _ data: Data!, _ imageUrl: String!){
         
         let context = stack.persistentContainer.viewContext
         let image = ImageCoreData(context:context)
@@ -93,30 +91,33 @@ class Service_LocalCoreData {
         image.imageData = data
         image.uiditem = item.uid
         image.imageUrl = imageUrl
-        
-        
-//        var arrayImageCoreData = [ImageCoreData]()
-        
-//        for data in images {
-//            let imageCoreData = ImageCoreData(context: context)
-//
-//            imageCoreData.imageData = data
-//            imageCoreData.imageUrl = stringImage
-//            imageCoreData.uidItem = item.uid
-//
-//            arrayImageCoreData.append(imageCoreData)
-//
-//
-//        }
+
         do {
             try context.save()
             print("se ha guardado la imagen con éxito")
         } catch {
             print("error actualizando Core Data")
         }
+    }
+    
+    func insertImages(_ item: Item!, _ data: [Data]!, _ imageUrl: [String]?){
+        let context = stack.persistentContainer.viewContext
+        var images = [ImageCoreData(context:context)]
         
+        for x in 0...(data.count - 1) {
+            let image = ImageCoreData()
+            image.imageData = data[x]
+            image.uiditem = item.uid
+            image.imageUrl = imageUrl?[x] ?? "sin url"
+            images.append(image)
+        }
         
-        
+        do {
+            try context.save()
+            
+        } catch {
+            print("error actualizando Core Data")
+        }
     }
     
     
