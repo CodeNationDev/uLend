@@ -8,8 +8,8 @@
 
 import UIKit
 import AVFoundation
-import CoreML
-import Vision
+//import CoreML
+//import Vision
 
 final class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
 
@@ -99,15 +99,24 @@ extension CameraViewController {
         //guardamos la imagen que se ha tomado
         photoData = photo.fileDataRepresentation()
         let image = UIImage(data: photoData!)
+        let cgImage = image?.cgImage
+        let widht = CGFloat(cgImage!.width)
+        let height = CGFloat(cgImage!.height)
+        let cropRect = CGRect(x: (widht/2) - 360.0,
+                              y: (height/2) - 360.0,
+                              width: 720.0,
+                              height: 720.0)
+        let img = cgImage?.cropping(to: cropRect)
 
+        
+        temporalImageView.image = UIImage(cgImage: img!, scale: 1.0, orientation: image!.imageOrientation)
         openPreview()
-        temporalImageView.image = image!
     }
     
     
     func openPreview(){
         self.view.addSubview(preView)
-        preView.bounds = self.view.bounds.applying(CGAffineTransform(scaleX: 0.8, y: 0.8))
+        preView.bounds = self.view.bounds.applying(CGAffineTransform(scaleX: 0.95, y: 0.95))
         preView.center = self.view.center
 
     }

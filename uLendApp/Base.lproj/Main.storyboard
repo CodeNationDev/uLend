@@ -496,7 +496,7 @@
                                 <action selector="cancelPreview" destination="9MV-ZI-IzD" eventType="touchUpInside" id="Oy8-UG-FMm"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hgJ-Ux-ZSV">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hgJ-Ux-ZSV">
                             <rect key="frame" x="8" y="149" width="300" height="300"/>
                             <color key="backgroundColor" red="0.3469700888784728" green="0.50889376490967531" blue="0.62656250000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
