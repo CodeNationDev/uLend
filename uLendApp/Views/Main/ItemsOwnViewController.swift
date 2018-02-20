@@ -56,9 +56,29 @@ extension ItemsOwnViewController {
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        Service_LocalCoreData().removeItem(items![indexPath.row])
-        items?.remove(at: indexPath.row)
-        self.itemsCollection.reloadData()
+        Service_Item().deleteItem(items![indexPath.row]) { (error, bool) in
+            if error != nil {
+                self.present(errorAlertView("Ha ocurrido un error, vuelve probar de eliminar"), animated: true, completion: nil)
+            } else {
+
+                for x in 1...3  {
+                    Service_Storage().itemImagesRef.child(self.items![indexPath.row].uid!).child("image\(x).jpg").delete(completion: { (error) in
+                        if let error = (error as NSError?){
+                            print(error.localizedDescription)
+                        } else {
+                            print("todo ha ido bien")
+                        }
+                    })
+                }
+                
+                Service_LocalCoreData().removeItem(self.items![indexPath.row])
+                self.items?.remove(at: indexPath.row)
+                self.itemsCollection.reloadData()
+            }
+        }
+        
+        
+
     }
     
 }

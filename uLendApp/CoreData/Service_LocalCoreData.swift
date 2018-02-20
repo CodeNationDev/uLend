@@ -131,6 +131,8 @@ class Service_LocalCoreData {
         do {
             let _item = try context.fetch(request)
             context.delete(_item.last!)
+            
+            try context.save()
             print("item eliminado")
         } catch  {
             print("error eliminando el item")

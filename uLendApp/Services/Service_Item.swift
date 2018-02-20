@@ -44,7 +44,7 @@ struct Service_Item {
                 var counter = 1//;   <- C moment?
                 for data in mediaData {
                     
-                    let imageName = "\(UUID().uuidString).jpg"
+                    let imageName = "image\(counter).jpg"
                     
                     Service_Storage().itemImagesRef.child((ref?.documentID)!).child(imageName).putData(data, metadata: nil, completion: { (object, error) in
                         if let error = (error as NSError?){
@@ -71,6 +71,27 @@ struct Service_Item {
         }
     }
     
+    
+    func deleteItem(_ item: Item, completionHandler: @escaping CompletionBool){
+        
+        if item.uidOwner == Auth.auth().currentUser?.uid {
+            servDBitems.document(item.uid!).delete(completion: { (error) in
+                if let error = (error as NSError?){
+                    completionHandler(error.localizedDescription, false)
+                } else {
+                    let collection = self.servDBitems.document(item.uid!).collection("mediaUrl").parent
+                    collection?.delete()
+                   
+                    completionHandler(nil, true)
+                }
+            })
+        } else {
+            completionHandler("not owner",false)
+        }
+        
+        
+        
+    }
     
     
     
