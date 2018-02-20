@@ -53,7 +53,19 @@ extension ItemsOwnViewController {
         return cell
     }
     
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        Service_LocalCoreData().removeItem(items![indexPath.row])
+        items?.remove(at: indexPath.row)
+        self.itemsCollection.reloadData()
+    }
+    
 }
+
+
+
+
 
 
 

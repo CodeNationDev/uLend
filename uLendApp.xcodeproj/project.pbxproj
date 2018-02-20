@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3215E3DE203B270400DDB87C /* pruebasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215E3DD203B270400DDB87C /* pruebasViewController.swift */; };
+		3215E3E0203B284200DDB87C /* pruebaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215E3DF203B284200DDB87C /* pruebaTableViewCell.swift */; };
 		321D5732203301CC00EC66C1 /* Service_Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D5731203301CC00EC66C1 /* Service_Storage.swift */; };
 		322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322344402018CF16008D0EBB /* ItemPageViewController.swift */; };
 		32234449201BD286008D0EBB /* AlgoliaKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32234448201BD286008D0EBB /* AlgoliaKeys.swift */; };
@@ -57,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		14D2492761D3F7585A842CF6 /* Pods_uLendApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uLendApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3215E3DD203B270400DDB87C /* pruebasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebasViewController.swift; sourceTree = "<group>"; };
+		3215E3DF203B284200DDB87C /* pruebaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebaTableViewCell.swift; sourceTree = "<group>"; };
 		321D5731203301CC00EC66C1 /* Service_Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Storage.swift; sourceTree = "<group>"; };
 		322344402018CF16008D0EBB /* ItemPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPageViewController.swift; sourceTree = "<group>"; };
 		32234448201BD286008D0EBB /* AlgoliaKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaKeys.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 			children = (
 				32500B70200EB7E000927D15 /* CurrentUserViewController.swift */,
 				3236DB1120177C9700D98EA4 /* ItemsOwnViewController.swift */,
+				3215E3DD203B270400DDB87C /* pruebasViewController.swift */,
+				3215E3DF203B284200DDB87C /* pruebaTableViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -473,6 +479,7 @@
 				32C36443202C92F50050901B /* NewItemImageCell.swift in Sources */,
 				324F165E2035DCD800CFDB0A /* ItemManaged.swift in Sources */,
 				322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */,
+				3215E3E0203B284200DDB87C /* pruebaTableViewCell.swift in Sources */,
 				324F165C2035DA0800CFDB0A /* uLend.xcdatamodeld in Sources */,
 				3236DB09201632B500D98EA4 /* Service_Database.swift in Sources */,
 				32ABD96C202A652A00100977 /* Service_Loan.swift in Sources */,
@@ -484,6 +491,7 @@
 				32C3645B202E5FED0050901B /* TextFieldEffects.swift in Sources */,
 				324F16592035D99600CFDB0A /* CoreDataStack.swift in Sources */,
 				3267744A2020C64800067E1E /* Service_User.swift in Sources */,
+				3215E3DE203B270400DDB87C /* pruebasViewController.swift in Sources */,
 				321D5732203301CC00EC66C1 /* Service_Storage.swift in Sources */,
 				3284072220250F060088F7A0 /* enum.swift in Sources */,
 				32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */,

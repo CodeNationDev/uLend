@@ -82,6 +82,8 @@ class Service_LocalCoreData {
         
     }
     
+
+    
     
     func insertImage(_ item: Item!, _ data: Data!, _ imageUrl: String!){
         
@@ -118,6 +120,22 @@ class Service_LocalCoreData {
         } catch {
             print("error actualizando Core Data")
         }
+    }
+    
+    func removeItem(_ item: Item!){
+        let context = stack.persistentContainer.viewContext
+        let request : NSFetchRequest<ItemManaged> = ItemManaged.fetchRequest()
+        let predicate = NSPredicate(format: "uid = %@", item.uid!)
+        request.predicate = predicate
+        
+        do {
+            let _item = try context.fetch(request)
+            context.delete(_item.last!)
+            print("item eliminado")
+        } catch  {
+            print("error eliminando el item")
+        }
+    
     }
     
     
