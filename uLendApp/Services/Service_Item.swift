@@ -29,7 +29,6 @@ struct Service_Item {
             if error != nil {
                 completionHandlerItem(error?.localizedDescription, nil)
             } else {
-                //se debe insertar las imagenes en el contenedor de items
                 
                 //creamos el item en local
                 let item = Item()
@@ -39,12 +38,15 @@ struct Service_Item {
                 item.uidOwner = uidUser
                 //guardamos el item en coredata
                 Service_LocalCoreData().insertItem(item)
-//                Service_LocalCoreData().insertImages(item, mediaData, mediaUrl)
+                
+                print("tenemos \(mediaData.count) elementos")
                 
                 var counter = 1//;   <- C moment?
+                var counterImage = 1
                 for data in mediaData {
                     
-                    let imageName = "image\(counter).jpg"
+                    let imageName = "image\(counterImage).jpg"
+                    counterImage += 1
                     
                     Service_Storage().itemImagesRef.child((ref?.documentID)!).child(imageName).putData(data, metadata: nil, completion: { (object, error) in
                         if let error = (error as NSError?){
