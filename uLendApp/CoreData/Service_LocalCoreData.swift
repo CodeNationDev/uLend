@@ -79,7 +79,6 @@ class Service_LocalCoreData {
         } catch  {
             print("Error actualizando Core Data")
         }
-        
     }
     
 
@@ -96,7 +95,6 @@ class Service_LocalCoreData {
 
         do {
             try context.save()
-            print("se ha guardado la imagen con éxito")
         } catch {
             print("error actualizando Core Data")
         }

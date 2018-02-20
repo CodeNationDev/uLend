@@ -39,8 +39,6 @@ struct Service_Item {
                 //guardamos el item en coredata
                 Service_LocalCoreData().insertItem(item)
                 
-                print("tenemos \(mediaData.count) elementos")
-                
                 var counter = 1//;   <- C moment?
                 var counterImage = 1
                 for data in mediaData {
@@ -83,6 +81,9 @@ struct Service_Item {
                 } else {
                     let collection = self.servDBitems.document(item.uid!).collection("mediaUrl").parent
                     collection?.delete()
+                    for x in 1...3 {
+                        self.servDBitems.document(item.uid!).collection("mediaUrl").document("image\(x)").delete()
+                    }
                    
                     completionHandler(nil, true)
                 }

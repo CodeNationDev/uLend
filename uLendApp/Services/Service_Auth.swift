@@ -20,8 +20,7 @@ class Service_Auth {
     
     
     func createUser(_ email: String!, _ psswd: String!, completionHandler: @escaping CompletionUserFirebase){
-        
-        
+
         Auth.auth().createUser(withEmail: email, password: psswd) { (user, error) in
             
             if let error = (error as NSError?){
@@ -35,12 +34,10 @@ class Service_Auth {
                     } else {
                         
                         //se ha creado el user y se ha logueado, creamos el profile
-                        
                         Service_User().createUser(user?.uid, completionHandler: { (error, bool) in
                             if error != nil {
                                 print(error as Any)
                             }
-
                         })
                         completionHandler(nil, user)
                     }

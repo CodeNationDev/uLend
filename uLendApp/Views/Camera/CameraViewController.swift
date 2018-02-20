@@ -56,21 +56,18 @@ extension CameraViewController {
         captureSession = AVCaptureSession()
         captureSession?.sessionPreset = AVCaptureSession.Preset.hd1920x1080
         
-        
         let backCamera = AVCaptureDevice.default(for: AVMediaType.video)
         
-        
         do {
+            
             let input = try AVCaptureDeviceInput(device: backCamera!)
             captureSession?.addInput(input)
-            
             photoOutPut = AVCapturePhotoOutput()
-            
             
             //se puede cambiar por un guard ?
             if (captureSession?.canAddOutput(photoOutPut!) != nil) {
-                captureSession?.addOutput(self.photoOutPut!)
                 
+                captureSession?.addOutput(self.photoOutPut!)
                 previewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
                 previewLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
                 previewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
@@ -80,8 +77,6 @@ extension CameraViewController {
         } catch  {
             print("Error: \(error)")
         }
-        
-//        previewLayer?.frame = self.view.bounds
         previewLayer?.frame = self.cameraView.bounds
         previewLayer?.videoGravity = .resizeAspectFill
 
@@ -106,9 +101,8 @@ extension CameraViewController {
                               y: (height/2) - 360.0,
                               width: 720.0,
                               height: 720.0)
-        let img = cgImage?.cropping(to: cropRect)
-
         
+        let img = cgImage?.cropping(to: cropRect)
         temporalImageView.image = UIImage(cgImage: img!, scale: 1.0, orientation: image!.imageOrientation)
         openPreview()
     }
@@ -118,7 +112,6 @@ extension CameraViewController {
         self.view.addSubview(preView)
         preView.bounds = self.view.bounds.applying(CGAffineTransform(scaleX: 0.95, y: 0.95))
         preView.center = self.view.center
-
     }
     
     @IBAction func okSavePhoto(){

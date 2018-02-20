@@ -17,7 +17,6 @@ struct Service_Algolia {
     
     var refSerchUser = clientSearch.index(withName: "users")
     var refCreateUser = clientAdmin.index(withName: "users")
-
     var refSearchItems = clientSearch.index(withName: "items")
     var refCreateItems = clientAdmin.index(withName: "items")
     

@@ -28,16 +28,9 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
     @IBOutlet var newUserButton: UIButton!
     @IBOutlet var googleLoginButton: UIButton!
     @IBOutlet var loginView: UIView!
-    
-    
-    
     @IBOutlet var yoLabel: UILabel!
     @IBOutlet var uLabel: UILabel!
     @IBOutlet var lendLabel: UILabel!
-    
-    
-    
-    
     
     let serviceAuth = Service_Auth()
     var mode = Mode.login
@@ -60,7 +53,7 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
         GIDSignIn.sharedInstance().uiDelegate = self
         
         //datos de pruebas
-//        usernameTextField.text = "prueba@prueba.com"
+        usernameTextField.text = "prueba@prueba.com"
         passwordTextField.text = "prueba"
         passwordRepeatTextField.text = "prueba"
         
@@ -224,28 +217,19 @@ extension LoginMainViewController {
         if controlPosicion {
             UIView.animate(withDuration: 0.2, animations: {
                 self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + 200, width:self.view.frame.size.width, height:self.view.frame.size.height);
-                
             })
             controlPosicion = false
-            
         }
-
     }
     
     @IBAction func apareceTecladoMover(_ sender: Any) {
         
         if(!controlPosicion){ UIView.animate(withDuration: 0.3, animations: {
             self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - 200, width:self.view.frame.size.width, height:self.view.frame.size.height);
-            
         })
             controlPosicion = true
         }
-        
     }
-
-
-    
-    
 }
 
 //MARK: Animation login
@@ -284,8 +268,7 @@ extension LoginMainViewController {
         yoLabel.center = CGPoint(x: yoLabel.center.x, y: -10)
         uLabel.center = CGPoint(x: uLabel.center.x, y: -10)
         lendLabel.center = CGPoint(x: 800, y: lendLabel.center.y)
-        
-
+    
         UIView.animate(withDuration: 0.8, animations: {
             //yo u   -> para abajo
             self.yoLabel.center = yoLabelCenter
@@ -303,11 +286,7 @@ extension LoginMainViewController {
                 })
             })
         }
-        
-        
-        
     }
-    
 }
 
 
@@ -339,9 +318,6 @@ extension LoginMainViewController {
             })
             self.performSegue(withIdentifier: "showMain", sender: nil)
         }
-        
-        
-        
     }
     
     @IBAction func googleButtonPressed(_ sender: Any) {

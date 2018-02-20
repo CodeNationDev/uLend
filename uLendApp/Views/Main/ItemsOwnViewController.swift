@@ -10,8 +10,6 @@ import UIKit
 
 final class ItemsOwnViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-
-    
     @IBOutlet var sideMenu: UIView!
     @IBOutlet var itemsCollection: UICollectionView!
     var items : [Item]?
@@ -21,10 +19,8 @@ final class ItemsOwnViewController: UIViewController, UICollectionViewDelegate, 
         
         itemsCollection.delegate = self
         itemsCollection.dataSource = self
-        
         items = Service_LocalCoreData().itemsStored()
         itemsCollection.reloadData()
-        
     }
 }
 
@@ -46,7 +42,6 @@ extension ItemsOwnViewController {
         let images = Service_LocalCoreData().imagesByUIDimage(item.uid)
         
         guard let image = UIImage(data: (images?.last!)!) else {
-            print("algo falla")
             return cell
         }
         cell.image.image = image
@@ -58,15 +53,13 @@ extension ItemsOwnViewController {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         Service_Item().deleteItem(items![indexPath.row]) { (error, bool) in
             if error != nil {
-                self.present(errorAlertView("Ha ocurrido un error, vuelve probar de eliminar"), animated: true, completion: nil)
+                self.present(errorAlertView("Ha ocurrido un error, vuelve a probar"), animated: true, completion: nil)
             } else {
 
                 for x in 1...3  {
                     Service_Storage().itemImagesRef.child(self.items![indexPath.row].uid!).child("image\(x).jpg").delete(completion: { (error) in
                         if let error = (error as NSError?){
                             print(error.localizedDescription)
-                        } else {
-                            print("todo ha ido bien")
                         }
                     })
                 }
@@ -76,9 +69,6 @@ extension ItemsOwnViewController {
                 self.itemsCollection.reloadData()
             }
         }
-        
-        
-
     }
     
 }
@@ -95,7 +85,6 @@ extension ItemsOwnViewController {
     
     func hideSideMenu(){
         UIView.animate(withDuration: 0.5) {
-            
             self.sideMenu.center = CGPoint(x: self.sideMenu.center.x - 60, y: self.sideMenu.center.y)
         }
     }
@@ -103,9 +92,7 @@ extension ItemsOwnViewController {
     func showSideMenu(){
         UIView.animate(withDuration: 0.5) {
             self.sideMenu.center = CGPoint(x: self.sideMenu.center.x + 60, y: self.sideMenu.center.y)
-            print("hola caracola")
         }
-    
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

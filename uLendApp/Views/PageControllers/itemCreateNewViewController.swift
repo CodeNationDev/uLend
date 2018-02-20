@@ -29,11 +29,6 @@ class itemCreateNewViewController: UIViewController, UICollectionViewDelegate, U
         photoCollection.dataSource = self
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func cancelPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -53,9 +48,7 @@ class itemCreateNewViewController: UIViewController, UICollectionViewDelegate, U
         if let vc = segue.destination as? CameraViewController {
             vc.backVC = self
         }
-        
     }
-
 }
 
 
@@ -117,16 +110,11 @@ extension itemCreateNewViewController {
                     self.present(errorAlertView(error), animated: true, completion: nil)
                 } else {
                     
-//                    Service_LocalCoreData().insertImages(item!, self.arrayData?.last)
                     self.backVC.items? = Service_LocalCoreData().itemsStored()!
                     self.backVC.itemsCollection.reloadData()
                     self.dismiss(animated: true, completion: nil)
                 }
-                
-                
-                
             })
-            
         }
     }
     
