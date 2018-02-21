@@ -11,7 +11,7 @@ import Firebase
 
 final class ULServ_User {
     
-    private let servDB = Service_Database()
+    private let servDB = ULServ_DB()
     
     func createUser(_ uidUser: String!, completionHandler: @escaping CompletionBool){
         
