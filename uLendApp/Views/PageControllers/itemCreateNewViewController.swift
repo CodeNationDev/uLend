@@ -104,10 +104,10 @@ extension itemCreateNewViewController {
         if comprobeNameAndPhoto(){
             //si estamos aquí es pq hemos pasado las dos pruebas
             
-            Service_Item().createItem(Auth.auth().currentUser?.uid, name: nameTextField.text!, mediaUrl: nil, description: descriptionText.text, mediaData: arrayData, completionHandlerItem: { (error, item) in
+            ULServ_Item().createItem(Auth.auth().currentUser?.uid, name: nameTextField.text!, mediaUrl: nil, description: descriptionText.text, mediaData: arrayData, completionHandlerItem: { (error, item) in
                 
                 if let error = error {
-                    self.present(errorAlertView(error), animated: true, completion: nil)
+                    self.present(ULF_errorAlertView(error), animated: true, completion: nil)
                 } else {
                     
                     self.backVC.items? = Service_LocalCoreData().itemsStored()!
@@ -120,11 +120,11 @@ extension itemCreateNewViewController {
     
     func comprobeNameAndPhoto() -> Bool{
         if nameTextField.text?.count == 0 {
-            self.present(errorAlertView("Debes introducir un nombre"), animated: true, completion: nil)
+            self.present(ULF_errorAlertView("Debes introducir un nombre"), animated: true, completion: nil)
             return false
         }
         if arrayImages == nil {
-            self.present(errorAlertView("Debes introducir alguna foto..."), animated: true, completion: nil)
+            self.present(ULF_errorAlertView("Debes introducir alguna foto..."), animated: true, completion: nil)
             return false
         }
         

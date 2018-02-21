@@ -9,11 +9,11 @@
 import Foundation
 import FirebaseAuth
 
-class Service_Auth {
+class ULServ_Auth {
     
-    private static let _shared = Service_Auth()
+    private static let _shared = ULServ_Auth()
     
-    static var shared: Service_Auth {
+    static var shared: ULServ_Auth {
         return _shared
     }
     
@@ -34,7 +34,7 @@ class Service_Auth {
                     } else {
                         
                         //se ha creado el user y se ha logueado, creamos el profile
-                        Service_User().createUser(user?.uid, completionHandler: { (error, bool) in
+                        ULServ_User().createUser(user?.uid, completionHandler: { (error, bool) in
                             if error != nil {
                                 print(error as Any)
                             }

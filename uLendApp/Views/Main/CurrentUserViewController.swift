@@ -26,7 +26,7 @@ class CurrentUserViewController: UIViewController {
 //        quizás sea más conveniente realizarlo antes y luego llamarlo a una variable que esté een el appdelegate
 //        para no estar realizando la llamada cada vez q se carga la pantalla...
         
-        Service_User().getDataCurrentUser(Auth.auth().currentUser?.uid) { (error, user) in
+        ULServ_User().getDataCurrentUser(Auth.auth().currentUser?.uid) { (error, user) in
             if let error = error {
                 print(error)
             } else {
@@ -59,7 +59,7 @@ class CurrentUserViewController: UIViewController {
         let action1 = UIAlertAction(title: "Disconect", style: .default) { (action) in
 
             if !self.disconect() {
-                let alert = errorAlertView("Ha pasado algo raro raro raro, vuelve a probar de desconectar la sesión.")
+                let alert = ULF_errorAlertView("Ha pasado algo raro raro raro, vuelve a probar de desconectar la sesión.")
                 self.present(alert, animated: true, completion: nil)
                 
             } else {

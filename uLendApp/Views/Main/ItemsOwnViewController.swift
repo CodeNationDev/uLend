@@ -51,13 +51,13 @@ extension ItemsOwnViewController {
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        Service_Item().deleteItem(items![indexPath.row]) { (error, bool) in
+        ULServ_Item().deleteItem(items![indexPath.row]) { (error, bool) in
             if error != nil {
-                self.present(errorAlertView("Ha ocurrido un error, vuelve a probar"), animated: true, completion: nil)
+                self.present(ULF_errorAlertView("Ha ocurrido un error, vuelve a probar"), animated: true, completion: nil)
             } else {
 
                 for x in 1...3  {
-                    Service_Storage().itemImagesRef.child(self.items![indexPath.row].uid!).child("image\(x).jpg").delete(completion: { (error) in
+                    ULServ_Storege().itemImagesRef.child(self.items![indexPath.row].uid!).child("image\(x).jpg").delete(completion: { (error) in
                         if let error = (error as NSError?){
                             print(error.localizedDescription)
                         }

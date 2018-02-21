@@ -32,7 +32,7 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
     @IBOutlet var uLabel: UILabel!
     @IBOutlet var lendLabel: UILabel!
     
-    let serviceAuth = Service_Auth()
+    let serviceAuth = ULServ_Auth()
     var mode = Mode.login
     var currenUser: UserUlend?
     
@@ -95,7 +95,7 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
                     //se ha creado el usuario, nos vamos a la pantalla principal
                     self.performSegue(withIdentifier: "showMain", sender: nil)
                 } else {
-                    self.present(errorAlertView(errorString), animated: true, completion: nil)
+                    self.present(ULF_errorAlertView(errorString), animated: true, completion: nil)
                 }
             })
             
@@ -114,7 +114,7 @@ class LoginMainViewController: UIViewController, GIDSignInDelegate, GIDSignInUID
                     self.performSegue(withIdentifier: "showMain", sender: nil)
 
                 } else {
-                    self.present(errorAlertView(errorString), animated: true, completion: nil)
+                    self.present(ULF_errorAlertView(errorString), animated: true, completion: nil)
                 }
             })
         }
@@ -180,8 +180,8 @@ extension LoginMainViewController {
     
     
     func verifyEmail() -> Bool {
-        if !isValidEmail(test: usernameTextField.text!){
-            present(errorAlertView("Debes introducir un email válido"), animated: true, completion: nil)
+        if !ULF_isValidEmail(test: usernameTextField.text!){
+            present(ULF_errorAlertView("Debes introducir un email válido"), animated: true, completion: nil)
             return false
         }
         return true
@@ -189,7 +189,7 @@ extension LoginMainViewController {
     
     func verifyLongPass() -> Bool {
         if (passwordTextField.text?.count)! < 6 {
-            present(errorAlertView("El password debe tener mínimo 6 caracteres"), animated: true, completion: nil)
+            present(ULF_errorAlertView("El password debe tener mínimo 6 caracteres"), animated: true, completion: nil)
             passwordTextField.text = ""
             passwordRepeatTextField.text = ""
             return false
@@ -199,7 +199,7 @@ extension LoginMainViewController {
     
     func verifySamePass() -> Bool {
         if passwordTextField.text != passwordRepeatTextField.text {
-            present(errorAlertView("Debes introducir el mismo password"), animated: true, completion: nil)
+            present(ULF_errorAlertView("Debes introducir el mismo password"), animated: true, completion: nil)
             passwordTextField.text = ""
             passwordRepeatTextField.text = ""
             return false
@@ -298,7 +298,7 @@ extension LoginMainViewController {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             print(error.localizedDescription)
-            present(errorAlertView(error.localizedDescription), animated: true, completion: nil)
+            present(ULF_errorAlertView(error.localizedDescription), animated: true, completion: nil)
             return
         }
         
@@ -307,11 +307,11 @@ extension LoginMainViewController {
         Auth.auth().signIn(with: credential) { (user, error) in
             if let error = (error as NSError?){
                 print(error.localizedDescription)
-                self.present(errorAlertView(error.localizedDescription), animated: true, completion: nil)
+                self.present(ULF_errorAlertView(error.localizedDescription), animated: true, completion: nil)
                 return
             }
             
-            Service_User().createUser(user?.uid, completionHandler: { (error, bool) in
+            ULServ_User().createUser(user?.uid, completionHandler: { (error, bool) in
                 if error != nil {
                     print(error as Any)
                 }

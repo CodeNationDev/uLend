@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 
-struct Service_Storage {
+struct ULServ_Storege {
     private let storageRef = Storage.storage().reference()
     
     var itemImagesRef : StorageReference {

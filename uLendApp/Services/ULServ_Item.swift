@@ -10,9 +10,9 @@ import Foundation
 import Firebase
 
 
-struct Service_Item {
+struct ULServ_Item {
     
-    private let servDBitems = Service_Database().collectionItems
+    private let servDBitems = ULServ_DB().collectionItems
     
     func createItem(_ uidUser: String!, name: String, mediaUrl: [String]?, description: String?, mediaData: [Data]!, completionHandlerItem: @escaping CompletionItem){
         
@@ -46,7 +46,7 @@ struct Service_Item {
                     let imageName = "image\(counterImage).jpg"
                     counterImage += 1
                     
-                    Service_Storage().itemImagesRef.child((ref?.documentID)!).child(imageName).putData(data, metadata: nil, completion: { (object, error) in
+                    ULServ_Storege().itemImagesRef.child((ref?.documentID)!).child(imageName).putData(data, metadata: nil, completion: { (object, error) in
                         if let error = (error as NSError?){
                             print(error.localizedDescription)
                         } else {
@@ -55,7 +55,7 @@ struct Service_Item {
                             
                             self.servDBitems.document(ref!.documentID).collection("mediaUrl").document("image\(counter)").setData(["mediaUrl":String(describing: object!.downloadURL()!)])
                             if counter == mediaData.count {
-                                Service_Algolia().saveItem(item, { (errorAlg, content) in
+                                ULServ_Algolia().saveItem(item, { (errorAlg, content) in
                                     if error != nil {
                                         completionHandlerItem(errorAlg, item)
                                     } else {
@@ -120,7 +120,6 @@ struct Service_Item {
                 completionHandler(nil, true)
             }
         }
-
     }
     
     
@@ -133,7 +132,7 @@ struct Service_Item {
     ///   - completionHandler: error? o Item?
     func searchItem(_ uid: String!, completionHandler: @escaping CompletionItem){
         
-        let docRef = Service_Database().collectionItems.document(uid)
+        let docRef = ULServ_DB().collectionItems.document(uid)
 
         docRef.getDocument { (document, error) in
             if let error = (error as NSError?){

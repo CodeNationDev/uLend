@@ -9,9 +9,9 @@
 import Foundation
 import Firebase
 
-struct Service_Loan {
+struct ULServ_Loan {
     
-    private let servDB = Service_Database().collectionsLoans
+    private let servDB = ULServ_DB().collectionsLoans
     
     func createLoan(_ item: Item!,_ userOwner: UserUlend!, _ userLoan: UserUlend!, completionHandler: @escaping CompletionLoan){
         

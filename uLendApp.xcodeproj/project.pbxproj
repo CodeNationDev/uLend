@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		3215E3DE203B270400DDB87C /* pruebasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215E3DD203B270400DDB87C /* pruebasViewController.swift */; };
 		3215E3E0203B284200DDB87C /* pruebaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215E3DF203B284200DDB87C /* pruebaTableViewCell.swift */; };
-		321D5732203301CC00EC66C1 /* Service_Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D5731203301CC00EC66C1 /* Service_Storage.swift */; };
+		321D5732203301CC00EC66C1 /* ULServ_Storege.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D5731203301CC00EC66C1 /* ULServ_Storege.swift */; };
 		322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322344402018CF16008D0EBB /* ItemPageViewController.swift */; };
 		32234449201BD286008D0EBB /* AlgoliaKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32234448201BD286008D0EBB /* AlgoliaKeys.swift */; };
 		3235942A2031F8E0006EEBBF /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323594292031F8E0006EEBBF /* ItemCollectionViewCell.swift */; };
 		3236DB01201629C200D98EA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3236DB00201629C100D98EA4 /* GoogleService-Info.plist */; };
 		3236DB0320162A7000D98EA4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB0220162A7000D98EA4 /* Item.swift */; };
 		3236DB0520162B8C00D98EA4 /* GeoPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB0420162B8C00D98EA4 /* GeoPosition.swift */; };
-		3236DB09201632B500D98EA4 /* Service_Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB08201632B500D98EA4 /* Service_Database.swift */; };
-		3236DB0B201635A400D98EA4 /* Service_Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB0A201635A400D98EA4 /* Service_Item.swift */; };
+		3236DB09201632B500D98EA4 /* ULServ_DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB08201632B500D98EA4 /* ULServ_DB.swift */; };
+		3236DB0B201635A400D98EA4 /* ULServ_Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB0A201635A400D98EA4 /* ULServ_Item.swift */; };
 		3236DB1020177A4D00D98EA4 /* LoansPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB0F20177A4D00D98EA4 /* LoansPageViewController.swift */; };
 		3236DB1220177C9700D98EA4 /* ItemsOwnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB1120177C9700D98EA4 /* ItemsOwnViewController.swift */; };
 		324F16592035D99600CFDB0A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F16582035D99600CFDB0A /* CoreDataStack.swift */; };
@@ -25,15 +25,15 @@
 		324F165E2035DCD800CFDB0A /* ItemManaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F165D2035DCD800CFDB0A /* ItemManaged.swift */; };
 		324F16602035E38900CFDB0A /* Service_LocalCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F165F2035E38900CFDB0A /* Service_LocalCoreData.swift */; };
 		32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32500B70200EB7E000927D15 /* CurrentUserViewController.swift */; };
-		3267744A2020C64800067E1E /* Service_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326774492020C64800067E1E /* Service_User.swift */; };
+		3267744A2020C64800067E1E /* ULServ_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326774492020C64800067E1E /* ULServ_User.swift */; };
 		3267744C202215C200067E1E /* pruebas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3267744B202215C200067E1E /* pruebas.swift */; };
-		3279F9D420137F4B001D010F /* Service_Algolia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3279F9D320137F4B001D010F /* Service_Algolia.swift */; };
+		3279F9D420137F4B001D010F /* ULServ_Algolia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3279F9D320137F4B001D010F /* ULServ_Algolia.swift */; };
 		3284072020250E600088F7A0 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284071F20250E600088F7A0 /* Loan.swift */; };
 		3284072220250F060088F7A0 /* enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284072120250F060088F7A0 /* enum.swift */; };
 		32840724202510830088F7A0 /* UserUlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32840723202510830088F7A0 /* UserUlend.swift */; };
 		32ABD9612029F31B00100977 /* itemCreateNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ABD9602029F31B00100977 /* itemCreateNewViewController.swift */; };
 		32ABD968202A077100100977 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ABD967202A077100100977 /* CameraViewController.swift */; };
-		32ABD96C202A652A00100977 /* Service_Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ABD96B202A652A00100977 /* Service_Loan.swift */; };
+		32ABD96C202A652A00100977 /* ULServ_Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ABD96B202A652A00100977 /* ULServ_Loan.swift */; };
 		32BE44992006CFDC0012EE19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BE44982006CFDC0012EE19 /* AppDelegate.swift */; };
 		32BE449E2006CFDC0012EE19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449C2006CFDC0012EE19 /* Main.storyboard */; };
 		32BE44A02006CFDC0012EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449F2006CFDC0012EE19 /* Assets.xcassets */; };
@@ -50,7 +50,7 @@
 		32C3645B202E5FED0050901B /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C36450202E5FEC0050901B /* TextFieldEffects.swift */; };
 		32C3645E202F3CDB0050901B /* IsaotextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C3645D202F3CDB0050901B /* IsaotextField.swift */; };
 		32C917452007A34B008F9A7C /* LoginMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C917442007A34B008F9A7C /* LoginMainViewController.swift */; };
-		32C917482007A852008F9A7C /* Service_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C917472007A852008F9A7C /* Service_Auth.swift */; };
+		32C917482007A852008F9A7C /* ULServ_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C917472007A852008F9A7C /* ULServ_Auth.swift */; };
 		32C9174B2007A910008F9A7C /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9174A2007A910008F9A7C /* Typealias.swift */; };
 		32C9174D2007A96A008F9A7C /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9174C2007A96A008F9A7C /* functions.swift */; };
 		32CCD5C82036F8DE006A1073 /* ImageCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CCD5C72036F8DE006A1073 /* ImageCoreData.swift */; };
@@ -61,15 +61,15 @@
 		14D2492761D3F7585A842CF6 /* Pods_uLendApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uLendApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3215E3DD203B270400DDB87C /* pruebasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebasViewController.swift; sourceTree = "<group>"; };
 		3215E3DF203B284200DDB87C /* pruebaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebaTableViewCell.swift; sourceTree = "<group>"; };
-		321D5731203301CC00EC66C1 /* Service_Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Storage.swift; sourceTree = "<group>"; };
+		321D5731203301CC00EC66C1 /* ULServ_Storege.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULServ_Storege.swift; sourceTree = "<group>"; };
 		322344402018CF16008D0EBB /* ItemPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPageViewController.swift; sourceTree = "<group>"; };
 		32234448201BD286008D0EBB /* AlgoliaKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaKeys.swift; sourceTree = "<group>"; };
 		323594292031F8E0006EEBBF /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		3236DB00201629C100D98EA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3236DB0220162A7000D98EA4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		3236DB0420162B8C00D98EA4 /* GeoPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoPosition.swift; sourceTree = "<group>"; };
-		3236DB08201632B500D98EA4 /* Service_Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Database.swift; sourceTree = "<group>"; };
-		3236DB0A201635A400D98EA4 /* Service_Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Item.swift; sourceTree = "<group>"; };
+		3236DB08201632B500D98EA4 /* ULServ_DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULServ_DB.swift; sourceTree = "<group>"; };
+		3236DB0A201635A400D98EA4 /* ULServ_Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULServ_Item.swift; sourceTree = "<group>"; };
 		3236DB0F20177A4D00D98EA4 /* LoansPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansPageViewController.swift; sourceTree = "<group>"; };
 		3236DB1120177C9700D98EA4 /* ItemsOwnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsOwnViewController.swift; sourceTree = "<group>"; };
 		324F16582035D99600CFDB0A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -77,16 +77,16 @@
 		324F165D2035DCD800CFDB0A /* ItemManaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManaged.swift; sourceTree = "<group>"; };
 		324F165F2035E38900CFDB0A /* Service_LocalCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_LocalCoreData.swift; sourceTree = "<group>"; };
 		32500B70200EB7E000927D15 /* CurrentUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserViewController.swift; sourceTree = "<group>"; };
-		326774492020C64800067E1E /* Service_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_User.swift; sourceTree = "<group>"; };
+		326774492020C64800067E1E /* ULServ_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULServ_User.swift; sourceTree = "<group>"; };
 		3267744B202215C200067E1E /* pruebas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebas.swift; sourceTree = "<group>"; };
-		3279F9D320137F4B001D010F /* Service_Algolia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Algolia.swift; sourceTree = "<group>"; };
+		3279F9D320137F4B001D010F /* ULServ_Algolia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULServ_Algolia.swift; sourceTree = "<group>"; };
 		3279F9D620137FAB001D010F /* AlgoliaSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlgoliaSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3284071F20250E600088F7A0 /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		3284072120250F060088F7A0 /* enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enum.swift; sourceTree = "<group>"; };
 		32840723202510830088F7A0 /* UserUlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUlend.swift; sourceTree = "<group>"; };
 		32ABD9602029F31B00100977 /* itemCreateNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemCreateNewViewController.swift; sourceTree = "<group>"; };
 		32ABD967202A077100100977 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		32ABD96B202A652A00100977 /* Service_Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Loan.swift; sourceTree = "<group>"; };
+		32ABD96B202A652A00100977 /* ULServ_Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULServ_Loan.swift; sourceTree = "<group>"; };
 		32BE44952006CFDC0012EE19 /* uLendApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uLendApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE44982006CFDC0012EE19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32BE449D2006CFDC0012EE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		32C36450202E5FEC0050901B /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
 		32C3645D202F3CDB0050901B /* IsaotextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsaotextField.swift; sourceTree = "<group>"; };
 		32C917442007A34B008F9A7C /* LoginMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainViewController.swift; sourceTree = "<group>"; };
-		32C917472007A852008F9A7C /* Service_Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service_Auth.swift; sourceTree = "<group>"; };
+		32C917472007A852008F9A7C /* ULServ_Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULServ_Auth.swift; sourceTree = "<group>"; };
 		32C9174A2007A910008F9A7C /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		32C9174C2007A96A008F9A7C /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 		32CCD5C72036F8DE006A1073 /* ImageCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCoreData.swift; sourceTree = "<group>"; };
@@ -282,13 +282,13 @@
 		32C917462007A821008F9A7C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				32C917472007A852008F9A7C /* Service_Auth.swift */,
-				3279F9D320137F4B001D010F /* Service_Algolia.swift */,
-				3236DB08201632B500D98EA4 /* Service_Database.swift */,
-				3236DB0A201635A400D98EA4 /* Service_Item.swift */,
-				326774492020C64800067E1E /* Service_User.swift */,
-				32ABD96B202A652A00100977 /* Service_Loan.swift */,
-				321D5731203301CC00EC66C1 /* Service_Storage.swift */,
+				32C917472007A852008F9A7C /* ULServ_Auth.swift */,
+				3279F9D320137F4B001D010F /* ULServ_Algolia.swift */,
+				3236DB08201632B500D98EA4 /* ULServ_DB.swift */,
+				3236DB0A201635A400D98EA4 /* ULServ_Item.swift */,
+				326774492020C64800067E1E /* ULServ_User.swift */,
+				32ABD96B202A652A00100977 /* ULServ_Loan.swift */,
+				321D5731203301CC00EC66C1 /* ULServ_Storege.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -469,7 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3236DB0B201635A400D98EA4 /* Service_Item.swift in Sources */,
+				3236DB0B201635A400D98EA4 /* ULServ_Item.swift in Sources */,
 				32234449201BD286008D0EBB /* AlgoliaKeys.swift in Sources */,
 				32C36453202E5FED0050901B /* KaedeTextField.swift in Sources */,
 				3284072020250E600088F7A0 /* Loan.swift in Sources */,
@@ -481,18 +481,18 @@
 				322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */,
 				3215E3E0203B284200DDB87C /* pruebaTableViewCell.swift in Sources */,
 				324F165C2035DA0800CFDB0A /* uLend.xcdatamodeld in Sources */,
-				3236DB09201632B500D98EA4 /* Service_Database.swift in Sources */,
-				32ABD96C202A652A00100977 /* Service_Loan.swift in Sources */,
+				3236DB09201632B500D98EA4 /* ULServ_DB.swift in Sources */,
+				32ABD96C202A652A00100977 /* ULServ_Loan.swift in Sources */,
 				3236DB1020177A4D00D98EA4 /* LoansPageViewController.swift in Sources */,
 				32C3645E202F3CDB0050901B /* IsaotextField.swift in Sources */,
 				3236DB0520162B8C00D98EA4 /* GeoPosition.swift in Sources */,
-				3279F9D420137F4B001D010F /* Service_Algolia.swift in Sources */,
+				3279F9D420137F4B001D010F /* ULServ_Algolia.swift in Sources */,
 				32C36452202E5FED0050901B /* MadokaTextField.swift in Sources */,
 				32C3645B202E5FED0050901B /* TextFieldEffects.swift in Sources */,
 				324F16592035D99600CFDB0A /* CoreDataStack.swift in Sources */,
-				3267744A2020C64800067E1E /* Service_User.swift in Sources */,
+				3267744A2020C64800067E1E /* ULServ_User.swift in Sources */,
 				3215E3DE203B270400DDB87C /* pruebasViewController.swift in Sources */,
-				321D5732203301CC00EC66C1 /* Service_Storage.swift in Sources */,
+				321D5732203301CC00EC66C1 /* ULServ_Storege.swift in Sources */,
 				3284072220250F060088F7A0 /* enum.swift in Sources */,
 				32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */,
 				32C917452007A34B008F9A7C /* LoginMainViewController.swift in Sources */,
@@ -502,7 +502,7 @@
 				3236DB1220177C9700D98EA4 /* ItemsOwnViewController.swift in Sources */,
 				32ABD9612029F31B00100977 /* itemCreateNewViewController.swift in Sources */,
 				32C36456202E5FED0050901B /* HoshiTextField.swift in Sources */,
-				32C917482007A852008F9A7C /* Service_Auth.swift in Sources */,
+				32C917482007A852008F9A7C /* ULServ_Auth.swift in Sources */,
 				32C36458202E5FED0050901B /* YokoTextField.swift in Sources */,
 				32C36455202E5FED0050901B /* AkiraTextField.swift in Sources */,
 				32C36454202E5FED0050901B /* JiroTextField.swift in Sources */,

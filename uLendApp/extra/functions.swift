@@ -15,18 +15,18 @@ import UIKit
  Verify if is a valid email
  @param: email
  */
-public func isValidEmail(test: String) -> Bool {
+public func ULF_isValidEmail(test: String) -> Bool {
     let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
     let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
     return emailTest.evaluate(with: test)
 }
 
 
-public func errorAlertView(_ message: String!) -> UIAlertController{
+
+public func ULF_errorAlertView(_ message: String!) -> UIAlertController{
     let alertVC = UIAlertController(title: "ERROR", message: message, preferredStyle: .alert)
     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
     alertVC.addAction(defaultAction)
-//    self.present(alertVC, animated: true, completion: nil)
     return alertVC
 }
 

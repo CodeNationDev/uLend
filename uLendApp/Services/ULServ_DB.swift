@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-class Service_Database {
+class ULServ_DB {
     
 //    private static let _shared = Service_Database()
     
