@@ -54,6 +54,8 @@
 		32C9174B2007A910008F9A7C /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9174A2007A910008F9A7C /* Typealias.swift */; };
 		32C9174D2007A96A008F9A7C /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9174C2007A96A008F9A7C /* functions.swift */; };
 		32CCD5C82036F8DE006A1073 /* ImageCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CCD5C72036F8DE006A1073 /* ImageCoreData.swift */; };
+		32D16EE7203F145700E2978E /* pruebalogingoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EE6203F145700E2978E /* pruebalogingoogleViewController.swift */; };
+		32D16EE9203F49EB00E2978E /* lereleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EE8203F49EB00E2978E /* lereleViewController.swift */; };
 		BE9D266E055B4EBE6C878BAB /* Pods_uLendApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D2492761D3F7585A842CF6 /* Pods_uLendApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +112,8 @@
 		32C9174A2007A910008F9A7C /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		32C9174C2007A96A008F9A7C /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 		32CCD5C72036F8DE006A1073 /* ImageCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCoreData.swift; sourceTree = "<group>"; };
+		32D16EE6203F145700E2978E /* pruebalogingoogleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebalogingoogleViewController.swift; sourceTree = "<group>"; };
+		32D16EE8203F49EB00E2978E /* lereleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lereleViewController.swift; sourceTree = "<group>"; };
 		8DD64864CEDB4B7D9124F632 /* Pods-uLendApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uLendApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-uLendApp/Pods-uLendApp.release.xcconfig"; sourceTree = "<group>"; };
 		DB8D1E3C9E168E7F9E78AB1B /* Pods-uLendApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uLendApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uLendApp/Pods-uLendApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -275,6 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				32C917442007A34B008F9A7C /* LoginMainViewController.swift */,
+				32D16EE6203F145700E2978E /* pruebalogingoogleViewController.swift */,
+				32D16EE8203F49EB00E2978E /* lereleViewController.swift */,
 			);
 			path = LoginMainView;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				3236DB0320162A7000D98EA4 /* Item.swift in Sources */,
 				32C36443202C92F50050901B /* NewItemImageCell.swift in Sources */,
 				324F165E2035DCD800CFDB0A /* ItemManaged.swift in Sources */,
+				32D16EE9203F49EB00E2978E /* lereleViewController.swift in Sources */,
 				322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */,
 				3215E3E0203B284200DDB87C /* pruebaTableViewCell.swift in Sources */,
 				324F165C2035DA0800CFDB0A /* uLend.xcdatamodeld in Sources */,
@@ -493,6 +500,7 @@
 				3267744A2020C64800067E1E /* ULServ_User.swift in Sources */,
 				3215E3DE203B270400DDB87C /* pruebasViewController.swift in Sources */,
 				321D5732203301CC00EC66C1 /* ULServ_Storege.swift in Sources */,
+				32D16EE7203F145700E2978E /* pruebalogingoogleViewController.swift in Sources */,
 				3284072220250F060088F7A0 /* enum.swift in Sources */,
 				32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */,
 				32C917452007A34B008F9A7C /* LoginMainViewController.swift in Sources */,

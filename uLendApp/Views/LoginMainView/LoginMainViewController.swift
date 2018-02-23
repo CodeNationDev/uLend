@@ -295,6 +295,7 @@ extension LoginMainViewController {
 
 //MARK: Google Signin
 extension LoginMainViewController {
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             print(error.localizedDescription)
@@ -320,8 +321,11 @@ extension LoginMainViewController {
         }
     }
     
+    
+    
     @IBAction func googleButtonPressed(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
+        
     }
 }
 

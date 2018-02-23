@@ -51,24 +51,24 @@ extension ItemsOwnViewController {
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        ULServ_Item().deleteItem(items![indexPath.row]) { (error, bool) in
-            if error != nil {
-                self.present(ULF_errorAlertView("Ha ocurrido un error, vuelve a probar"), animated: true, completion: nil)
-            } else {
-
-                for x in 1...3  {
-                    ULServ_Storege().itemImagesRef.child(self.items![indexPath.row].uid!).child("image\(x).jpg").delete(completion: { (error) in
-                        if let error = (error as NSError?){
-                            print(error.localizedDescription)
-                        }
-                    })
-                }
-                
-                Service_LocalCoreData().removeItem(self.items![indexPath.row])
-                self.items?.remove(at: indexPath.row)
-                self.itemsCollection.reloadData()
-            }
-        }
+//        ULServ_Item().deleteItem(items![indexPath.row]) { (error, bool) in
+//            if error != nil {
+//                self.present(ULF_errorAlertView("Ha ocurrido un error, vuelve a probar"), animated: true, completion: nil)
+//            } else {
+//
+//                for x in 1...3  {
+//                    ULServ_Storege().itemImagesRef.child(self.items![indexPath.row].uid!).child("image\(x).jpg").delete(completion: { (error) in
+//                        if let error = (error as NSError?){
+//                            print(error.localizedDescription)
+//                        }
+//                    })
+//                }
+//                
+//                Service_LocalCoreData().removeItem(self.items![indexPath.row])
+//                self.items?.remove(at: indexPath.row)
+//                self.itemsCollection.reloadData()
+//            }
+//        }
     }
     
 }
