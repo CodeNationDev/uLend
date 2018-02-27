@@ -56,6 +56,8 @@
 		32CCD5C82036F8DE006A1073 /* ImageCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CCD5C72036F8DE006A1073 /* ImageCoreData.swift */; };
 		32D16EE7203F145700E2978E /* pruebalogingoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EE6203F145700E2978E /* pruebalogingoogleViewController.swift */; };
 		32D16EE9203F49EB00E2978E /* lereleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EE8203F49EB00E2978E /* lereleViewController.swift */; };
+		32D16EEC204464C200E2978E /* LoansLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EEB204464C200E2978E /* LoansLeftViewController.swift */; };
+		32D16EEE2044651000E2978E /* LoansAcquiredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EED2044651000E2978E /* LoansAcquiredViewController.swift */; };
 		BE9D266E055B4EBE6C878BAB /* Pods_uLendApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D2492761D3F7585A842CF6 /* Pods_uLendApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +116,8 @@
 		32CCD5C72036F8DE006A1073 /* ImageCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCoreData.swift; sourceTree = "<group>"; };
 		32D16EE6203F145700E2978E /* pruebalogingoogleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebalogingoogleViewController.swift; sourceTree = "<group>"; };
 		32D16EE8203F49EB00E2978E /* lereleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lereleViewController.swift; sourceTree = "<group>"; };
+		32D16EEB204464C200E2978E /* LoansLeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansLeftViewController.swift; sourceTree = "<group>"; };
+		32D16EED2044651000E2978E /* LoansAcquiredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansAcquiredViewController.swift; sourceTree = "<group>"; };
 		8DD64864CEDB4B7D9124F632 /* Pods-uLendApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uLendApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-uLendApp/Pods-uLendApp.release.xcconfig"; sourceTree = "<group>"; };
 		DB8D1E3C9E168E7F9E78AB1B /* Pods-uLendApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uLendApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uLendApp/Pods-uLendApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,7 +154,6 @@
 		3236DB0C20177A1900D98EA4 /* PageControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3236DB0F20177A4D00D98EA4 /* LoansPageViewController.swift */,
 				322344402018CF16008D0EBB /* ItemPageViewController.swift */,
 				32ABD9602029F31B00100977 /* itemCreateNewViewController.swift */,
 			);
@@ -255,6 +258,7 @@
 		32C917412007A1A2008F9A7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				32D16EEA20445AA500E2978E /* Loan */,
 				32C36441202C92870050901B /* Cells */,
 				32ABD966202A076400100977 /* Camera */,
 				3236DB0C20177A1900D98EA4 /* PageControllers */,
@@ -309,6 +313,16 @@
 				3284072120250F060088F7A0 /* enum.swift */,
 			);
 			path = extra;
+			sourceTree = "<group>";
+		};
+		32D16EEA20445AA500E2978E /* Loan */ = {
+			isa = PBXGroup;
+			children = (
+				3236DB0F20177A4D00D98EA4 /* LoansPageViewController.swift */,
+				32D16EEB204464C200E2978E /* LoansLeftViewController.swift */,
+				32D16EED2044651000E2978E /* LoansAcquiredViewController.swift */,
+			);
+			path = Loan;
 			sourceTree = "<group>";
 		};
 		6B406F779B74AB14ABDB15AA /* Pods */ = {
@@ -491,6 +505,7 @@
 				3236DB09201632B500D98EA4 /* ULServ_DB.swift in Sources */,
 				32ABD96C202A652A00100977 /* ULServ_Loan.swift in Sources */,
 				3236DB1020177A4D00D98EA4 /* LoansPageViewController.swift in Sources */,
+				32D16EEE2044651000E2978E /* LoansAcquiredViewController.swift in Sources */,
 				32C3645E202F3CDB0050901B /* IsaotextField.swift in Sources */,
 				3236DB0520162B8C00D98EA4 /* GeoPosition.swift in Sources */,
 				3279F9D420137F4B001D010F /* ULServ_Algolia.swift in Sources */,
@@ -504,6 +519,7 @@
 				3284072220250F060088F7A0 /* enum.swift in Sources */,
 				32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */,
 				32C917452007A34B008F9A7C /* LoginMainViewController.swift in Sources */,
+				32D16EEC204464C200E2978E /* LoansLeftViewController.swift in Sources */,
 				3235942A2031F8E0006EEBBF /* ItemCollectionViewCell.swift in Sources */,
 				32C3645A202E5FED0050901B /* MinoruTextField.swift in Sources */,
 				32BE44992006CFDC0012EE19 /* AppDelegate.swift in Sources */,
