@@ -51,6 +51,7 @@ extension ItemsOwnViewController {
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showItem", sender: nil)
 //        ULServ_Item().deleteItem(items![indexPath.row]) { (error, bool) in
 //            if error != nil {
 //                self.present(ULF_errorAlertView("Ha ocurrido un error, vuelve a probar"), animated: true, completion: nil)

@@ -20,6 +20,7 @@
 		3236DB0B201635A400D98EA4 /* ULServ_Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB0A201635A400D98EA4 /* ULServ_Item.swift */; };
 		3236DB1020177A4D00D98EA4 /* LoansPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB0F20177A4D00D98EA4 /* LoansPageViewController.swift */; };
 		3236DB1220177C9700D98EA4 /* ItemsOwnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3236DB1120177C9700D98EA4 /* ItemsOwnViewController.swift */; };
+		323A58E82046CE3000310085 /* ItemSelectedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323A58E72046CE3000310085 /* ItemSelectedUIView.swift */; };
 		324F16592035D99600CFDB0A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F16582035D99600CFDB0A /* CoreDataStack.swift */; };
 		324F165C2035DA0800CFDB0A /* uLend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 324F165A2035DA0800CFDB0A /* uLend.xcdatamodeld */; };
 		324F165E2035DCD800CFDB0A /* ItemManaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F165D2035DCD800CFDB0A /* ItemManaged.swift */; };
@@ -58,6 +59,7 @@
 		32D16EE9203F49EB00E2978E /* lereleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EE8203F49EB00E2978E /* lereleViewController.swift */; };
 		32D16EEC204464C200E2978E /* LoansLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EEB204464C200E2978E /* LoansLeftViewController.swift */; };
 		32D16EEE2044651000E2978E /* LoansAcquiredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EED2044651000E2978E /* LoansAcquiredViewController.swift */; };
+		32D16EF12046C6B600E2978E /* ItemSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EF02046C6B600E2978E /* ItemSelectedViewController.swift */; };
 		BE9D266E055B4EBE6C878BAB /* Pods_uLendApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D2492761D3F7585A842CF6 /* Pods_uLendApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,7 @@
 		3236DB0A201635A400D98EA4 /* ULServ_Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULServ_Item.swift; sourceTree = "<group>"; };
 		3236DB0F20177A4D00D98EA4 /* LoansPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansPageViewController.swift; sourceTree = "<group>"; };
 		3236DB1120177C9700D98EA4 /* ItemsOwnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsOwnViewController.swift; sourceTree = "<group>"; };
+		323A58E72046CE3000310085 /* ItemSelectedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectedUIView.swift; sourceTree = "<group>"; };
 		324F16582035D99600CFDB0A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		324F165B2035DA0800CFDB0A /* uLend.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = uLend.xcdatamodel; sourceTree = "<group>"; };
 		324F165D2035DCD800CFDB0A /* ItemManaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManaged.swift; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 		32D16EE8203F49EB00E2978E /* lereleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lereleViewController.swift; sourceTree = "<group>"; };
 		32D16EEB204464C200E2978E /* LoansLeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansLeftViewController.swift; sourceTree = "<group>"; };
 		32D16EED2044651000E2978E /* LoansAcquiredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansAcquiredViewController.swift; sourceTree = "<group>"; };
+		32D16EF02046C6B600E2978E /* ItemSelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectedViewController.swift; sourceTree = "<group>"; };
 		8DD64864CEDB4B7D9124F632 /* Pods-uLendApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uLendApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-uLendApp/Pods-uLendApp.release.xcconfig"; sourceTree = "<group>"; };
 		DB8D1E3C9E168E7F9E78AB1B /* Pods-uLendApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uLendApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uLendApp/Pods-uLendApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				32500B70200EB7E000927D15 /* CurrentUserViewController.swift */,
-				3236DB1120177C9700D98EA4 /* ItemsOwnViewController.swift */,
 				3215E3DD203B270400DDB87C /* pruebasViewController.swift */,
 				3215E3DF203B284200DDB87C /* pruebaTableViewCell.swift */,
 			);
@@ -258,6 +261,7 @@
 		32C917412007A1A2008F9A7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				32D16EEF2046C68F00E2978E /* Item */,
 				32D16EEA20445AA500E2978E /* Loan */,
 				32C36441202C92870050901B /* Cells */,
 				32ABD966202A076400100977 /* Camera */,
@@ -323,6 +327,16 @@
 				32D16EED2044651000E2978E /* LoansAcquiredViewController.swift */,
 			);
 			path = Loan;
+			sourceTree = "<group>";
+		};
+		32D16EEF2046C68F00E2978E /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				3236DB1120177C9700D98EA4 /* ItemsOwnViewController.swift */,
+				32D16EF02046C6B600E2978E /* ItemSelectedViewController.swift */,
+				323A58E72046CE3000310085 /* ItemSelectedUIView.swift */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 		6B406F779B74AB14ABDB15AA /* Pods */ = {
@@ -509,6 +523,7 @@
 				32C3645E202F3CDB0050901B /* IsaotextField.swift in Sources */,
 				3236DB0520162B8C00D98EA4 /* GeoPosition.swift in Sources */,
 				3279F9D420137F4B001D010F /* ULServ_Algolia.swift in Sources */,
+				32D16EF12046C6B600E2978E /* ItemSelectedViewController.swift in Sources */,
 				32C36452202E5FED0050901B /* MadokaTextField.swift in Sources */,
 				32C3645B202E5FED0050901B /* TextFieldEffects.swift in Sources */,
 				324F16592035D99600CFDB0A /* CoreDataStack.swift in Sources */,
@@ -522,6 +537,7 @@
 				32D16EEC204464C200E2978E /* LoansLeftViewController.swift in Sources */,
 				3235942A2031F8E0006EEBBF /* ItemCollectionViewCell.swift in Sources */,
 				32C3645A202E5FED0050901B /* MinoruTextField.swift in Sources */,
+				323A58E82046CE3000310085 /* ItemSelectedUIView.swift in Sources */,
 				32BE44992006CFDC0012EE19 /* AppDelegate.swift in Sources */,
 				3236DB1220177C9700D98EA4 /* ItemsOwnViewController.swift in Sources */,
 				32ABD9612029F31B00100977 /* itemCreateNewViewController.swift in Sources */,
