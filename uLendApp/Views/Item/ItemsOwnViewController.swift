@@ -80,10 +80,9 @@ extension ItemsOwnViewController {
 
 
 
-//MARK: animation functions
 extension ItemsOwnViewController {
     
-    
+    //MARK: animation functions
     func hideSideMenu(){
         UIView.animate(withDuration: 0.5) {
             self.sideMenu.center = CGPoint(x: self.sideMenu.center.x - 60, y: self.sideMenu.center.y)
@@ -96,10 +95,20 @@ extension ItemsOwnViewController {
         }
     }
     
+    
+    
+    //MARK: preparesegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? itemCreateNewViewController {
             vc.backVC = self
         }
+        
+//        if let vc = segue.destination as? ItemSelectedViewController {
+//            vc.hola = "caracola"
+//        }
+//        if segue.identifier == "showItem" {
+////            let vc = segue.destination as?
+//        }
     }
     
     

@@ -45,6 +45,67 @@ struct ULServ_Loan {
     
     
     
+//    enum loanstatus {
+//        case ordered    -> el primero
+//        case accepted    -> modifica el ownerItem
+//        case loaned       -> modifica el receiver
+//        case toreturn     -> modifica el receiver
+//        case closed      -> modifica el owner
+//        case cancelled    --> modifica el receiver
+//        case denied       -> modifica el owner
+//    }
+
+    private func verifyChangeToAccepted(_ loan: Loan!, _ userID: String!) -> Bool{
+        
+        if loan.ownerUser?.uid == userID && loan.status == loanstatus.ordered {
+            return true
+        }
+        return false
+    }
+    
+    private func verifyChangeToCancel(_ loan: Loan!, _ userID: String!) -> Bool {
+        
+        if loan.ownerUser?.uid == userID && loan.status == loanstatus.ordered {
+            return true
+        }
+        return false
+    }
+    
+    private func verifyChangeToLoaned(_ loan: Loan!, _ userID: String!) -> Bool {
+        
+        if loan.loanUser?.uid == userID && loan.status == loanstatus.accepted {
+            return true
+        }
+        return false
+    }
+    
+    private func verifyChangeToReturn(_ loan: Loan!, _ userID: String!) -> Bool {
+        
+        if loan.loanUser?.uid == userID && loan.status == loanstatus.loaned {
+            return true
+        }
+        return false
+    }
+    private func verifyChangeToCancelled(_ loan: Loan!, _ userID: String!) -> Bool {
+        
+        if loan.loanUser?.uid == userID && loan.status == loanstatus.ordered {
+            return true
+        }
+        return false
+    }
+    
+    private func verifyChangeToDenied(_ loan: Loan!, _ userID: String) -> Bool {
+        if loan.ownerUser?.uid == userID && loan.status == loanstatus.ordered {
+            return true
+        }
+        
+        return false
+    }
+    
+    
+    
+    //reeescribir con un switch para hacerlo más ameno    ^^^^^^^^^^^^
+    
     
     func changeStatus(_ loan: Loan!,_ status: loanstatus, completionHandler:@escaping CompletionBool){
         let profile : ProfileAnyHashable = [

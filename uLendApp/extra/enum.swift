@@ -13,6 +13,7 @@ enum loanstatus {
     case ordered
     case accepted
     case loaned
+    case toreturn
     case closed
     case cancelled
     case denied
