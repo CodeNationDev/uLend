@@ -23,6 +23,7 @@ final class Item {
     
     
     var country: String?
+    private var loaned: Bool?
     
     
     init(){}
@@ -32,6 +33,7 @@ final class Item {
         self.uidOwner = uidOwner
         self.name = name
         self.description = description ?? ""
+        self.loaned = false
 //        self.images = images ?? [String]()
 //        self.geoposition = geoposition ?? nil
     }
@@ -42,12 +44,34 @@ final class Item {
         self.uidOwner = document.get("uidOwner") as? String
         self.name = document.get("name") as? String
         self.description = document.get("description") as? String ?? ""
+        self.loaned = document.get("loaned") as? Bool ?? false
         
         if let geo = document.get("_geoloc") as? Dictionary<String, Double> {
             self.geoposition = GeoPosition(geo["lng"]!, geo["lat"]!)
         }
 
 
+    }
+    
+    func changeLoanedToFalse(){
+        ULServ_Item().updateLabelbyUidItem(self.uid!, "loaned", false) { (error, bool) in
+            if let error = error {
+                print(error)
+            } else {
+                self.loaned = false
+            }
+        }
+    }
+    
+    func changeLoanedToTrue(){
+        ULServ_Item().updateLabelbyUidItem(self.uid, "loaned", true) { (error, bool) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                self.loaned = true
+            }
+        }
     }
     
     

@@ -99,27 +99,40 @@ struct ULServ_Item {
     
     
     func updateAllProfile(_ item: Item!, completionHandler: @escaping CompletionBool){
-        servDBitems.document(item.uid!).setData(item.toProfile()) { (error) in
-            if let error = (error as NSError?){
-                completionHandler(error.localizedDescription, false)
-            } else {
-                completionHandler(nil, true)
+        
+        if item.uidOwner == Auth.auth().currentUser?.uid {
+            servDBitems.document(item.uid!).setData(item.toProfile()) { (error) in
+                if let error = (error as NSError?){
+                    completionHandler(error.localizedDescription, false)
+                } else {
+                    completionHandler(nil, true)
+                }
+                
             }
-            
+        } else {
+            completionHandler("Error update Profile: user without privileges", false)
+
         }
+        
+        
     }
     
     func updateLabelbyUidItem(_ uidItem: String!, _ label: String, _ data: AnyHashable, completionHandler: @escaping CompletionBool){
         let profile = [label:data]
         
-        
-        servDBitems.document(uidItem).updateData(profile) { (error) in
-            if error != nil {
+        if uidItem == Auth.auth().currentUser?.uid {
+            servDBitems.document(uidItem).updateData(profile) { (error) in
+                if error != nil {
                     completionHandler(error?.localizedDescription, false)
-            } else {
-                completionHandler(nil, true)
+                } else {
+                    completionHandler(nil, true)
+                }
             }
+        } else {
+            completionHandler("Error update Label by Uid Item: user without privileges", false)
         }
+        
+        
     }
     
     
