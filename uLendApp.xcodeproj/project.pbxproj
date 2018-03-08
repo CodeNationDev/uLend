@@ -35,6 +35,7 @@
 		32ABD9612029F31B00100977 /* itemCreateNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ABD9602029F31B00100977 /* itemCreateNewViewController.swift */; };
 		32ABD968202A077100100977 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ABD967202A077100100977 /* CameraViewController.swift */; };
 		32ABD96C202A652A00100977 /* ULServ_Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ABD96B202A652A00100977 /* ULServ_Loan.swift */; };
+		32B546BA205192DB00E7AD31 /* imagesItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B546B9205192DB00E7AD31 /* imagesItemCollectionViewCell.swift */; };
 		32BE44992006CFDC0012EE19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BE44982006CFDC0012EE19 /* AppDelegate.swift */; };
 		32BE449E2006CFDC0012EE19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449C2006CFDC0012EE19 /* Main.storyboard */; };
 		32BE44A02006CFDC0012EE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32BE449F2006CFDC0012EE19 /* Assets.xcassets */; };
@@ -55,8 +56,6 @@
 		32C9174B2007A910008F9A7C /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9174A2007A910008F9A7C /* Typealias.swift */; };
 		32C9174D2007A96A008F9A7C /* functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9174C2007A96A008F9A7C /* functions.swift */; };
 		32CCD5C82036F8DE006A1073 /* ImageCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CCD5C72036F8DE006A1073 /* ImageCoreData.swift */; };
-		32D16EE7203F145700E2978E /* pruebalogingoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EE6203F145700E2978E /* pruebalogingoogleViewController.swift */; };
-		32D16EE9203F49EB00E2978E /* lereleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EE8203F49EB00E2978E /* lereleViewController.swift */; };
 		32D16EEC204464C200E2978E /* LoansLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EEB204464C200E2978E /* LoansLeftViewController.swift */; };
 		32D16EEE2044651000E2978E /* LoansAcquiredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EED2044651000E2978E /* LoansAcquiredViewController.swift */; };
 		32D16EF12046C6B600E2978E /* ItemSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D16EF02046C6B600E2978E /* ItemSelectedViewController.swift */; };
@@ -94,6 +93,7 @@
 		32ABD9602029F31B00100977 /* itemCreateNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemCreateNewViewController.swift; sourceTree = "<group>"; };
 		32ABD967202A077100100977 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		32ABD96B202A652A00100977 /* ULServ_Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULServ_Loan.swift; sourceTree = "<group>"; };
+		32B546B9205192DB00E7AD31 /* imagesItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagesItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		32BE44952006CFDC0012EE19 /* uLendApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uLendApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BE44982006CFDC0012EE19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32BE449D2006CFDC0012EE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,8 +117,6 @@
 		32C9174A2007A910008F9A7C /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		32C9174C2007A96A008F9A7C /* functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = functions.swift; sourceTree = "<group>"; };
 		32CCD5C72036F8DE006A1073 /* ImageCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCoreData.swift; sourceTree = "<group>"; };
-		32D16EE6203F145700E2978E /* pruebalogingoogleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebalogingoogleViewController.swift; sourceTree = "<group>"; };
-		32D16EE8203F49EB00E2978E /* lereleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lereleViewController.swift; sourceTree = "<group>"; };
 		32D16EEB204464C200E2978E /* LoansLeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansLeftViewController.swift; sourceTree = "<group>"; };
 		32D16EED2044651000E2978E /* LoansAcquiredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansAcquiredViewController.swift; sourceTree = "<group>"; };
 		32D16EF02046C6B600E2978E /* ItemSelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectedViewController.swift; sourceTree = "<group>"; };
@@ -287,8 +285,6 @@
 			isa = PBXGroup;
 			children = (
 				32C917442007A34B008F9A7C /* LoginMainViewController.swift */,
-				32D16EE6203F145700E2978E /* pruebalogingoogleViewController.swift */,
-				32D16EE8203F49EB00E2978E /* lereleViewController.swift */,
 			);
 			path = LoginMainView;
 			sourceTree = "<group>";
@@ -335,6 +331,7 @@
 				3236DB1120177C9700D98EA4 /* ItemsOwnViewController.swift */,
 				32D16EF02046C6B600E2978E /* ItemSelectedViewController.swift */,
 				323A58E72046CE3000310085 /* ItemSelectedUIView.swift */,
+				32B546B9205192DB00E7AD31 /* imagesItemCollectionViewCell.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -512,11 +509,11 @@
 				3236DB0320162A7000D98EA4 /* Item.swift in Sources */,
 				32C36443202C92F50050901B /* NewItemImageCell.swift in Sources */,
 				324F165E2035DCD800CFDB0A /* ItemManaged.swift in Sources */,
-				32D16EE9203F49EB00E2978E /* lereleViewController.swift in Sources */,
 				322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */,
 				3215E3E0203B284200DDB87C /* pruebaTableViewCell.swift in Sources */,
 				324F165C2035DA0800CFDB0A /* uLend.xcdatamodeld in Sources */,
 				3236DB09201632B500D98EA4 /* ULServ_DB.swift in Sources */,
+				32B546BA205192DB00E7AD31 /* imagesItemCollectionViewCell.swift in Sources */,
 				32ABD96C202A652A00100977 /* ULServ_Loan.swift in Sources */,
 				3236DB1020177A4D00D98EA4 /* LoansPageViewController.swift in Sources */,
 				32D16EEE2044651000E2978E /* LoansAcquiredViewController.swift in Sources */,
@@ -530,7 +527,6 @@
 				3267744A2020C64800067E1E /* ULServ_User.swift in Sources */,
 				3215E3DE203B270400DDB87C /* pruebasViewController.swift in Sources */,
 				321D5732203301CC00EC66C1 /* ULServ_Storege.swift in Sources */,
-				32D16EE7203F145700E2978E /* pruebalogingoogleViewController.swift in Sources */,
 				3284072220250F060088F7A0 /* enum.swift in Sources */,
 				32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */,
 				32C917452007A34B008F9A7C /* LoginMainViewController.swift in Sources */,

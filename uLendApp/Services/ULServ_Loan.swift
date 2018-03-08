@@ -136,18 +136,26 @@ struct ULServ_Loan {
     }
     
     
-    func changeStatus(_ loan: Loan!,_ status: loanstatus, completionHandler:@escaping CompletionBool){
-        let profile : ProfileAnyHashable = [
-            "status":status,
-            "lastChange": FieldValue.serverTimestamp()
+    func changeStatus(_ loan: Loan!,_ status: loanstatus, _ uidUser: String!, completionHandler:@escaping CompletionBool){
+        
+        if verifyChange(loan, uidUser, status){
+            let profile : ProfileAnyHashable = [
+                "status":status,
+                "lastChange": FieldValue.serverTimestamp()
             ]
-        servDB.document(loan.uid).updateData(profile) { (error) in
-            if error != nil {
-                completionHandler(error?.localizedDescription, false)
-            } else {
-                completionHandler(nil, true)
+            servDB.document(loan.uid).updateData(profile) { (error) in
+                if error != nil {
+                    completionHandler(error?.localizedDescription, false)
+                } else {
+                    completionHandler(nil, true)
+                }
             }
+            
+        } else {
+            completionHandler("User no válido", false)
         }
+        
+
     }
     
 

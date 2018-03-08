@@ -19,6 +19,7 @@ final class Item {
     var description: String?
     var images: [String]?
     var geoposition: GeoPosition?
+    var imagesArray: [UIImage]?
     
     
     var country: String?
@@ -47,6 +48,20 @@ final class Item {
         }
 
 
+    }
+    
+    
+    func imagesToItem(_ arrayData: [Data]!) {
+        var array = [UIImage]()
+        
+        for _data in arrayData {
+            guard let image = UIImage(data: _data) else {
+                return
+            }
+            array.append(image)
+        }
+        
+        self.imagesArray = array
     }
     
     

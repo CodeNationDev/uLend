@@ -8,16 +8,20 @@
 
 import UIKit
 
-class ItemSelectedViewController: UIViewController {
+class ItemSelectedViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    var hola = "hola"
-    
+
+    @IBOutlet var collectionImages: UICollectionView!
+    var itemSelected: Item!
         
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(hola)
+        print("Estás en el item:\(itemSelected!.uid!)  ")
+        
+        collectionImages.delegate = self
+        collectionImages.dataSource = self
     }
 
     
@@ -25,6 +29,32 @@ class ItemSelectedViewController: UIViewController {
     @IBAction func goBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        guard let count = itemSelected.imagesArray?.count else {
+            print("nada??")
+            return 0
+        }
+        print(count)
+        return count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
+         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageItem", for: indexPath) as! imagesItemCollectionViewCell
+        
+        cell.image.image = itemSelected.imagesArray![indexPath.row]
+        
+        
+        return cell
+    }
+    
     
     
     

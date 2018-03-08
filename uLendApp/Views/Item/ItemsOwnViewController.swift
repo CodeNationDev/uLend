@@ -13,6 +13,7 @@ final class ItemsOwnViewController: UIViewController, UICollectionViewDelegate, 
     @IBOutlet var sideMenu: UIView!
     @IBOutlet var itemsCollection: UICollectionView!
     var items : [Item]?
+    var itemSelected: Item?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,8 @@ extension ItemsOwnViewController {
         let item = items![indexPath.row]
         let images = Service_LocalCoreData().imagesByUIDimage(item.uid)
         
+        item.imagesToItem(images!)
+        
         guard let image = UIImage(data: (images?.last!)!) else {
             return cell
         }
@@ -51,25 +54,9 @@ extension ItemsOwnViewController {
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        itemSelected = items![indexPath.row]
         performSegue(withIdentifier: "showItem", sender: nil)
-//        ULServ_Item().deleteItem(items![indexPath.row]) { (error, bool) in
-//            if error != nil {
-//                self.present(ULF_errorAlertView("Ha ocurrido un error, vuelve a probar"), animated: true, completion: nil)
-//            } else {
-//
-//                for x in 1...3  {
-//                    ULServ_Storege().itemImagesRef.child(self.items![indexPath.row].uid!).child("image\(x).jpg").delete(completion: { (error) in
-//                        if let error = (error as NSError?){
-//                            print(error.localizedDescription)
-//                        }
-//                    })
-//                }
-//                
-//                Service_LocalCoreData().removeItem(self.items![indexPath.row])
-//                self.items?.remove(at: indexPath.row)
-//                self.itemsCollection.reloadData()
-//            }
-//        }
+
     }
     
 }
@@ -101,6 +88,9 @@ extension ItemsOwnViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? itemCreateNewViewController {
             vc.backVC = self
+        }
+        if let vc = segue.destination as? ItemSelectedViewController {
+            vc.itemSelected = itemSelected!
         }
         
 //        if let vc = segue.destination as? ItemSelectedViewController {
