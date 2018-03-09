@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3215E3DE203B270400DDB87C /* pruebasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215E3DD203B270400DDB87C /* pruebasViewController.swift */; };
 		3215E3E0203B284200DDB87C /* pruebaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215E3DF203B284200DDB87C /* pruebaTableViewCell.swift */; };
-		321D5732203301CC00EC66C1 /* ULServ_Storege.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D5731203301CC00EC66C1 /* ULServ_Storege.swift */; };
+		321D5732203301CC00EC66C1 /* ULServ_Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321D5731203301CC00EC66C1 /* ULServ_Storage.swift */; };
 		322344412018CF16008D0EBB /* ItemPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322344402018CF16008D0EBB /* ItemPageViewController.swift */; };
 		32234449201BD286008D0EBB /* AlgoliaKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32234448201BD286008D0EBB /* AlgoliaKeys.swift */; };
 		3235942A2031F8E0006EEBBF /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323594292031F8E0006EEBBF /* ItemCollectionViewCell.swift */; };
@@ -66,7 +66,7 @@
 		14D2492761D3F7585A842CF6 /* Pods_uLendApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uLendApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3215E3DD203B270400DDB87C /* pruebasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebasViewController.swift; sourceTree = "<group>"; };
 		3215E3DF203B284200DDB87C /* pruebaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pruebaTableViewCell.swift; sourceTree = "<group>"; };
-		321D5731203301CC00EC66C1 /* ULServ_Storege.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULServ_Storege.swift; sourceTree = "<group>"; };
+		321D5731203301CC00EC66C1 /* ULServ_Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ULServ_Storage.swift; sourceTree = "<group>"; };
 		322344402018CF16008D0EBB /* ItemPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPageViewController.swift; sourceTree = "<group>"; };
 		32234448201BD286008D0EBB /* AlgoliaKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoliaKeys.swift; sourceTree = "<group>"; };
 		323594292031F8E0006EEBBF /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -298,7 +298,7 @@
 				3236DB0A201635A400D98EA4 /* ULServ_Item.swift */,
 				326774492020C64800067E1E /* ULServ_User.swift */,
 				32ABD96B202A652A00100977 /* ULServ_Loan.swift */,
-				321D5731203301CC00EC66C1 /* ULServ_Storege.swift */,
+				321D5731203301CC00EC66C1 /* ULServ_Storage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -526,7 +526,7 @@
 				324F16592035D99600CFDB0A /* CoreDataStack.swift in Sources */,
 				3267744A2020C64800067E1E /* ULServ_User.swift in Sources */,
 				3215E3DE203B270400DDB87C /* pruebasViewController.swift in Sources */,
-				321D5732203301CC00EC66C1 /* ULServ_Storege.swift in Sources */,
+				321D5732203301CC00EC66C1 /* ULServ_Storage.swift in Sources */,
 				3284072220250F060088F7A0 /* enum.swift in Sources */,
 				32500B71200EB7E000927D15 /* CurrentUserViewController.swift in Sources */,
 				32C917452007A34B008F9A7C /* LoginMainViewController.swift in Sources */,

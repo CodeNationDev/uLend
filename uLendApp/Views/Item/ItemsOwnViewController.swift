@@ -14,6 +14,7 @@ final class ItemsOwnViewController: UIViewController, UICollectionViewDelegate, 
     @IBOutlet var itemsCollection: UICollectionView!
     var items : [Item]?
     var itemSelected: Item?
+    var rowItemSelected : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +56,36 @@ extension ItemsOwnViewController {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         itemSelected = items![indexPath.row]
+        rowItemSelected = indexPath.row
         performSegue(withIdentifier: "showItem", sender: nil)
 
     }
+    
+    func deleteItemSelected(){
+        //eliminamos de Firebase
+        
+        ULServ_Item().deleteItem(itemSelected!) { (error, bool) in
+            if let error = error {
+                print(error)
+            } else {
+                // se ha borrado correcto, así que ahora lo eliminamos de coredata y del oollection
+                Service_LocalCoreData().removeItem(self.itemSelected!)
+                
+                if self.rowItemSelected != nil {
+                    self.items?.remove(at: self.rowItemSelected!)
+                    self.itemsCollection.reloadData()
+                    self.itemSelected = nil
+                    self.rowItemSelected = nil
+                }
+            }
+        }
+        
+        
+        
+        
+
+    }
+
     
 }
 
@@ -90,6 +118,7 @@ extension ItemsOwnViewController {
             vc.backVC = self
         }
         if let vc = segue.destination as? ItemSelectedViewController {
+            vc.backVC = self
             vc.itemSelected = itemSelected!
         }
         

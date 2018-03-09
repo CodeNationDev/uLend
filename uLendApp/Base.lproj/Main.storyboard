@@ -666,6 +666,19 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfv-DG-JN8">
+                                <rect key="frame" x="313" y="64" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Zta-Km-rrt"/>
+                                    <constraint firstAttribute="height" constant="30" id="eN2-YB-uCU"/>
+                                </constraints>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" red="1" green="0.076598369858868254" blue="0.011287128486411446" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteItem:" destination="7Q4-f7-rkw" eventType="touchUpInside" id="Y2M-l0-21b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -673,6 +686,8 @@
                             <constraint firstItem="dLq-aI-Uhw" firstAttribute="top" secondItem="XCH-gC-Xk8" secondAttribute="top" constant="20" id="6o2-9p-SQH"/>
                             <constraint firstItem="aUr-6y-aPo" firstAttribute="centerX" secondItem="faz-V6-HM5" secondAttribute="centerX" id="CCF-oN-qxX"/>
                             <constraint firstItem="dLq-aI-Uhw" firstAttribute="leading" secondItem="XCH-gC-Xk8" secondAttribute="leading" constant="16" id="EHM-Ov-FoR"/>
+                            <constraint firstItem="XCH-gC-Xk8" firstAttribute="trailing" secondItem="vfv-DG-JN8" secondAttribute="trailing" constant="16" id="F4U-lw-dyV"/>
+                            <constraint firstItem="vfv-DG-JN8" firstAttribute="top" secondItem="XCH-gC-Xk8" secondAttribute="top" constant="20" id="FOh-ah-Y9E"/>
                             <constraint firstItem="aUr-6y-aPo" firstAttribute="trailing" secondItem="XCH-gC-Xk8" secondAttribute="trailing" id="Qz9-P7-8Iv"/>
                             <constraint firstItem="aUr-6y-aPo" firstAttribute="leading" secondItem="XCH-gC-Xk8" secondAttribute="leading" id="f4v-Kh-bd0"/>
                             <constraint firstItem="XCH-gC-Xk8" firstAttribute="bottom" secondItem="aUr-6y-aPo" secondAttribute="bottom" constant="120" id="yuk-hi-njs"/>

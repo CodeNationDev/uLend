@@ -12,13 +12,15 @@ class ItemSelectedViewController: UIViewController, UICollectionViewDelegate, UI
 
 
     @IBOutlet var collectionImages: UICollectionView!
+    
     var itemSelected: Item!
+    var backVC: ItemsOwnViewController!
         
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print("Estás en el item:\(itemSelected!.uid!)  ")
+//        print("Estás en el item:\(itemSelected!.uid!)  ")
         
         collectionImages.delegate = self
         collectionImages.dataSource = self
@@ -30,6 +32,10 @@ class ItemSelectedViewController: UIViewController, UICollectionViewDelegate, UI
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func deleteItem(_ sender: Any) {
+        backVC.deleteItemSelected()
+        dismiss(animated: true, completion: nil)
+    }
     
     
     
@@ -40,7 +46,6 @@ class ItemSelectedViewController: UIViewController, UICollectionViewDelegate, UI
             print("nada??")
             return 0
         }
-        print(count)
         return count
     }
     

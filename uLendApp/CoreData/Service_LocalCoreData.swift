@@ -131,7 +131,27 @@ class Service_LocalCoreData {
         } catch  {
             print("error eliminando el item")
         }
+        
+        self.removeImagesByUID(item.uid)
     
+    }
+    
+    func removeImagesByUID(_ uid: String!){
+        let context = stack.persistentContainer.viewContext
+        let request : NSFetchRequest<ImageCoreData> = ImageCoreData.fetchRequest()
+        let predicate = NSPredicate(format: "uiditem = %@", uid)
+        request.predicate = predicate
+        
+        do {
+            let images = try context.fetch(request)
+            for image in images {
+                context.delete(image)
+            }
+            try context.save()
+            
+        } catch  {
+            print("no ha eliminado las fotos")
+        }
     }
     
     

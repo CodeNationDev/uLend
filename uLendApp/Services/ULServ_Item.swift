@@ -46,7 +46,7 @@ struct ULServ_Item {
                     let imageName = "image\(counterImage).jpg"
                     counterImage += 1
                     
-                    ULServ_Storege().itemImagesRef.child((ref?.documentID)!).child(imageName).putData(data, metadata: nil, completion: { (object, error) in
+                    ULServ_Storage().itemImagesRef.child((ref?.documentID)!).child(imageName).putData(data, metadata: nil, completion: { (object, error) in
                         if let error = (error as NSError?){
                             print(error.localizedDescription)
                         } else {
@@ -84,6 +84,8 @@ struct ULServ_Item {
                     for x in 1...3 {
                         self.servDBitems.document(item.uid!).collection("mediaUrl").document("image\(x)").delete()
                     }
+                    
+                    ULServ_Storage().deleteImagesByUIDItem(item.uid, 3)
                    
                     completionHandler(nil, true)
                 }
