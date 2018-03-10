@@ -12,6 +12,7 @@ class ItemSelectedViewController: UIViewController, UICollectionViewDelegate, UI
 
 
     @IBOutlet var collectionImages: UICollectionView!
+    @IBOutlet var deleteItemButton: UIButton!
     
     var itemSelected: Item!
     var backVC: ItemsOwnViewController!
@@ -22,6 +23,9 @@ class ItemSelectedViewController: UIViewController, UICollectionViewDelegate, UI
         // Do any additional setup after loading the view.
 //        print("Estás en el item:\(itemSelected!.uid!)  ")
         
+        if itemSelected.isLoaned() {
+            self.deleteItemButton.isHidden = true
+        }
         collectionImages.delegate = self
         collectionImages.dataSource = self
     }

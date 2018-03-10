@@ -74,6 +74,10 @@ final class Item {
         }
     }
     
+    func isLoaned() -> Bool {
+        return self.loaned!
+    }
+    
     
     func imagesToItem(_ arrayData: [Data]!) {
         var array = [UIImage]()

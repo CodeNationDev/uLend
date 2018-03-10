@@ -702,6 +702,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="collectionImages" destination="aUr-6y-aPo" id="9de-HM-jL8"/>
+                        <outlet property="deleteItemButton" destination="vfv-DG-JN8" id="NOd-Yj-P8O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grj-fp-RIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
